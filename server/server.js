@@ -24,8 +24,8 @@ const server = app.listen(port, () => {
   console.log(`Server is running in port ${port}`);
 });
 
-process.on("unhandledRejection", (reason, promise) => {
-  console.log(`Unhandled Rejection at: ${promise}, reason: ${reason}`);
+process.on("unhandledRejection", (err) => {
+  console.log(err.name, err.message);
 
   server.close(() => {
     console.log("Shutting down");

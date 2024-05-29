@@ -1,5 +1,6 @@
 const User = require("../models/userModel");
 const AppError = require("../utils/AppError");
+require("express-async-errors");
 
 exports.getAllUsers = async (req, res) => {};
 
