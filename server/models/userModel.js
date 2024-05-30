@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     unique: [true, "User already exists"],
     validate: [validator.isEmail, "Please provide a valid email"],
   },
-  avatar: String,
+  image: String,
   role: {
     type: String,
     enum: {
@@ -27,6 +27,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide your password"],
     minlength: 6,
+    select: false,
   },
   passwordConfirm: {
     type: String,
@@ -37,6 +38,11 @@ const userSchema = new mongoose.Schema({
       },
       message: "Confirm password and password do not match",
     },
+  },
+  active: {
+    type: Boolean,
+    default: true,
+    select: false,
   },
   passwordChangedAt: Date,
   passwordResetToken: String,
