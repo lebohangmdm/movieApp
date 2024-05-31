@@ -1,5 +1,8 @@
 const router = require("express").Router();
 const movieController = require("../controller/movieController");
+const reviewRouter = require("./reviewRoute");
+
+router.use("/:movieId/reviews", reviewRouter);
 
 router
   .route("/")
