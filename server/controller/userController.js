@@ -62,3 +62,36 @@ exports.deleteMyProfile = async (req, res) => {
     data: null,
   });
 };
+
+exports.addLikedMovie = async (req, res) => {
+  const user = await User.findById(req.user.id);
+
+  await user.addFavorite(req.body.movie);
+
+  res.status(200).json({
+    status: "success",
+    message: "Movie successfully added",
+  });
+};
+
+exports.deleteLikedMovie = async (req, res) => {
+  const user = await User.findById(req.user.id);
+
+  await user.deleteFavorite(req.body.id);
+
+  res.status(200).json({
+    status: "success",
+    message: "Movie successfully deleted",
+  });
+};
+
+exports.clearLikedMovies = async (req, res) => {
+  const user = await User.findById(req.user.id);
+
+  await user.clearFavorite();
+
+  res.status(200).json({
+    status: "success",
+    message: "Movies successfully deleted",
+  });
+};

@@ -42,12 +42,36 @@ const movieSchema = new mongoose.Schema(
       type: Array,
       required: [true, "Please provide the genre of them movie"],
     },
-    coverImage: String,
-    director: {
+    type: {
       type: String,
+      enum: {
+        values: ["Movie", "Series"],
+        message: "Please provide the given type",
+      },
+      required: [true, "Please provide the type"],
+    },
+    seasonsNumber: {
+      type: String,
+      default: "N/A",
+      validate: {
+        validator: function (value) {
+          // `this` refers to the document being validated
+          if (this.type === "series") {
+            // For series, content must be provided and not 'N/A'
+            return value && value !== "N/A";
+          }
+          // For movies, content can be 'N/A' or anything else
+          return true;
+        },
+        message: `Content is required for series and cannot be 'N/A'`,
+      },
+    },
+    coverImage: String,
+    directors: {
+      type: [String],
       required: [true, "Please provide the director of them movie"],
     },
-    actors: {
+    cast: {
       type: [String],
       required: [true, "Please provide the actors of them movie"],
     },

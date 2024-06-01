@@ -44,6 +44,12 @@ const userSchema = new mongoose.Schema({
     default: true,
     select: false,
   },
+  favorites: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Movie",
+    },
+  ],
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetTokenExpires: Date,
@@ -84,6 +90,29 @@ userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
 
   // False means NOT changed
   return false;
+};
+
+// favourite methods
+userSchema.methods.addFavorite = function (contentId) {
+  if (!this.favorites.includes(contentId)) {
+    this.favorites.push(contentId);
+  }
+
+  return this.save();
+};
+
+userSchema.methods.deleteFavorite = function (contentId) {
+  this.favorites = this.favorites.filter(
+    (id) => id.toString() !== contentId.toString()
+  );
+
+  this.save();
+};
+
+userSchema.methods.clearFavorite = function () {
+  this.favorites = [];
+
+  this.save();
 };
 
 const User = mongoose.model("User", userSchema);
