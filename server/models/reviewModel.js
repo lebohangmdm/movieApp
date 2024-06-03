@@ -10,10 +10,10 @@ const reviewSchema = new mongoose.Schema({
     type: Number,
     required: [true, "Please provide your rating"],
   },
-  movie: {
+  content: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Movie",
-    required: [true, "Review must have a movie"],
+    ref: "Content",
+    required: [true, "Review must have a content"],
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

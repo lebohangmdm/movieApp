@@ -2,7 +2,7 @@ const Review = require("../models/reviewModel");
 
 exports.createReview = async (req, res) => {
   if (!req.body.user) req.body.user = req.user.id;
-  if (!req.body.movie) req.body.movie = req.params.movieId;
+  if (!req.body.content) req.body.content = req.params.contentId;
 
   const review = await Review.create(req.body);
 

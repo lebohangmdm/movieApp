@@ -15,14 +15,14 @@ router.delete("/profile/delete", userController.deleteMyProfile);
 
 router
   .route("/favorites")
-  .post(protect, restrictTo("user"), userController.addLikedMovie)
-  .delete(protect, restrictTo("user"), userController.deleteLikedMovie);
+  .post(protect, restrictTo("user"), userController.addLikedContent)
+  .delete(protect, restrictTo("user"), userController.deleteLikedContent);
 
 router.delete(
   "/favorites/clear",
   protect,
   restrictTo("user"),
-  userController.clearLikedMovies
+  userController.clearLikedContents
 );
 
 module.exports = router;

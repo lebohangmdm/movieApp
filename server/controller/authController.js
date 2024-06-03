@@ -53,8 +53,6 @@ exports.login = async (req, res, next) => {
     return next(new AppError("Invalid credentials", 401));
   }
 
-  const token = signToken(user._id);
-
   createSendToken(res, 200, user);
 };
 

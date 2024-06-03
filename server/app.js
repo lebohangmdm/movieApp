@@ -9,7 +9,7 @@ const hpp = require("hpp");
 require("express-async-errors");
 const authRouter = require("./routes/authRoute");
 const userRouter = require("./routes/userRoute");
-const movieRouter = require("./routes/movieRoute");
+const contentRouter = require("./routes/contentRoute");
 const reviewRouter = require("./routes/reviewRoute");
 const AppError = require("./utils/AppError");
 
@@ -38,7 +38,7 @@ app.use(hpp());
 // routes
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
-app.use("/api/v1/movies", movieRouter);
+app.use("/api/v1/contents", contentRouter);
 app.use("/api/v1/reviews", reviewRouter);
 
 app.use("*", (req, res, next) => {
