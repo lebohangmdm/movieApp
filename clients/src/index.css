@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a1a1a;
+}
+
+@layer utilities {
+  .nav-link {
+    @apply capitalize text-lg text-light-2 hover:text-light-1 active:text-light-1  transition-all duration-200;
+  }
+}
