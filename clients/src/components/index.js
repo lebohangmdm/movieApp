@@ -6,3 +6,4 @@ export { default as NavLinks } from "./NavLinks";
 export { default as AccountMenu } from "./AccountMenu";
 export { default as MenuCategory } from "./MenuCategory";
 export { default as MobileMenu } from "./MobileMenu";
+export { default as Hero } from "./Hero";

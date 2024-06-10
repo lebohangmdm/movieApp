@@ -5,6 +5,7 @@ import MovieIcon from "@mui/icons-material/Movie";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 
 const MobileMenu = () => {
@@ -59,6 +60,15 @@ const MobileMenu = () => {
               >
                 <SubscriptionsIcon />
                 <span className="font-semibold">My List</span>
+              </Link>
+            </li>
+            <li className="text-white text-lg">
+              <Link
+                to={"/movie"}
+                className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
+              >
+                <SearchIcon />
+                <span className="font-semibold">Search</span>
               </Link>
             </li>
           </ul>

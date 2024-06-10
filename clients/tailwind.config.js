@@ -14,6 +14,10 @@ export default {
         "light-2": "#b3b3b3",
         "light-3": "#333333",
       },
+      spacing: {
+        // Add a custom height class using calc(100dvh - 20px)
+        "height-dvh": "calc(100dvh - 20px)",
+      },
       height: {
         screen: "100dvh",
       },

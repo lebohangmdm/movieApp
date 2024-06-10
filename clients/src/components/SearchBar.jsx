@@ -10,7 +10,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="z-10">
+    <div className="hidden z-10 lg:block ">
       <form>
         <IconButton
           onClick={toggleSearch}

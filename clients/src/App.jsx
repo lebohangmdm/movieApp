@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./components";
-// import { Home } from "./pages";
+import { Home } from "./pages";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<AppLayout />}>
-            {/* <Route index element={<Home />} /> */}
+            <Route index element={<Home />} />
           </Route>
         </Routes>
       </Router>
