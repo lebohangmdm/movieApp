@@ -10,7 +10,12 @@ router.get(
   userController.getMyProfile,
   userController.getUserById
 );
-router.patch("/profile/update", userController.updateMyProfile);
+router.patch(
+  "/profile/update",
+  userController.uploadUserPhoto,
+  userController.resizeUserPhoto,
+  userController.updateMyProfile
+);
 router.delete("/profile/delete", userController.deleteMyProfile);
 
 router
