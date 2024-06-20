@@ -26,10 +26,10 @@ const SearchBar = () => {
             sx={{
               "& .MuiOutlinedInput-root": {
                 "& fieldset": { borderColor: "#4d4d4d" },
-                "&:hover fieldset": { borderColor: "#e6e6e6" },
-                "&.Mui-focused fieldset": { borderColor: "#e6e6e6" },
+                "&:hover fieldset": { borderColor: "#9499f" },
+                "&.Mui-focused fieldset": { borderColor: "#9499ff" },
                 borderRadius: "3px",
-                maxWidth: "240px",
+                maxWidth: "230px",
               },
             }}
             variant="outlined"
