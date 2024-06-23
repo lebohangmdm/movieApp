@@ -2,17 +2,17 @@ const mongoose = require("mongoose");
 
 const contentSchema = new mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
-      required: [true, "Please provide the name of them content"],
-      unique: [true, "This name is already in use"],
-      maxlength: [50, "The name cannot be more than 50 characters"],
+      required: [true, "Please provide the title of them content"],
+      unique: [true, "This title is already in use"],
+      maxlength: [50, "The title cannot be more than 50 characters"],
       trim: true,
     },
     description: {
       type: String,
       required: [true, "Please provide the description of them content"],
-      maxlength: [250, "The name cannot be more than 50 characters"],
+      maxlength: [500, "The description cannot be more than 500 characters"],
       trim: true,
     },
     duration: {
@@ -45,7 +45,7 @@ const contentSchema = new mongoose.Schema(
     type: {
       type: String,
       enum: {
-        values: ["movie", "series"],
+        values: ["movie", "tv"],
         message: "Please provide the given type",
       },
       required: [true, "Please provide the type"],

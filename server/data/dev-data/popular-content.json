@@ -1,0 +1,883 @@
+[
+  {
+    "adult": false,
+    "backdrop_path": "/xg27NrXi7VXCGUr7MG75UqLl6Vg.jpg",
+    "belongs_to_collection": {
+      "id": 1022790,
+      "name": "Inside Out Collection",
+      "coverImage": "/Apr19lGxP7gm6y2HQX0kqOXTtqC.jpg",
+      "backdrop_path": "/7U2m2dMSIfHx2gWXKq78Xj1weuH.jpg"
+    },
+    "budget": 200000000,
+    "genres": [
+      {
+        "id": 16,
+        "name": "Animation"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "homepage": "https://movies.disney.com/inside-out-2",
+    "id": 1022789,
+    "imdb_id": "tt22022452",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Inside Out 2",
+    "description": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
+    "popularity": 8313.022,
+    "coverImage": "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+    "production_companies": [
+      {
+        "id": 3,
+        "logo_path": "/1TjvGVDMYsj6JBxOAkUHpPEwLf7.png",
+        "name": "Pixar",
+        "origin_country": "US"
+      },
+      {
+        "id": 2,
+        "logo_path": "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
+        "name": "Walt Disney Pictures",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "releaseDate": "2024-06-11",
+    "releaseYear": 2024,
+    "revenue": 379748790,
+    "duration": 97,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "type": "tv",
+    "status": "Released",
+    "tagline": "Make room for new emotions.",
+    "title": "Inside Out 2",
+
+    "directors": ["Kelsey Mann"],
+    "cast": [
+      "Amy Poehler",
+      "Maya Hawke",
+      "Kensington Tallman",
+      "Liza Lapira",
+      "Phyllis Smith",
+      "Lewis Black"
+    ],
+    "video": "https://www.youtube.com/watch?v=L4DrolmDxmw",
+    "vote_average": 7.877,
+    "vote_count": 464
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/fqv8v6AycXKsivp1T5yKtLbGXce.jpg",
+    "belongs_to_collection": {
+      "id": 173710,
+      "name": "Planet of the Apes (Reboot) Collection",
+      "coverImage": "/afGkMC4HF0YtXYNkyfCgTDLFe6m.jpg",
+      "backdrop_path": "/2ZkvqfOJUCINozB00wmYuGJQW81.jpg"
+    },
+    "budget": 160000000,
+
+    "directors": ["Wes Ball"],
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "homepage": "https://www.20thcenturystudios.com/movies/kingdom-of-the-planet-of-the-apes",
+    "id": 653346,
+    "imdb_id": "tt11389872",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Kingdom of the Planet of the Apes",
+    "description": "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
+    "popularity": 3212.069,
+    "coverImage": "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
+    "production_companies": [
+      {
+        "id": 127928,
+        "logo_path": "/h0rjX5vjW5r8yEnUBStFarjcLT4.png",
+        "name": "20th Century Studios",
+        "origin_country": "US"
+      },
+      {
+        "id": 133024,
+        "logo_path": null,
+        "name": "Oddball Entertainment",
+        "origin_country": "US"
+      },
+      {
+        "id": 89254,
+        "logo_path": null,
+        "name": "Jason T. Reed Productions",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "releaseDate": "2024-05-08",
+    "releaseYear": 2024,
+    "revenue": 375795892,
+    "duration": 145,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "status": "Released",
+    "tagline": "No one can stop the reign.",
+    "title": "Kingdom of the Planet of the Apes",
+    "video": "https://youtu.be/Kdr5oedn7q8",
+    "cast": [
+      "Owen Teague",
+      "Freya Allan",
+      "Kevin Durand",
+      "Peter Macon",
+      "William H. Macy",
+      "Eka Darville"
+    ],
+    "type": "movie",
+    "vote_average": 6.87,
+    "vote_count": 1161
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/9faGSFi5jam6pDWGNd0p8JcJgXQ.jpg",
+    "directors": ["Vince Gilligan"],
+    "duration": "42",
+    "episode_run_time": [],
+    "releaseDate": "2008-01-20",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      }
+    ],
+    "homepage": "https://www.sonypictures.com/tv/breakingbad",
+    "id": 1396,
+    "in_production": false,
+    "languages": ["en", "de", "es"],
+    "last_air_date": "2013-09-29",
+    "last_episode_to_air": {
+      "id": 62161,
+      "description": "All bad things must come to an end.",
+      "name": "Felina",
+      "vote_average": 9.2,
+      "vote_count": 210,
+      "air_date": "2013-09-29",
+      "episode_number": 16,
+      "episode_type": "finale",
+      "production_code": "",
+      "duration": 56,
+      "season_number": 5,
+      "show_id": 1396,
+      "still_path": "/pA0YwyhvdDXP3BEGL2grrIhq8aM.jpg"
+    },
+    "video": "https://www.youtube.com/watch?v=XZ8daibM3AE",
+    "name": "Breaking Bad",
+    "next_episode_to_air": null,
+    "networks": [
+      {
+        "id": 174,
+        "logo_path": "/alqLicR1ZMHMaZGP3xRQxn9sq7p.png",
+        "name": "AMC",
+        "origin_country": "US"
+      }
+    ],
+    "number_of_episodes": 62,
+    "seasonsNumber": "5",
+    "releaseYear": 2008,
+    "type": "tv",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "title": "Breaking Bad",
+    "description": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+    "popularity": 471.37,
+    "coverImage": "/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+    "production_companies": [
+      {
+        "id": 11073,
+        "logo_path": "/aCbASRcI1MI7DXjPbSW9Fcv9uGR.png",
+        "name": "Sony Pictures Television Studios",
+        "origin_country": "US"
+      },
+      {
+        "id": 33742,
+        "logo_path": null,
+        "name": "High Bridge Productions",
+        "origin_country": "US"
+      },
+      {
+        "id": 2605,
+        "logo_path": null,
+        "name": "Gran Via Productions",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "seasons": [
+      {
+        "air_date": "2009-02-17",
+        "episode_count": 9,
+        "id": 3577,
+        "name": "Specials",
+        "description": "",
+        "coverImage": "/40dT79mDEZwXkQiZNBgSaydQFDP.jpg",
+        "season_number": 0,
+        "vote_average": 0.0
+      },
+      {
+        "air_date": "2008-01-20",
+        "episode_count": 7,
+        "id": 3572,
+        "name": "Season 1",
+        "description": "High school chemistry teacher Walter White's life is suddenly transformed by a dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\" Walter a new trade.",
+        "coverImage": "/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg",
+        "season_number": 1,
+        "vote_average": 8.3
+      },
+      {
+        "air_date": "2009-03-08",
+        "episode_count": 13,
+        "id": 3573,
+        "name": "Season 2",
+        "description": "Walt must deal with the chain reaction of his choice, as he and Jesse face new and severe consequences. When danger and suspicion around Walt escalate, he is pushed to new levels of desperation. Just how much higher will the stakes rise? How far is Walt willing to go to ensure his family's security? Will his grand plan spiral out of control?",
+        "coverImage": "/e3oGYpoTUhOFK0BJfloru5ZmGV.jpg",
+        "season_number": 2,
+        "vote_average": 8.3
+      },
+      {
+        "air_date": "2010-03-21",
+        "episode_count": 13,
+        "id": 3575,
+        "name": "Season 3",
+        "description": "Walt continues to battle dueling identities: a desperate husband and father trying to provide for his family, and a newly appointed key player in the Albuquerque drug trade. As the danger around him escalates, Walt is now entrenched in the complex worlds of an angst-ridden family on the verge of dissolution, and the ruthless and unrelenting drug cartel.",
+        "coverImage": "/ffP8Q8ew048YofHRnFVM18B2fPG.jpg",
+        "season_number": 3,
+        "vote_average": 8.3
+      },
+      {
+        "air_date": "2011-07-17",
+        "episode_count": 13,
+        "id": 3576,
+        "name": "Season 4",
+        "description": "Walt and Jesse must cope with the fallout of their previous actions, both personally and professionally. Tension mounts as Walt faces a true standoff with his employer, Gus, with neither side willing or able to back down. Walt must also adjust to a new relationship with Skyler, whom while still reconciling her relationship with Walt, is committed to properly laundering Walt’s money and ensuring her sister Marie and an ailing Hank are financially stable.",
+        "coverImage": "/5ewrnKp4TboU4hTLT5cWO350mHj.jpg",
+        "season_number": 4,
+        "vote_average": 8.5
+      },
+      {
+        "air_date": "2012-07-15",
+        "episode_count": 16,
+        "id": 3578,
+        "name": "Season 5",
+        "description": "Walt is faced with the prospect of moving on in a world without his enemy. As the pressure of a criminal life starts to build, Skyler struggles to keep Walt’s terrible secrets. Facing resistance from sometime adversary and former Fring lieutenant Mike, Walt tries to keep his world from falling apart even as his DEA Agent brother in law, Hank, finds numerous leads that could blaze a path straight to Walt. ",
+        "coverImage": "/r3z70vunihrAkjILQKWHX0G2xzO.jpg",
+        "season_number": 5,
+        "vote_average": 8.9
+      }
+    ],
+
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      },
+      {
+        "english_name": "German",
+        "iso_639_1": "de",
+        "name": "Deutsch"
+      },
+      {
+        "english_name": "Spanish",
+        "iso_639_1": "es",
+        "name": "Español"
+      }
+    ],
+    "cast": [
+      "Bryan Cranston",
+      "Aaron Paul",
+      "Dean Norris",
+      "Betsy Brandt",
+      "Anna Gunn",
+      "RJ Mitte"
+    ],
+    "status": "Ended",
+
+    "tagline": "Change the equation.",
+    "vote_average": 8.909,
+    "vote_count": 13705
+  },
+
+  {
+    "id": 573435,
+    "coverImage": "/nP6RliHjxsz4irTKsxe8FRhKZYl.jpg",
+    "adult": false,
+    "backdrop_path": "/gRApXuxWmO2forYTuTmcz5RaNUV.jpg",
+    "belongs_to_collection": {
+      "id": 14890,
+      "name": "Bad Boys Collection",
+      "coverImage": "/iB59poJBofg1ciKlu6LzZakf11m.jpg",
+      "backdrop_path": "/k9hhSHg5GS4UgWQC6MHBOZrarji.jpg"
+    },
+    "budget": 100000000,
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 80,
+        "name": "Crime"
+      },
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 35,
+        "name": "Comedy"
+      }
+    ],
+    "homepage": "https://www.badboys.movie",
+    "imdb_id": "tt4919268",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "Bad Boys: Ride or Die",
+    "description": "After their late former Captain is framed, Lowrey and Burnett try to clear his name, only to end up on the run themselves.",
+    "popularity": 2026.401,
+    "production_companies": [
+      {
+        "id": 122771,
+        "logo_path": "/bYRqVEAuaC1QWmt3hGo0PMdK7EX.png",
+        "name": "Westbrook Studios",
+        "origin_country": "US"
+      },
+      {
+        "id": 5,
+        "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+        "name": "Columbia Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 10288,
+        "logo_path": "/Aszf09kIVXR6cwG9lwjZIawbYVS.png",
+        "name": "Don Simpson/Jerry Bruckheimer Films",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "releaseDate": "2024-06-05",
+    "releaseYear": 2024,
+    "revenue": 218758327,
+    "duration": 115,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "status": "Released",
+    "tagline": "Miami's finest are now its most wanted.",
+    "vote_average": 7.143,
+    "type": "movie",
+    "vote_count": 368,
+    "title": "Bad Boys: Ride or Die",
+    "directors": ["Bilall Fallah", "Adil El Arbi"],
+    "video": "https://youtu.be/uWLNl_KQCAU"
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/fY3lD0jM5AoHJMunjGWqJ0hRteI.jpg",
+    "belongs_to_collection": null,
+    "budget": 15000000,
+    "genres": [
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      },
+      {
+        "id": 27,
+        "name": "Horror"
+      },
+      {
+        "id": 28,
+        "name": "Action"
+      }
+    ],
+    "homepage": "https://godzillafilm.co.uk",
+    "id": 940721,
+    "imdb_id": "tt23289160",
+    "origin_country": ["JP"],
+    "original_language": "ja",
+    "original_title": "ゴジラ-1.0",
+    "description": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
+    "popularity": 464.254,
+    "coverImage": "/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
+    "production_companies": [
+      {
+        "id": 882,
+        "logo_path": "/iDw9Xxok1d9WAM2zFicI8p3khTH.png",
+        "name": "TOHO",
+        "origin_country": "JP"
+      },
+      {
+        "id": 182161,
+        "logo_path": "/wvG4lK0m76M6jK8WbWkXNecA7SP.png",
+        "name": "TOHO Studios",
+        "origin_country": "JP"
+      },
+      {
+        "id": 12386,
+        "logo_path": "/oxvw2Mrq3GcTxFc2mlT7E5tpek7.png",
+        "name": "Robot Communications",
+        "origin_country": "JP"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "JP",
+        "name": "Japan"
+      }
+    ],
+    "releaseDate": "2023-11-03",
+    "releaseYear": 2023,
+    "revenue": 115857413,
+    "duration": 125,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      },
+      {
+        "english_name": "Japanese",
+        "iso_639_1": "ja",
+        "name": "日本語"
+      }
+    ],
+    "status": "Released",
+    "tagline": "Postwar Japan. From zero to minus.",
+    "title": "Godzilla Minus One",
+    "video": "https://youtu.be/nAYKaslCXPc",
+    "cast": [
+      "Ryunosuke Kamiki",
+      "Minami Hamabe",
+      "Yuki Yamada",
+      "Munetaka Aoki",
+      "Sakura Ando"
+    ],
+    "directors": "Takashi Yamazaki",
+    "vote_average": 7.619,
+    "vote_count": 1721,
+    "type": "movie"
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/xtAQ7j9Yd0j4Rjbvx1hW0ENpXjf.jpg",
+    "created_by": [
+      {
+        "id": 237053,
+        "credit_id": "5db8d867a1d3320011e7ddf1",
+        "name": "George R. R. Martin",
+        "original_name": "George R. R. Martin",
+        "gender": 2,
+        "profile_path": "/1A7W0L9dZz0rCN1oj6h8YUvusdN.jpg"
+      },
+      {
+        "id": 1167458,
+        "credit_id": "5db8d8fe3faba000163a83cb",
+        "name": "Ryan Condal",
+        "original_name": "Ryan Condal",
+        "gender": 2,
+        "profile_path": null
+      }
+    ],
+    "episode_run_time": [],
+    "releaseDate": "2022-08-21",
+    "genres": [
+      {
+        "id": 10765,
+        "name": "Sci-Fi & Fantasy"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10759,
+        "name": "Action & Adventure"
+      }
+    ],
+    "homepage": "https://www.hbo.com/house-of-the-dragon",
+    "id": 94997,
+
+    "in_production": true,
+    "languages": ["en"],
+    "title": "House Of Dragon",
+    "last_air_date": "2024-06-16",
+    "last_episode_to_air": {
+      "id": 5044090,
+      "description": "While Rhaenyra struggles to come to terms with her son's murder, in King's Landing, Alicent grows concerned that Aegon's Small Council may lead them to an all-out war. Larys suggests Aegon needs a new Hand, and Rhaenyra arrives at a fateful decision.",
+      "name": "A Son for a Son",
+      "vote_average": 8.1,
+      "vote_count": 18,
+      "air_date": "2024-06-16",
+      "episode_number": 1,
+      "episode_type": "standard",
+      "production_code": "",
+      "duration": 59,
+      "season_number": 2,
+      "show_id": 94997,
+      "still_path": "/sFplF5Ya6irRVvMUInjE57fjO8Z.jpg"
+    },
+    "name": "House of the Dragon",
+    "next_episode_to_air": {
+      "id": 5234722,
+      "description": "",
+      "name": "Episode 2",
+      "vote_average": 0.0,
+      "vote_count": 0,
+      "air_date": "2024-06-23",
+      "episode_number": 2,
+      "episode_type": "standard",
+      "production_code": "",
+      "duration": null,
+      "season_number": 2,
+      "show_id": 94997,
+      "still_path": "/plVChbDtiWCZowdqiKThSXZaWYa.jpg"
+    },
+    "networks": [
+      {
+        "id": 49,
+        "logo_path": "/tuomPhY2UtuPTqqFnKMVHvSb724.png",
+        "name": "HBO",
+        "origin_country": "US"
+      }
+    ],
+    "number_of_episodes": 18,
+    "number_of_seasons": 2,
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_name": "House of the Dragon",
+    "duration": "50",
+    "description": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
+    "popularity": 3474.684,
+    "coverImage": "/t9XkeE7HzOsdQcDDDapDYh8Rrmt.jpg",
+    "production_companies": [
+      {
+        "id": 3268,
+        "logo_path": "/tuomPhY2UtuPTqqFnKMVHvSb724.png",
+        "name": "HBO",
+        "origin_country": "US"
+      },
+      {
+        "id": 180956,
+        "logo_path": null,
+        "name": "Bastard Sword",
+        "origin_country": "US"
+      },
+      {
+        "id": 180957,
+        "logo_path": null,
+        "name": "1:26 Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 180958,
+        "logo_path": null,
+        "name": "GRRM",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "seasons": [
+      {
+        "air_date": "2022-08-21",
+        "episode_count": 53,
+        "id": 309556,
+        "name": "Specials",
+        "description": "",
+        "coverImage": "/qVU4112Ob2ikHBu4VRC50MdWZcM.jpg",
+        "season_number": 0,
+        "vote_average": 0.0
+      },
+      {
+        "air_date": "2022-08-21",
+        "episode_count": 10,
+        "id": 134965,
+        "name": "Season 1",
+        "description": "",
+        "coverImage": "/m7ta0kNg2ONvnBFF76miVvbWK1V.jpg",
+        "season_number": 1,
+        "vote_average": 7.9
+      },
+      {
+        "air_date": "2024-06-16",
+        "episode_count": 8,
+        "id": 368014,
+        "name": "Season 2",
+        "description": "",
+        "coverImage": "/xhjADf5sslq7lbRjc50FgvIYIkT.jpg",
+        "season_number": 2,
+        "vote_average": 8.1
+      }
+    ],
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "status": "Returning Series",
+    "tagline": "All must choose.",
+    "releaseYear": 2022,
+    "type": "movie",
+    "seasonsNumber": "2",
+    "directors": ["George R. R. Martin", "Ryan Condal"],
+    "cast": [
+      "Matt Smith",
+      "Rhys Ifans",
+      "Emma D'Arcy",
+      "Olivia Cooke",
+      "Paddy Considine",
+      "Jefferson Hall"
+    ],
+    "video": "https://youtu.be/YN2H_sKcmGw",
+    "vote_average": 8.426,
+    "vote_count": 4086
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nxxCPRGTzxUH8SFMrIsvMmdxHti.jpg",
+    "belongs_to_collection": null,
+    "budget": 110000000,
+    "genres": [
+      {
+        "id": 35,
+        "name": "Comedy"
+      },
+      {
+        "id": 14,
+        "name": "Fantasy"
+      },
+      {
+        "id": 10751,
+        "name": "Family"
+      }
+    ],
+    "homepage": "https://www.if.movie",
+    "id": 639720,
+    "imdb_id": "tt11152168",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "IF",
+    "description": "A young girl who goes through a difficult experience begins to see everyone's imaginary friends who have been left behind as their real-life friends have grown up.",
+    "popularity": 937.037,
+    "coverImage": "/xbKFv4KF3sVYuWKllLlwWDmuZP7.jpg",
+    "production_companies": [
+      {
+        "id": 4,
+        "logo_path": "/gz66EfNoYPqHTYI4q9UEN4CbHRc.png",
+        "name": "Paramount Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 29312,
+        "logo_path": "/v6aLhoAviWYkfOksBJTd9XbO0YH.png",
+        "name": "Sunday Night",
+        "origin_country": "US"
+      },
+      {
+        "id": 104228,
+        "logo_path": "/hx0C1XcSxGgat8N62GpxoJGTkCk.png",
+        "name": "Maximum Effort",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "releaseDate": "2024-05-08",
+    "releaseYear": 2024,
+    "revenue": 174159175,
+    "duration": 104,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "status": "Released",
+    "tagline": "A story you have to believe to see.",
+    "title": "IF",
+    "video": "https://youtu.be/TP47e3-nmw8",
+    "cast": [
+      "Cailey Fleming",
+      "Ryan Reynolds",
+      "John Krasinski",
+      "Fiona Shaw",
+      "Steve Carell",
+      "Phoebe Waller-Bridge"
+    ],
+    "type": "movie",
+    "vote_average": 7.476,
+    "directors": ["John Krasinski"],
+    "vote_count": 245
+  },
+
+  {
+    "adult": false,
+    "backdrop_path": "/raph7qjAGTMXaIjVxt6ZDSXRzUr.jpg",
+    "belongs_to_collection": {
+      "id": 8945,
+      "name": "Mad Max Collection",
+      "coverImage": "/9U9QmbCDIBhqDShuIxOiS9gjKYz.jpg",
+      "backdrop_path": "/7ECkRbU1OvDCDLxUv5YBBDxfGF3.jpg"
+    },
+    "budget": 168000000,
+    "genres": [
+      {
+        "id": 28,
+        "name": "Action"
+      },
+      {
+        "id": 12,
+        "name": "Adventure"
+      },
+      {
+        "id": 878,
+        "name": "Science Fiction"
+      }
+    ],
+    "homepage": "https://www.furiosaamadmaxsaga.com",
+    "id": 786892,
+    "imdb_id": "tt12037194",
+    "origin_country": ["AU", "US"],
+    "original_language": "en",
+    "original_title": "Furiosa: A Mad Max Saga",
+    "description": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home.",
+    "popularity": 659.548,
+    "coverImage": "/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+    "production_companies": [
+      {
+        "id": 174,
+        "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+        "name": "Warner Bros. Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 28382,
+        "logo_path": "/xqE1fjLynj3RaZca9chctZQyfzZ.png",
+        "name": "Kennedy Miller Mitchell",
+        "origin_country": "AU"
+      },
+      {
+        "id": 216687,
+        "logo_path": null,
+        "name": "Domain Entertainment",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      },
+      {
+        "iso_3166_1": "AU",
+        "name": "Australia"
+      }
+    ],
+    "releaseDate": "2024-05-22",
+    "releaseYear": 2024,
+    "revenue": 160620267,
+    "duration": 149,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "status": "Released",
+    "tagline": "Fury is born.",
+    "title": "Furiosa: A Mad Max Saga",
+    "video": "https://youtu.be/LYV3001u574",
+    "directors": ["George Miller"],
+    "cast": [
+      "Anya Taylor-Joy",
+      "Chris Hemsworth",
+      "Tom Burke",
+      "Alyla Browne",
+      "George Shevtsov",
+      "Lachy Hulme"
+    ],
+    "type": "movie",
+    "vote_average": 7.631,
+    "vote_count": 969
+  }
+]

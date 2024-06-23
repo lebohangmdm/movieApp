@@ -7,6 +7,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const globalErrorHandler = require("./middleware/errorHandlerMiddleware");
 const hpp = require("hpp");
 require("express-async-errors");
+const cors = require("cors");
 const authRouter = require("./routes/authRoute");
 const userRouter = require("./routes/userRoute");
 const contentRouter = require("./routes/contentRoute");
@@ -29,6 +30,13 @@ const limiter = rateLimit({
 });
 
 app.use("/api", limiter);
+
+const corsOptions = {
+  origin: "http://localhost:5173",
+  // other options
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json({ limit: "10kb" }));
 

@@ -4,6 +4,8 @@ const reviewRouter = require("./reviewRoute");
 
 router.use("/:contentId/reviews", reviewRouter);
 
+router.get("/random", contentController.getRandomContents);
+
 router
   .route("/")
   .get(contentController.getAllContents)

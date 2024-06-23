@@ -4,7 +4,7 @@ const handleDuplicateKeyError = (err, res) => {
   const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
 
   if (err.keyValue.email.includes("@" && ".com")) {
-    message = `The user with this email (${err.keyValue.email}) already exist`;
+    message = `The user with this email already exist`;
     return new AppError(message, 400);
   } else {
     message = `Duplicate field value: ${value}. Please use another value!`;

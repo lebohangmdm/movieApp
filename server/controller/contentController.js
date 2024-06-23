@@ -82,3 +82,15 @@ exports.deleteContent = async (req, res, next) => {
     data: null,
   });
 };
+
+exports.getRandomContents = async (req, res) => {
+  const contents = await Content.aggregate([{ $sample: { size: 10 } }]);
+
+  res.status(200).json({
+    status: "success",
+    count: contents.length,
+    data: {
+      contents,
+    },
+  });
+};
