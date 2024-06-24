@@ -3,11 +3,42 @@
 @tailwind utilities;
 
 body {
-  background-color: #1a1a1a;
+  background-color: #0f0019;
 }
+
+.no-amazon-scrollbar::-webkit-scrollbar {
+  display: "none";
+}
+
+/* @layer base {
+  body {
+    @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-500;
+  }
+} */
 
 @layer utilities {
   .nav-link {
-    @apply capitalize text-lg text-light-2 hover:text-light-1 active:text-light-1  transition-all duration-200;
+    @apply capitalize text-lg text-light-2 hover:text-purple-2 active:text-purple-2  transition-all duration-200;
   }
+}
+
+.bg-banner {
+  background-image: url("assets/banner.jpg");
+  height: 100dvh;
+  width: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .swiper-button-prev,
+.swiper-button-next {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
 }

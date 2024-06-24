@@ -1,4 +1,5 @@
 const Review = require("../models/reviewModel");
+const { getOne, deleteOne } = require("./handlerFactory");
 
 exports.createReview = async (req, res) => {
   if (!req.body.user) req.body.user = req.user.id;
@@ -26,3 +27,6 @@ exports.getAllReviews = async (req, res) => {
     },
   });
 };
+
+exports.getReview = getOne(Review);
+exports.deleteReview = deleteOne(Review);

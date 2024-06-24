@@ -5,6 +5,7 @@ const multer = require("multer");
 const sharp = require("sharp");
 const path = require("path");
 const storage = require("../config/firebaseStorage");
+const { getAll, getOne, deleteOne, updateOne } = require("./handlerFactory");
 require("express-async-errors");
 
 const filterObj = (obj, ...allowedFields) => {
@@ -69,7 +70,10 @@ exports.resizeUserPhoto = async (req, res, next) => {
   // blobStream.end(file.buffer);
 };
 
-exports.getAllUsers = async (req, res, next) => {};
+exports.getAllUsers = getAll(User);
+exports.getUser = getOne(User);
+exports.updat = updateOne(User);
+exports.deleteUser = deleteOne(User);
 
 exports.getMyProfile = (req, res, next) => {
   req.params.id = req.user.id;

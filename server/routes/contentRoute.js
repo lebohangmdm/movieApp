@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const contentController = require("../controller/contentController");
+const { restrictTo, protect } = require("../middleware/authMiddleware");
 const reviewRouter = require("./reviewRoute");
 
 router.use("/:contentId/reviews", reviewRouter);
@@ -14,7 +15,7 @@ router
 router
   .route("/:id")
   .get(contentController.getContent)
-  .patch(contentController.updateContent)
-  .delete(contentController.deleteContent);
+  .patch(protect, restrictTo("admin"), contentController.updateContent)
+  .delete(protect, restrictTo("admin"), contentController.deleteContent);
 
 module.exports = router;

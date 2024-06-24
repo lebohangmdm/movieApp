@@ -2,7 +2,6 @@ const router = require("express").Router();
 const userController = require("../controller/userController");
 const { protect, restrictTo } = require("../middleware/authMiddleware");
 
-router.route("/:id").get(protect, userController.getUserById);
 router.use(protect);
 
 router.get(
@@ -20,14 +19,21 @@ router.delete("/profile/delete", userController.deleteMyProfile);
 
 router
   .route("/favorites")
-  .post(protect, restrictTo("user"), userController.addLikedContent)
-  .delete(protect, restrictTo("user"), userController.deleteLikedContent);
+  .post(restrictTo("user"), userController.addLikedContent)
+  .delete(restrictTo("user"), userController.deleteLikedContent);
 
 router.delete(
   "/favorites/clear",
-  protect,
   restrictTo("user"),
   userController.clearLikedContents
 );
+
+router.use(restrictTo("admin"));
+
+router.get("/", userController.getAllUsers);
+router
+  .route("/:id")
+  .get(userController.getUser)
+  .delete(userController.deleteUser);
 
 module.exports = router;
