@@ -1,11 +1,11 @@
-// import { Hero } from "../components";
+import { Hero } from "../components";
 
 import Rows from "../components/Rows";
 
 const Home = () => {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <Rows />
     </>
   );

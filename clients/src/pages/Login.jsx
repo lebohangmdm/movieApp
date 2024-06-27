@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { LoginValidation } from "../utils/validation";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -7,8 +7,13 @@ import { useLoginMutation } from "../services/authService";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { handleFirstWord } from "../utils/helpers";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/features/auth/auth";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [loginUser, { isLoading, isError, error }] = useLoginMutation();
   const {
     register,
@@ -20,9 +25,11 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     const { data: dataInfo } = await loginUser(data);
+    dispatch(login(dataInfo));
     if (dataInfo?.success) {
       const firstName = handleFirstWord(dataInfo?.data.user.fullName);
       toast.success(`Welcome back, ${firstName}`);
+      navigate("/");
     }
   };
 

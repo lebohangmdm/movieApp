@@ -1,15 +1,10 @@
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useState } from "react";
 import { categories } from "../constants/NavLinks";
 import { Link } from "react-router-dom";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 
 const MenuCategory = () => {
   const [showMenu, setShowMenu] = useState(false);
-
-  //   const handleMenu = () => {
-  //     setShowMenu((show) => !show);
-  //   };
 
   const handleMouseEnter = () => {
     setShowMenu(true);
@@ -25,14 +20,18 @@ const MenuCategory = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button className="nav-link font-semibold">
+      <button className="nav-link font-semibold flex items-end ">
         <span>Genres</span>
         <span>
-          {showMenu ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
+          {showMenu ? (
+            <ChevronDownIcon className="h-6 w-6" />
+          ) : (
+            <ChevronUpIcon className="h-6 w-6" />
+          )}
         </span>
       </button>
       {showMenu && (
-        <ul className="absolute  grid grid-cols-3 gap-x-6 gap-y-2 w-[400px] bg-light-3 py-4 px-6">
+        <ul className="absolute  grid grid-cols-3 gap-x-6 gap-y-2 w-[400px] bg-[#2c2e4c] py-4 px-6">
           {categories.map((link) => {
             return (
               <li key={link.key}>

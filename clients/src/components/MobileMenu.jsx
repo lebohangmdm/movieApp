@@ -17,7 +17,10 @@ const MobileMenu = () => {
 
   return (
     <div className="block lg:hidden">
-      <button className="text-lg text-light-2 z-50" onClick={handleShowMenu}>
+      <button
+        className="text-lg text-light-2 hover:text-light-1 transition-all duration-200 z-50"
+        onClick={handleShowMenu}
+      >
         <span>menu</span>
         <span>
           {showMenu ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}

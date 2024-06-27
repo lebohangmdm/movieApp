@@ -1,10 +1,11 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useCallback, useEffect, useState } from "react";
+import { useGetRandomMoviesQuery } from "../services/contentsService";
 
 const Hero = () => {
   const slides = [
     {
-      url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80",
+      url: "https://m.media-amazon.com/images/M/MV5BY2U5YmQ3YjgtM2I2OC00YmM5LTkyM2MtN2I5Zjg2MDE0ODkwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
     },
     {
       url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
@@ -20,6 +21,10 @@ const Hero = () => {
       url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
     },
   ];
+
+  const { data, error, isLoading } = useGetRandomMoviesQuery();
+  const contents = data?.data.contents;
+  // console.log(contents);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -50,7 +55,9 @@ const Hero = () => {
   return (
     <section className=" relative group w-full h-height-dvh">
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+        style={{
+          backgroundImage: `url(https://images.savoysystems.co.uk/MPE/17357552.jpg)`,
+        }}
         className="w-full h-full bg-center bg-cover duration-500"
       ></div>
       {/* Left Arrow */}

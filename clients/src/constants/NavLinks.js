@@ -1,6 +1,6 @@
 export const Nav_Links = [
   { href: "/movies", key: "movies", label: "movies" },
-  { href: "/series", key: "series", label: "series" },
+  { href: "/series", key: "series", label: "TV Shows" },
 ];
 
 export const categories = [
