@@ -31,7 +31,7 @@ const MenuCategory = () => {
         </span>
       </button>
       {showMenu && (
-        <ul className="absolute  grid grid-cols-3 gap-x-6 gap-y-2 w-[400px] bg-[#2c2e4c] py-4 px-6">
+        <ul className="z-30 absolute  grid grid-cols-3 gap-x-6 gap-y-2 w-[400px] bg-[#2c2e4c] py-4 px-6">
           {categories.map((link) => {
             return (
               <li key={link.key}>

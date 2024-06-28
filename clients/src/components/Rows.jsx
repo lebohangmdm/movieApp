@@ -2,12 +2,24 @@ import { useTopContent } from "../services/contentHooks";
 import Row from "./Row";
 
 const Rows = () => {
-  const { contents: series, isLoading, error } = useTopContent("series");
-  console.log(isLoading, error);
+  const {
+    contents: series,
+    isLoading: loadingTopSeries,
+    error: errorTopSeries,
+  } = useTopContent("series");
+  const {
+    contents: movies,
+    isLoading: loadingTopMovies,
+    error: errorTopMovies,
+  } = useTopContent("movie");
+  // console.log(isLoading, error);
+  // console.log(series);
   return (
     <section className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-12 lg:py-16">
-      <div className="h-40 space-y-0.5 md:space-y-2">
-        <Row title={"Top Series"} series={series} />
+      <div className="h-40 space-y-0.5 md:space-y-8 ">
+        <Row title={"Top Movie"} data={movies} />
+        <Row title={"Top Series"} data={series} />
+        <Row title={"Top Series"} data={series} />
       </div>
     </section>
   );

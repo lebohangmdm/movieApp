@@ -25,9 +25,15 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
       }),
     }),
     getTopContent: builder.query({
-      query: ({ type, createdAt }) => ({
+      query: ({ type, createdAt, limit }) => ({
         url: "/contents",
-        params: { type, createdAt },
+        params: { type, createdAt, limit },
+      }),
+    }),
+    getFeaturedContent: builder.query({
+      query: ({ featured, createdAt, limit }) => ({
+        url: "/contents",
+        params: { featured, createdAt, limit },
       }),
     }),
     updateContent: builder.mutation({
@@ -51,6 +57,7 @@ export const {
   useGetRandomMoviesQuery,
   useCreateContentMutation,
   useGetContentQuery,
+  useGetFeaturedContentQuery,
   useUpdateContentMutation,
   useDeleteContentMutation,
   useGetContentBasedOnGenreQuery,

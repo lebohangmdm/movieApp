@@ -2,7 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useRef, useState } from "react";
 import RowContent from "./RowContent";
 
-const Row = ({ title, series }) => {
+const Row = ({ title, data }) => {
   const rowRef = useRef(null);
   const [isMoved, setIsMoved] = useState(false);
 
@@ -38,7 +38,7 @@ const Row = ({ title, series }) => {
           ref={rowRef}
           className="flex items-center space-x-1 overflow-x-scroll scrollbar-hide md:gap-x-8"
         >
-          {series?.map((show) => {
+          {data?.map((show) => {
             return <RowContent key={show.id} show={show} />;
           })}
         </div>

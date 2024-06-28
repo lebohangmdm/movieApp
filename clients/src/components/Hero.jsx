@@ -1,8 +1,12 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useCallback, useEffect, useState } from "react";
 import { useGetRandomMoviesQuery } from "../services/contentsService";
+import { useFeaturedContent } from "../services/contentHooks";
 
 const Hero = () => {
+  const { contents: movies, isLoading, error } = useFeaturedContent();
+  console.log(movies);
+
   const slides = [
     {
       url: "https://m.media-amazon.com/images/M/MV5BY2U5YmQ3YjgtM2I2OC00YmM5LTkyM2MtN2I5Zjg2MDE0ODkwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
@@ -22,10 +26,6 @@ const Hero = () => {
     },
   ];
 
-  const { data, error, isLoading } = useGetRandomMoviesQuery();
-  const contents = data?.data.contents;
-  // console.log(contents);
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = useCallback(() => {
@@ -44,19 +44,19 @@ const Hero = () => {
   };
 
   // Auto-rotate slides every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
+  // useEffect(() => {
+  //   // const interval = setInterval(() => {
+  //   //   nextSlide();
+  //   // }, 5000);
 
-    return () => clearInterval(interval);
-  }, [nextSlide]);
+  //   return () => clearInterval(interval);
+  // }, [nextSlide]);
 
   return (
-    <section className=" relative group w-full h-height-dvh">
+    <section className="z-0 relative group w-full h-height-dvh">
       <div
         style={{
-          backgroundImage: `url(https://images.savoysystems.co.uk/MPE/17357552.jpg)`,
+          backgroundImage: `url(${movies?.[currentIndex]?.coverImage})`,
         }}
         className="w-full h-full bg-center bg-cover duration-500"
       ></div>
@@ -73,7 +73,7 @@ const Hero = () => {
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`text-xl text-white cursor-default ${slideIndex === currentIndex ? "text-white" : "text-gray-700"}`}
+            className={`text-xl cursor-default ${slideIndex === currentIndex ? "text-purple-2" : "text-white"}`}
           >
             &#9679;
           </div>
