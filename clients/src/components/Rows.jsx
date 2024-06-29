@@ -1,4 +1,4 @@
-import { useTopContent } from "../services/contentHooks";
+import { useFetchBasedOnSortQuery } from "../services/hooks/contentHooks";
 import Row from "./Row";
 
 const Rows = () => {
@@ -6,12 +6,13 @@ const Rows = () => {
     contents: series,
     isLoading: loadingTopSeries,
     error: errorTopSeries,
-  } = useTopContent("series");
+  } = useFetchBasedOnSortQuery({ type: "series", sort: "-rating" });
   const {
     contents: movies,
     isLoading: loadingTopMovies,
     error: errorTopMovies,
-  } = useTopContent("movie");
+  } = useFetchBasedOnSortQuery({ type: "movie", sort: "-rating" });
+
   // console.log(isLoading, error);
   // console.log(series);
   return (

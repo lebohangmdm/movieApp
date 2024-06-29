@@ -18,16 +18,16 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
     getContent: builder.query({
       query: (id) => `contents/${id}`,
     }),
-    getContentBasedOnGenre: builder.query({
-      query: ({ type, sort }) => ({
+    getContentBasedOnSort: builder.query({
+      query: ({ type, sort, limit }) => ({
         url: "/contents",
-        params: { type, sort },
+        params: { type, sort, limit },
       }),
     }),
-    getTopContent: builder.query({
-      query: ({ type, createdAt, limit }) => ({
+    getContentBasedOnGenres: builder.query({
+      query: ({ type, genres, limit, sort }) => ({
         url: "/contents",
-        params: { type, createdAt, limit },
+        params: { type, genres, limit, sort },
       }),
     }),
     getFeaturedContent: builder.query({
@@ -60,6 +60,7 @@ export const {
   useGetFeaturedContentQuery,
   useUpdateContentMutation,
   useDeleteContentMutation,
-  useGetContentBasedOnGenreQuery,
+  useGetContentBasedOnSortQuery,
   useGetTopContentQuery,
+  useGetContentBasedOnGenresQuery,
 } = contentsApiSlice;

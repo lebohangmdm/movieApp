@@ -5,7 +5,7 @@ const RowContent = ({ show }) => {
   // const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="h-32  min-w-[180px] cursor-pointer transition duration-200 ease-out md:h-52 md:min-w-[260px]">
+    <div className="h-28  min-w-[180px] cursor-pointer transition duration-200 ease-out md:h-52 md:min-w-[260px]">
       <img
         src={show.coverImage}
         alt={show.title}

@@ -1,7 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useCallback, useEffect, useState } from "react";
 import { useGetRandomMoviesQuery } from "../services/contentsService";
-import { useFeaturedContent } from "../services/contentHooks";
+import { useFeaturedContent } from "../services/hooks/contentHooks";
 
 const Hero = () => {
   const { contents: movies, isLoading, error } = useFeaturedContent();
