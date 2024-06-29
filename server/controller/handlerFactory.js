@@ -7,6 +7,8 @@ exports.createOne = (Model) => async (req, res, next) => {
 
   const doc = await Model.create(req.body);
 
+  console.log(req.body.user);
+
   res.status(201).json({
     status: "success",
     data: {
@@ -38,8 +40,14 @@ exports.getAll = (Model) => async (req, res, next) => {
 
 exports.getOne = (Model, populateOpts) => async (req, res, next) => {
   const { id } = req.params;
+  console.log(req.params.slug);
+  console.log(id);
 
-  let query = Model.findById(id);
+  let queryObj = {};
+  queryObj = id ? { _id: id } : { slug: req.params.slug };
+  console.log(queryObj);
+
+  let query = Model.findOne(queryObj);
   if (populateOpts) query = Model.findById(id).populate(populateOpts);
 
   const doc = await query;

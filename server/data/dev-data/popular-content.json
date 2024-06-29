@@ -39,7 +39,8 @@
     "original_title": "Inside Out 2",
     "description": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
     "popularity": 8313.022,
-    "coverImage": "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+    "coverImage": "https://images.savoysystems.co.uk/MPE/17357552.jpg",
+    "featured": true,
     "production_companies": [
       {
         "id": 3,
@@ -60,10 +61,10 @@
         "name": "United States of America"
       }
     ],
-    "releaseDate": "2024-06-11",
-    "releaseYear": 2024,
+    "releaseDate": "11 Jun 2024  ",
+    "releaseYear": "2024",
     "revenue": 379748790,
-    "duration": 97,
+    "duration": "97 min",
     "spoken_languages": [
       {
         "english_name": "English",
@@ -71,20 +72,13 @@
         "name": "English"
       }
     ],
-    "type": "tv",
-    "status": "Released",
+    "type": "movie",
+    "status": "releaseDate",
     "tagline": "Make room for new emotions.",
     "title": "Inside Out 2",
 
-    "directors": ["Kelsey Mann"],
-    "cast": [
-      "Amy Poehler",
-      "Maya Hawke",
-      "Kensington Tallman",
-      "Liza Lapira",
-      "Phyllis Smith",
-      "Lewis Black"
-    ],
+    "directors": "Kelsey Mann",
+    "cast": "Amy Poehler,Maya Hawke,Kensington Tallman,Liza Lapira,Phyllis Smith,Lewis Black",
     "video": "https://www.youtube.com/watch?v=L4DrolmDxmw",
     "vote_average": 7.877,
     "vote_count": 464
@@ -95,12 +89,12 @@
     "belongs_to_collection": {
       "id": 173710,
       "name": "Planet of the Apes (Reboot) Collection",
-      "coverImage": "/afGkMC4HF0YtXYNkyfCgTDLFe6m.jpg",
+      "coverImage": "https://ntvb.tmsimg.com/assets/p24739866_v_h10_ad.jpg?w=1280&h=720",
       "backdrop_path": "/2ZkvqfOJUCINozB00wmYuGJQW81.jpg"
     },
     "budget": 160000000,
 
-    "directors": ["Wes Ball"],
+    "directors": "Wes Ball",
     "genres": [
       {
         "id": 878,
@@ -123,7 +117,7 @@
     "original_title": "Kingdom of the Planet of the Apes",
     "description": "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
     "popularity": 3212.069,
-    "coverImage": "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
+    "coverImage": "https://ntvb.tmsimg.com/assets/p24739866_v_h10_ad.jpg?w=1280&h=720",
     "production_companies": [
       {
         "id": 127928,
@@ -150,10 +144,10 @@
         "name": "United States of America"
       }
     ],
-    "releaseDate": "2024-05-08",
-    "releaseYear": 2024,
+    "releaseDate": "8 May 2024",
+    "releaseYear": "2024",
     "revenue": 375795892,
-    "duration": 145,
+    "duration": "145 min",
     "spoken_languages": [
       {
         "english_name": "English",
@@ -161,29 +155,23 @@
         "name": "English"
       }
     ],
-    "status": "Released",
+    "status": "releaseDate",
     "tagline": "No one can stop the reign.",
     "title": "Kingdom of the Planet of the Apes",
     "video": "https://youtu.be/Kdr5oedn7q8",
-    "cast": [
-      "Owen Teague",
-      "Freya Allan",
-      "Kevin Durand",
-      "Peter Macon",
-      "William H. Macy",
-      "Eka Darville"
-    ],
+    "cast": "Owen Teague, Freya Allan, Kevin Durand, Peter Macon, William H. Macy, Eka Darville",
     "type": "movie",
+    "featured": true,
     "vote_average": 6.87,
     "vote_count": 1161
   },
   {
     "adult": false,
     "backdrop_path": "/9faGSFi5jam6pDWGNd0p8JcJgXQ.jpg",
-    "directors": ["Vince Gilligan"],
-    "duration": "42",
+    "directors": "Vince Gilligan",
+    "duration": "42 min",
     "episode_run_time": [],
-    "releaseDate": "2008-01-20",
+    "releaseDate": "20 Jan 2008",
     "genres": [
       {
         "id": 18,
@@ -209,7 +197,7 @@
       "episode_number": 16,
       "episode_type": "finale",
       "production_code": "",
-      "duration": 56,
+      "duration": "56 min",
       "season_number": 5,
       "show_id": 1396,
       "still_path": "/pA0YwyhvdDXP3BEGL2grrIhq8aM.jpg"
@@ -226,15 +214,15 @@
       }
     ],
     "number_of_episodes": 62,
-    "seasonsNumber": "5",
-    "releaseYear": 2008,
-    "type": "tv",
+    "totalSeasons": "5",
+    "releaseYear": "2008",
+    "type": "series",
     "origin_country": ["US"],
     "original_language": "en",
     "title": "Breaking Bad",
     "description": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
     "popularity": 471.37,
-    "coverImage": "/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
     "production_companies": [
       {
         "id": 11073,
@@ -341,14 +329,7 @@
         "name": "Español"
       }
     ],
-    "cast": [
-      "Bryan Cranston",
-      "Aaron Paul",
-      "Dean Norris",
-      "Betsy Brandt",
-      "Anna Gunn",
-      "RJ Mitte"
-    ],
+    "cast": "Bryan Cranston, Aaron Paul, Dean Norris, Betsy Brandt, Anna Gunn, RJ Mitte",
     "status": "Ended",
 
     "tagline": "Change the equation.",
@@ -358,7 +339,7 @@
 
   {
     "id": 573435,
-    "coverImage": "/nP6RliHjxsz4irTKsxe8FRhKZYl.jpg",
+    "coverImage": "https://thecosmiccircus.com/wp-content/uploads/2024/06/u6nzsgL8kHFO89CUydIW52UY0Og-1200x600.webp",
     "adult": false,
     "backdrop_path": "/gRApXuxWmO2forYTuTmcz5RaNUV.jpg",
     "belongs_to_collection": {
@@ -419,10 +400,11 @@
         "name": "United States of America"
       }
     ],
-    "releaseDate": "2024-06-05",
-    "releaseYear": 2024,
+    "releaseDate": "5 June 2005",
+    "releaseYear": "2005–2013",
     "revenue": 218758327,
-    "duration": 115,
+    "duration": "115 min",
+    "featured": true,
     "spoken_languages": [
       {
         "english_name": "English",
@@ -430,13 +412,14 @@
         "name": "English"
       }
     ],
-    "status": "Released",
+    "status": "releaseDate",
     "tagline": "Miami's finest are now its most wanted.",
     "vote_average": 7.143,
     "type": "movie",
     "vote_count": 368,
     "title": "Bad Boys: Ride or Die",
-    "directors": ["Bilall Fallah", "Adil El Arbi"],
+    "cast": "Will Smith, Martin Lawrence",
+    "directors": "Bilall Fallah,Adil El Arbi",
     "video": "https://youtu.be/uWLNl_KQCAU"
   },
   {
@@ -466,7 +449,7 @@
     "original_title": "ゴジラ-1.0",
     "description": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
     "popularity": 464.254,
-    "coverImage": "/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
+    "coverImage": "https://cosmicbook.news/media/2023/07/godzilla-minus-one-official-teas-1.jpg",
     "production_companies": [
       {
         "id": 882,
@@ -493,10 +476,10 @@
         "name": "Japan"
       }
     ],
-    "releaseDate": "2023-11-03",
-    "releaseYear": 2023,
+    "releaseDate": "3 Nov 2023",
+    "releaseYear": "2023",
     "revenue": 115857413,
-    "duration": 125,
+    "duration": "125 min",
     "spoken_languages": [
       {
         "english_name": "English",
@@ -509,21 +492,16 @@
         "name": "日本語"
       }
     ],
-    "status": "Released",
+    "status": "releaseDate",
     "tagline": "Postwar Japan. From zero to minus.",
     "title": "Godzilla Minus One",
     "video": "https://youtu.be/nAYKaslCXPc",
-    "cast": [
-      "Ryunosuke Kamiki",
-      "Minami Hamabe",
-      "Yuki Yamada",
-      "Munetaka Aoki",
-      "Sakura Ando"
-    ],
+    "cast": "Ryunosuke Kamiki, Minami Hamabe, Yuki Yamada, Munetaka Aoki, Sakura Ando",
     "directors": "Takashi Yamazaki",
     "vote_average": 7.619,
     "vote_count": 1721,
-    "type": "movie"
+    "type": "movie",
+    "featured": true
   },
   {
     "adult": false,
@@ -547,7 +525,7 @@
       }
     ],
     "episode_run_time": [],
-    "releaseDate": "2022-08-21",
+    "releaseDate": "21 Aug 2022",
     "genres": [
       {
         "id": 10765,
@@ -579,7 +557,7 @@
       "episode_number": 1,
       "episode_type": "standard",
       "production_code": "",
-      "duration": 59,
+      "duration": "59 min",
       "season_number": 2,
       "show_id": 94997,
       "still_path": "/sFplF5Ya6irRVvMUInjE57fjO8Z.jpg"
@@ -613,10 +591,11 @@
     "origin_country": ["US"],
     "original_language": "en",
     "original_name": "House of the Dragon",
-    "duration": "50",
+    "duration": "50 min",
     "description": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
     "popularity": 3474.684,
-    "coverImage": "/t9XkeE7HzOsdQcDDDapDYh8Rrmt.jpg",
+    "coverImage": "https://static.dw.com/image/62850747_1004.webp",
+    "featured": true,
     "production_companies": [
       {
         "id": 3268,
@@ -692,16 +671,9 @@
     "tagline": "All must choose.",
     "releaseYear": 2022,
     "type": "movie",
-    "seasonsNumber": "2",
-    "directors": ["George R. R. Martin", "Ryan Condal"],
-    "cast": [
-      "Matt Smith",
-      "Rhys Ifans",
-      "Emma D'Arcy",
-      "Olivia Cooke",
-      "Paddy Considine",
-      "Jefferson Hall"
-    ],
+    "totalSeasons": "2",
+    "directors": "George R. R. Martin, Ryan Condal",
+    "cast": "Matt Smith, Rhys Ifans,Emma D'Arcy, Olivia Cooke,Paddy Considine,Jefferson Hall",
     "video": "https://youtu.be/YN2H_sKcmGw",
     "vote_average": 8.426,
     "vote_count": 4086
@@ -733,7 +705,7 @@
     "original_title": "IF",
     "description": "A young girl who goes through a difficult experience begins to see everyone's imaginary friends who have been left behind as their real-life friends have grown up.",
     "popularity": 937.037,
-    "coverImage": "/xbKFv4KF3sVYuWKllLlwWDmuZP7.jpg",
+    "coverImage": "https://ntvb.tmsimg.com/assets/p26019154_v_h8_ab.jpg?w=1280&h=720",
     "production_companies": [
       {
         "id": 4,
@@ -760,10 +732,10 @@
         "name": "United States of America"
       }
     ],
-    "releaseDate": "2024-05-08",
-    "releaseYear": 2024,
+    "releaseDate": "8 May 2024",
+    "releaseYear": "2024–2026",
     "revenue": 174159175,
-    "duration": 104,
+    "duration": "104 min",
     "spoken_languages": [
       {
         "english_name": "English",
@@ -771,21 +743,14 @@
         "name": "English"
       }
     ],
-    "status": "Released",
+    "status": "releaseDate",
     "tagline": "A story you have to believe to see.",
     "title": "IF",
     "video": "https://youtu.be/TP47e3-nmw8",
-    "cast": [
-      "Cailey Fleming",
-      "Ryan Reynolds",
-      "John Krasinski",
-      "Fiona Shaw",
-      "Steve Carell",
-      "Phoebe Waller-Bridge"
-    ],
+    "cast": "Cailey Fleming, Ryan Reynolds, John Krasinski, Fiona Shaw, Steve Carell,Phoebe Waller-Bridge",
     "type": "movie",
     "vote_average": 7.476,
-    "directors": ["John Krasinski"],
+    "directors": "John Krasinski",
     "vote_count": 245
   },
 
@@ -821,7 +786,7 @@
     "original_title": "Furiosa: A Mad Max Saga",
     "description": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home.",
     "popularity": 659.548,
-    "coverImage": "/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+    "coverImage": "https://i0.wp.com/www.newsfromthecouch.com/wp-content/uploads/2024/05/Furiosa-Cover.jpg?fit=1280%2C720&ssl=1",
     "production_companies": [
       {
         "id": 174,
@@ -852,10 +817,10 @@
         "name": "Australia"
       }
     ],
-    "releaseDate": "2024-05-22",
-    "releaseYear": 2024,
+    "releaseDate": "22 May 2024",
+    "releaseYear": "2024",
     "revenue": 160620267,
-    "duration": 149,
+    "duration": "149 min",
     "spoken_languages": [
       {
         "english_name": "English",
@@ -863,21 +828,765 @@
         "name": "English"
       }
     ],
-    "status": "Released",
+    "status": "releaseDate",
     "tagline": "Fury is born.",
     "title": "Furiosa: A Mad Max Saga",
     "video": "https://youtu.be/LYV3001u574",
-    "directors": ["George Miller"],
-    "cast": [
-      "Anya Taylor-Joy",
-      "Chris Hemsworth",
-      "Tom Burke",
-      "Alyla Browne",
-      "George Shevtsov",
-      "Lachy Hulme"
-    ],
+    "directors": "George Miller",
+    "cast": "Anya Taylor-Joy,Chris Hemsworth,Tom Burke,Alyla Browne,George Shevtsov,Lachy Hulme",
     "type": "movie",
     "vote_average": 7.631,
     "vote_count": 969
+  },
+
+  {
+    "title": "Attack on Titan",
+    "releaseYear": "2013",
+    "Rated": "TV-MA",
+    "releaseDate": "28 Sep 2013",
+    "duration": "24 min",
+    "genres": ["Animation", "Action", "Adventure"],
+    "directors": "Tetsurō Araki, Yuichiro Hayashi",
+    "Writer": "N/A",
+    "cast": "Jessie James Grelle, Bryce Papenbrook, Trina Nishimura",
+    "description": "After his hometown is destroyed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.",
+    "Language": "Japanese, English",
+    "Country": "Japan",
+    "Awards": "40 wins & 88 nominations",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00OGQ4LWE3OGYtNDdiMzNiNDZlMDAwXkEyXkFqcGdeQXVyNzI3NjY3NjQ@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.1/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "9.1",
+    "imdbVotes": "523,353",
+    "imdbID": "tt2560140",
+    "type": "series",
+    "totalSeasons": "4",
+    "Response": "True",
+    "video": "https://youtu.be/bT9csxkth8g"
+  },
+  {
+    "title": "Better Call Saul",
+    "releaseYear": "2015–2022",
+    "Rated": "TV-MA",
+    "releaseDate": "08 Feb 2015",
+    "duration": "46 min",
+    "genres": ["Crime", "Drama"],
+    "directors": "Vince Gilligan",
+    "Writer": "Vince Gilligan, Peter Gould",
+    "cast": "Bob Odenkirk, Rhea Seehorn, Jonathan Banks",
+    "description": "The trials and tribulations of criminal lawyer Jimmy McGill in the years leading up to his fateful run-in with Walter White and Jesse Pinkman.",
+    "Language": "English, Spanish, Vietnamese",
+    "Country": "United States",
+    "Awards": "Nominated for 53 Primetime Emmys. 69 wins & 324 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.0/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "9.0",
+    "imdbVotes": "655,267",
+    "imdbID": "tt3032476",
+    "type": "series",
+    "totalSeasons": "6",
+    "Response": "True",
+    "video": "https://youtu.be/HN4oydykJFc"
+  },
+  {
+    "title": "Chernobyl",
+    "releaseYear": "2019",
+    "Rated": "TV-MA",
+    "releaseDate": "06 May 2019",
+    "duration": "330 min",
+    "genres": ["Drama", "History", "Thriller"],
+    "directors": "Craig Mazin",
+    "Writer": "Craig Mazin",
+    "cast": "Jessie Buckley, Jared Harris, Stellan Skarsgård",
+    "description": "In April 1986, the city of Chernobyl in the Soviet Union suffers one of the worst nuclear disasters in the history of mankind. Consequently, many heroes put their lives on the line in the following days, weeks and months.",
+    "Language": "English, Russian, Ukrainian",
+    "Country": "United States, United Kingdom",
+    "Awards": "Won 10 Primetime Emmys. 85 wins & 60 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.3/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "9.3",
+    "imdbVotes": "875,910",
+    "imdbID": "tt7366338",
+    "type": "series",
+    "totalSeasons": "1",
+    "Response": "True",
+    "video": "https://youtu.be/s9APLXM9Ei8"
+  },
+  {
+    "title": "The Last of Us",
+    "releaseYear": "2023–",
+    "Rated": "TV-MA",
+    "releaseDate": "15 Jan 2023",
+    "duration": "18S min",
+    "genres": ["Action", "Adventure", "Drama"],
+    "directors": "Neil Druckmann, Craig Mazin",
+    "Writer": "Neil Druckmann, Craig Mazin",
+    "cast": "Pedro Pascal, Bella Ramsey, Anna Torv",
+    "description": "After a global pandemic destroys civilization, a hardened survivor takes charge of a 14-years-old girl who may be humanity's last hope.",
+    "Language": "English, Indonesian",
+    "Country": "Canada, United States",
+    "Awards": "Won 8 Primetime Emmys. 83 wins & 131 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.7/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.7",
+    "imdbVotes": "536,617",
+    "imdbID": "tt3581920",
+    "type": "series",
+    "totalSeasons": "2",
+    "Response": "True",
+    "video": "https://youtu.be/uLtkt8BonwM "
+  },
+  {
+    "title": "The Office",
+    "releaseYear": "2005–2013",
+    "Rated": "TV-14",
+    "releaseDate": "24 Mar 2005",
+    "duration": "22 min",
+    "genres": ["Comedy"],
+    "directors": "Greg Daniels",
+    "Writer": "Greg Daniels, Ricky Gervais, Stephen Merchant",
+    "cast": "Steve Carell, Jenna Fischer, John Krasinski",
+    "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, tedium and romance.",
+    "Language": "English, Spanish, German, French",
+    "Country": "United States",
+    "Awards": "Won 5 Primetime Emmys. 51 wins & 195 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.0/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "9.0",
+    "imdbVotes": "719,613",
+    "imdbID": "tt0386676",
+    "type": "series",
+    "totalSeasons": "9",
+    "Response": "True",
+    "video": "https://youtu.be/96ix3P9WaRc"
+  },
+  {
+    "title": "Shogun",
+    "releaseYear": "2024–2026",
+    "Rated": "TV-MA",
+    "releaseDate": "27 Feb 2024",
+    "duration": "50 min",
+    "genres": ["Adventure", "Drama", "History"],
+    "directors": "James Clavell",
+    "Writer": "James Clavell (based on the novel by)",
+    "cast": "Cosmo Jarvis, Anna Sawai, Tadanobu Asano",
+    "description": "When a mysterious European ship is found marooned in a nearby fishing village, Lord Yoshii Toranaga discovers secrets that could tip the scales of power and devastate his enemies.",
+    "Language": "Japanese, English",
+    "Country": "United States",
+    "Awards": "8 nominations",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BMzhkNzVkNDYtNmE2Zi00ZTk1LTk2OWYtOTU5NWM5OWQ2Zjc0XkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.7/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.7",
+    "imdbVotes": "140,121",
+    "imdbID": "tt2788316",
+    "type": "series",
+    "totalSeasons": "1",
+    "Response": "True",
+    "video": "https://youtu.be/HIs9x49DK7I"
+  },
+  {
+    "title": "Peaky Blinders",
+    "releaseYear": "2013–2022",
+    "Rated": "TV-MA",
+    "releaseDate": "30 Sep 2014",
+    "duration": "60 min",
+    "genres": ["Crime", "Drama"],
+    "directors": "Steven Knight",
+    "Writer": "Steven Knight",
+    "cast": "Cillian Murphy, Paul Anderson, Sophie Rundle",
+    "description": "A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.",
+    "Language": "English, Romanian, Irish Gaelic, Italian, Yiddish, French",
+    "Country": "United Kingdom",
+    "Awards": "Won 1 BAFTA Award23 wins & 55 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.8/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.8",
+    "imdbVotes": "657,625",
+    "imdbID": "tt2442560",
+    "type": "series",
+    "totalSeasons": "6",
+    "Response": "True",
+    "video": "https://youtu.be/EM12mcTEI88"
+  },
+  {
+    "title": "Blue Planet II",
+    "releaseYear": "2017",
+    "Rated": "TV-G",
+    "releaseDate": "20 Jan 2018",
+    "duration": "364 min",
+    "genres": ["Documentary"],
+    "directors": "David Attenborough",
+    "Writer": "N/A",
+    "cast": "David Attenborough, Peter Drost, Roger Munns",
+    "description": "David Attenborough returns to the world's oceans in this sequel to the acclaimed documentary filming rare and unusual creatures of the deep, as well as documenting the problems our oceans face.",
+    "Language": "English",
+    "Country": "United Kingdom, United States, China, France, Germany",
+    "Awards": "Won 1 Primetime Emmy. 11 wins & 13 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNDZiNDllMTAtOTgxZi00NzNiLWFhNzUtOGUwZWZjZGNjZTMyXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.3/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "9.3",
+    "imdbVotes": "47,275",
+    "imdbID": "tt6769208",
+    "type": "series",
+    "totalSeasons": "1",
+    "Response": "True",
+    "video": "https://youtu.be/kAphgHhlteM"
+  },
+  {
+    "title": "Game of Thrones",
+    "releaseYear": "2011–2019",
+    "Rated": "TV-MA",
+    "releaseDate": "17 Apr 2011",
+    "duration": "57 min",
+    "genres": ["Action", "Adventure", "Drama"],
+    "directors": "N/A",
+    "Writer": "David Benioff, D.B. Weiss",
+    "cast": "Emilia Clarke, Peter Dinklage, Kit Harington",
+    "description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
+    "Language": "English",
+    "Country": "United States, United Kingdom",
+    "Awards": "Won 59 Primetime Emmys. 389 wins & 636 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.2/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "9.2",
+    "imdbVotes": "2,301,821",
+    "imdbID": "tt0944947",
+    "type": "series",
+    "totalSeasons": "8",
+    "Response": "True",
+    "video": "https://youtu.be/KPLWWIOCOOQ"
+  },
+  {
+    "title": "Bridgerton",
+    "releaseYear": "2020–",
+    "Rated": "TV-MA",
+    "releaseDate": "25 Dec 2020",
+    "duration": "60 min",
+    "genres": ["Drama", "Romance"],
+    "directors": "Chris Van Dusen",
+    "Writer": "Chris Van Dusen",
+    "cast": "Nicola Coughlan, Claudia Jessie, Luke Newton",
+    "description": "The eight close-knit siblings of the Bridgerton family look for love and happiness in London high society.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Won 2 Primetime Emmys. 15 wins & 76 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BY2ZiODA2MGYtMmMxMi00YjlmLWFmYjktMWYyOTMwNWFkNWNkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.4/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "7.4",
+    "imdbVotes": "178,278",
+    "imdbID": "tt8740790",
+    "type": "series",
+    "totalSeasons": "3",
+    "Response": "True",
+    "video": "https://youtu.be/gpv7ayf_tyE"
+  },
+  {
+    "title": "Vikings",
+    "releaseYear": "2013–2020",
+    "Rated": "TV-MA",
+    "releaseDate": "03 Mar 2013",
+    "duration": "44 min",
+    "genres": ["Action", "Adventure", "Drama"],
+    "directors": "Michael Hirst",
+    "Writer": "Michael Hirst",
+    "cast": "Katheryn Winnick, Gustaf Skarsgård, Alexander Ludwig",
+    "description": "Vikings transports us to the brutal and mysterious world of Ragnar Lothbrok, a Viking warrior and farmer who yearns to explore--and raid--the distant shores across the ocean.",
+    "Language": "English, Old English, Norse, Old, Latin, French, Arabic, Greek, Ancient (to 1453), Russian",
+    "Country": "Ireland, Canada",
+    "Awards": "Won 1 Primetime Emmy. 46 wins & 133 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZWNlZmNiNzItYWMwNC00ODYxLThlNjYtMjU3NzlmNDQxMTY2XkEyXkFqcGdeQXVyMTA3MzQ4MTc0._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.5/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.5",
+    "imdbVotes": "587,053",
+    "imdbID": "tt2306299",
+    "type": "series",
+    "totalSeasons": "6",
+    "Response": "True",
+    "video": "https://youtu.be/7rcozIVtujw"
+  },
+  {
+    "title": "The Boys",
+    "releaseYear": "2019–",
+    "Rated": "TV-MA",
+    "releaseDate": "26 Jul 2019",
+    "duration": "31S min",
+    "genres": ["Action", "Comedy", "Crime"],
+    "directors": "Eric Kripke",
+    "Writer": "Eric Kripke",
+    "cast": "Karl Urban, Jack Quaid, Antony Starr",
+    "description": "A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Won 1 Primetime Emmy. 21 wins & 82 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BYTY2ZjYyNGUtZGVkZS00MDNhLWIwMjMtZDk4MmQ5ZWI0NTY4XkEyXkFqcGdeQXVyMTY3MDE5MDY1._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.7/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.7",
+    "imdbVotes": "667,529",
+    "imdbID": "tt1190634",
+    "type": "series",
+    "totalSeasons": "4",
+    "Response": "True",
+    "video": "https://youtu.be/tcrNsIaQkb4"
+  },
+  {
+    "title": "Suits",
+    "releaseYear": "2011–2019",
+    "Rated": "TV-14",
+    "releaseDate": "23 Jun 2011",
+    "duration": "44 min",
+    "genres": ["Comedy", "Drama"],
+    "directors": "Aaron Korsh",
+    "Writer": "Aaron Korsh",
+    "cast": "Gabriel Macht, Patrick J. Adams, Meghan Markle",
+    "description": "On the run from a drug deal gone bad, brilliant college dropout Mike Ross finds himself working with Harvey Specter, one of New York City's best lawyers.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "1 win & 9 nominations",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNmVmMmM5ZmItZDg0OC00NTFiLWIxNzctZjNmYTY5OTU3ZWU3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.4/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.4",
+    "imdbVotes": "483,461",
+    "imdbID": "tt1632701",
+    "type": "series",
+    "totalSeasons": "9",
+    "Response": "True",
+    "video": "https://youtu.be/cUnkjEIW2-o"
+  },
+  {
+    "title": "The Flash",
+    "releaseYear": "2014–2023",
+    "Rated": "TV-PG",
+    "releaseDate": "07 Oct 2014",
+    "duration": "43 min",
+    "genres": ["Action", "Adventure", "Drama"],
+    "directors": "Greg Berlanti,  Geoff Johns, Andrew Kreisberg",
+    "Writer": "Greg Berlanti, Geoff Johns, Andrew Kreisberg",
+    "cast": "Grant Gustin, Candice Patton, Danielle Panabaker",
+    "description": "After being struck by lightning, Barry Allen wakes up from his coma to discover he's been given the power of super speed, becoming the Flash, and fighting crime in Central City.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Nominated for 1 Primetime Emmy. 29 wins & 99 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BYmMxNGQ4NzYtYmQzNC00N2I2LWI5NzUtMTU5MDczZGEzNDBlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.5/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "7.5",
+    "imdbVotes": "369,217",
+    "imdbID": "tt3107288",
+    "type": "series",
+    "totalSeasons": "9",
+    "Response": "True",
+    "video": "https://youtu.be/IgVyroQjZbE"
+  },
+  {
+    "title": "The Good Doctor",
+    "releaseYear": "2017–2024",
+    "Rated": "TV-14",
+    "releaseDate": "25 Sep 2017",
+    "duration": "41 min",
+    "genres": ["Drama"],
+    "directors": "David Shore",
+    "Writer": "David Shore",
+    "cast": "Freddie Highmore, Richard Schiff, Hill Harper",
+    "description": "Shaun Murphy, a young surgeon with autism and Savant syndrome, is recruited into the surgical unit of a prestigious hospital.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "6 wins & 29 nominations",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNjMwNDNkMzEtNzRmNy00YmExLTg3ZWYtM2NjMjFjNWY3MmM0XkEyXkFqcGdeQXVyMTY0Njc2MTUx._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.0/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.0",
+    "imdbVotes": "115,397",
+    "imdbID": "tt6470478",
+    "type": "series",
+    "totalSeasons": "7",
+    "Response": "True",
+    "video": "https://youtu.be/lnY9FWUTY84"
+  },
+  {
+    "title": "The Vampire Diaries",
+    "releaseYear": "2009–2017",
+    "Rated": "TV-14",
+    "releaseDate": "10 Sep 2009",
+    "duration": "43 min",
+    "genres": ["Drama", "Fantasy", "Horror"],
+    "directors": "Julie Plec, Kevin Williamson",
+    "Writer": "Julie Plec, Kevin Williamson",
+    "cast": "Nina Dobrev, Paul Wesley, Ian Somerhalder",
+    "description": "The lives, loves, dangers and disasters in the town, Mystic Falls, Virginia. Creatures of unspeakable horror lurk beneath this town as a teenage girl is suddenly torn between two vampire brothers.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "38 wins & 67 nominations",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BMDk3YzgxNDQtNTEzOS00NDMyLWFlYmYtYTZlMDk1NDkxNmMyXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.7/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "7.7",
+    "imdbVotes": "351,802",
+    "imdbID": "tt1405406",
+    "type": "series",
+    "totalSeasons": "8",
+    "Response": "True",
+    "video": "https://youtu.be/_GWtgdAYHMU"
+  },
+  {
+    "title": "Naruto: Shippuden",
+    "releaseYear": "2007–2017",
+    "Rated": "TV-PG",
+    "releaseDate": "28 Oct 2009",
+    "duration": "24 min",
+    "genres": ["Animation", "Action", "Adventure"],
+    "directors": "Masashi Kishimoto",
+    "Writer": "Masashi Kishimoto",
+    "cast": "Alexandre Crepet, Junko Takeuchi, Maile Flanagan",
+    "description": "Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who constantly searches for approval and recognition, as well as to become Hokage, who is acknowledged as the leader and strongest of all ninja in the village.",
+    "Language": "Japanese",
+    "Country": "Japan",
+    "Awards": "2 wins & 10 nominations",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.7/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.7",
+    "imdbVotes": "173,488",
+    "imdbID": "tt0988824",
+    "type": "series",
+    "totalSeasons": "23",
+    "Response": "True",
+    "video": "https://youtu.be/1WLO0Owi5-A"
+  },
+  {
+    "title": "You",
+    "releaseYear": "2018–2024",
+    "Rated": "TV-MA",
+    "releaseDate": "09 Sep 2018",
+    "duration": "45 min",
+    "genres": ["Crime", "Drama", "Romance"],
+    "directors": "Greg Berlanti, Sera Gamble",
+    "Writer": "Greg Berlanti, Sera Gamble",
+    "cast": "Penn Badgley, Victoria Pedretti, Tati Gabrielle",
+    "description": "A dangerously charming, intensely obsessive young man goes to extreme measures to insert himself into the lives of those he is transfixed by.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "4 wins & 11 nominations",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNGZjZDc3NjAtYjI1OC00NWUzLWIxOWItNzUyODc5NDIwMWRjXkEyXkFqcGdeQXVyNTQ4ODA2NzQ@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.7/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "7.7",
+    "imdbVotes": "302,626",
+    "imdbID": "tt7335184",
+    "type": "series",
+    "totalSeasons": "5",
+    "Response": "True",
+    "video": "https://youtu.be/ga1m0wjzscU"
+  },
+  {
+    "title": "Rick and Morty",
+    "releaseYear": "2013–",
+    "Rated": "TV-MA",
+    "releaseDate": "02 Dec 2013",
+    "duration": "23 min",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "directors": "Dan Harmon, Justin Roiland",
+    "Writer": "Dan Harmon, Justin Roiland",
+    "cast": "Chris Parnell, Spencer Grammer, Sarah Chalke",
+    "description": "The fractured domestic lives of a nihilistic mad scientist and his anxious grandson are further complicated by their inter-dimensional misadventures.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Won 2 Primetime Emmys. 18 wins & 44 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "9.1/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "9.1",
+    "imdbVotes": "607,130",
+    "imdbID": "tt2861424",
+    "type": "series",
+    "totalSeasons": "8",
+    "Response": "True",
+    "video": "https://youtu.be/WNhH00OIPP0"
+  },
+  {
+    "title": "The Rookie",
+    "releaseYear": "2018–",
+    "Rated": "TV-14",
+    "releaseDate": "16 Oct 2018",
+    "duration": "43 min",
+    "genres": ["Action", "Crime", "Drama"],
+    "directors": "N/A",
+    "Writer": "Alexi Hawley",
+    "cast": "Nathan Fillion, Alyssa Diaz, Richard T. Jones",
+    "description": "Starting over isn't easy, especially for John Nolan who, after a life-altering incident, is pursuing his dream of joining the LAPD. As their oldest rookie, he's met with skepticism from those who see him as just a walking midlife ...",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Nominated for 2 Primetime Emmys. 2 wins & 5 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNjU1Y2JjMjYtNDJiNS00NmFhLTk2N2MtMDEwNDI1YzVhNGI1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.0/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.0",
+    "imdbVotes": "75,689",
+    "imdbID": "tt7587890",
+    "type": "series",
+    "totalSeasons": "6",
+    "Response": "True",
+    "video": "https://youtu.be/_HgC1TN8FVk"
+  },
+  {
+    "title": "The Blacklist",
+    "releaseYear": "2013–2023",
+    "Rated": "TV-14",
+    "releaseDate": "23 Sep 2013",
+    "duration": "43 min",
+    "genres": ["Crime", "Drama", "Mystery"],
+    "directors": "N/A",
+    "Writer": "Jon Bokenkamp",
+    "cast": "James Spader, Megan Boone, Diego Klattenhoff",
+    "description": "A new FBI profiler, Elizabeth Keen, has her entire life uprooted when a mysterious criminal, Raymond Reddington, who has eluded capture for decades, turns himself in and insists on speaking only to her.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Won 1 Primetime Emmy. 2 wins & 33 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BMTU1OTdjYTUtMzA2MS00Njg4LWI1NTctMWUzYzNkNmQ5YWY3XkEyXkFqcGdeQXVyMTUwMzM5ODkz._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.9/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "7.9",
+    "imdbVotes": "280,670",
+    "imdbID": "tt2741602",
+    "type": "series",
+    "totalSeasons": "10",
+    "Response": "True",
+    "video": "https://youtu.be/SoT5JImB1H8"
+  },
+  {
+    "title": "Curb Your Enthusiasm",
+    "releaseYear": "2000–2024",
+    "Rated": "TV-MA",
+    "releaseDate": "15 Oct 2000",
+    "duration": "28 min",
+    "genres": ["Comedy"],
+    "directors": "Larry David",
+    "Writer": "Larry David",
+    "cast": "Larry David, Cheryl Hines, Jeff Garlin",
+    "description": "Larry David stars as an over-the-top version of himself in this comedy series that shows how seemingly trivial details of day-to-day life can precipitate a catastrophic chain of events.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Won 2 Primetime Emmys. 22 wins & 164 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.8/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.8",
+    "imdbVotes": "148,792",
+    "imdbID": "tt0264235",
+    "type": "series",
+    "totalSeasons": "12",
+    "Response": "True",
+    "video": "https://www.youtube.com/watch?v=zRCMPMGDN00"
+  },
+  {
+    "title": "Cobra Kai",
+    "releaseYear": "2018–2025",
+    "Rated": "TV-14",
+    "releaseDate": "02 May 2018",
+    "duration": "30 min",
+    "genres": ["Action", "Comedy", "Drama"],
+    "directors": "Josh Heald, Jon Hurwitz, Hayden Schlossberg",
+    "Writer": "Josh Heald, Jon Hurwitz, Hayden Schlossberg",
+    "cast": "Ralph Macchio, William Zabka, Courtney Henggeler",
+    "description": "Decades after their 1984 All Valley Karate Tournament bout, a middle-aged Daniel LaRusso and Johnny Lawrence find themselves martial-arts rivals again.",
+    "Language": "English, Spanish",
+    "Country": "United States",
+    "Awards": "Nominated for 9 Primetime Emmys. 4 wins & 65 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BYWU4ZmI0NTItZjcyNy00MzQ5LThiNDQtZDZkNjg1NWUwN2RhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.5/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.5",
+    "imdbVotes": "204,685",
+    "imdbID": "tt7221388",
+    "type": "series",
+    "totalSeasons": "6",
+    "Response": "True",
+    "video": "https://youtu.be/xCwwxNbtK6Y"
+  },
+  {
+    "title": "Brooklyn Nine-Nine",
+    "releaseYear": "2013–2021",
+    "Rated": "TV-14",
+    "releaseDate": "17 Sep 2013",
+    "duration": "22 min",
+    "genres": ["Comedy", "Crime"],
+    "directors": "Michael Schur",
+    "Writer": "Dan Goor, Michael Schur",
+    "cast": "Andy Samberg, Stephanie Beatriz, Terry Crews",
+    "description": "Comedy series following the exploits of Det. Jake Peralta and his diverse, lovable colleagues as they police the NYPD's 99th Precinct.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "Won 2 Primetime Emmys. 19 wins & 134 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.4/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.4",
+    "imdbVotes": "367,961",
+    "imdbID": "tt2467372",
+    "type": "series",
+    "totalSeasons": "8",
+    "Response": "True",
+    "video": "https://youtu.be/icTOP9F17pU"
+  },
+  {
+    "title": "Black Mirror",
+    "releaseYear": "2011–",
+    "Rated": "TV-MA",
+    "releaseDate": "04 Dec 2011",
+    "duration": "60 min",
+    "genres": ["Crime", "Drama", "Mystery"],
+    "directors": "Charlie Brooker",
+    "Writer": "Charlie Brooker",
+    "cast": "Wunmi Mosaku, Monica Dolan, Daniel Lapaine",
+    "description": "Featuring stand-alone dramas -- sharp, suspenseful, satirical tales that explore techno-paranoia -- \"Black Mirror\" is a contemporary reworking of \"The Twilight Zone\" with stories that tap into the collective unease about the moder...",
+    "Language": "English",
+    "Country": "United Kingdom",
+    "Awards": "Won 6 Primetime Emmys. 37 wins & 123 nominations total",
+    "coverImage": "https://m.media-amazon.com/images/M/MV5BZTgyNTBkNzctN2I3NC00NTA1LWJiMDMtYzA2MmYyZjc1NWQzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "8.7/10"
+      }
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "8.7",
+    "imdbVotes": "645,216",
+    "imdbID": "tt2085059",
+    "type": "series",
+    "totalSeasons": "6",
+    "Response": "True",
+    "video": "https://youtu.be/di6emt8_ie8"
   }
 ]

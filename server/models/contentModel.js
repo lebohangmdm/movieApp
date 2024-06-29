@@ -16,7 +16,7 @@ const contentSchema = new mongoose.Schema(
       trim: true,
     },
     duration: {
-      type: Number,
+      type: String,
       required: [true, "Please provide the duration of them content"],
     },
     rating: {
@@ -27,11 +27,11 @@ const contentSchema = new mongoose.Schema(
       type: Number,
     },
     releaseYear: {
-      type: Number,
+      type: String,
       required: [true, "Please provide the release year of them content"],
     },
     releaseDate: {
-      type: Date,
+      type: String,
       required: [true, "Please provide the release date of them content"],
     },
     createdAt: {
@@ -45,12 +45,12 @@ const contentSchema = new mongoose.Schema(
     type: {
       type: String,
       enum: {
-        values: ["movie", "tv"],
+        values: ["movie", "series"],
         message: "Please provide the given type",
       },
       required: [true, "Please provide the type"],
     },
-    seasonsNumber: {
+    totalSeasons: {
       type: String,
       default: "N/A",
       validate: {
@@ -68,12 +68,16 @@ const contentSchema = new mongoose.Schema(
     },
     coverImage: String,
     directors: {
-      type: [String],
+      type: String,
       required: [true, "Please provide the director of them content"],
     },
     cast: {
-      type: [String],
+      type: String,
       required: [true, "Please provide the actors of them content"],
+    },
+    featured: {
+      type: Boolean,
+      default: false,
     },
     video: {
       type: String,

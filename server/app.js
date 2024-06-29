@@ -12,7 +12,6 @@ const authRouter = require("./routes/authRoute");
 const userRouter = require("./routes/userRoute");
 const contentRouter = require("./routes/contentRoute");
 const reviewRouter = require("./routes/reviewRoute");
-const listRouter = require("./routes/listRoute");
 const AppError = require("./utils/AppError");
 
 const app = express();
@@ -38,7 +37,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use(express.json({ limit: "10kb" }));
+app.use(express.json({ limit: "100kb" }));
 
 app.use(mongoSanitize());
 app.use(cookieParser());
@@ -49,7 +48,6 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/contents", contentRouter);
 app.use("/api/v1/reviews", reviewRouter);
-app.use("/api/v1/lists", listRouter);
 
 app.use("*", (req, res, next) => {
   return next(
