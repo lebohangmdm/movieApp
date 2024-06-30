@@ -3,10 +3,16 @@ import { apiSlice } from "./apiSlice";
 export const contentsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getAllContents: builder.query({
-      query: () => `contents`,
+      query: ({ sort }) => ({
+        url: "contents",
+        params: { sort },
+      }),
     }),
-    getRandomMovies: builder.query({
-      query: () => `contents/random`,
+    getRandomContent: builder.query({
+      query: ({ type }) => ({
+        url: "contents",
+        params: { type },
+      }),
     }),
     createContent: builder.mutation({
       query: (newContent) => ({
@@ -28,6 +34,12 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
       query: ({ type, genres, limit, sort }) => ({
         url: "/contents",
         params: { type, genres, limit, sort },
+      }),
+    }),
+    getAllContentBasedOnType: builder.query({
+      query: ({ type, sort }) => ({
+        url: "contents",
+        params: { type, sort },
       }),
     }),
     getFeaturedContent: builder.query({
@@ -54,13 +66,13 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
 
 export const {
   useGetAllContentsQuery,
-  useGetRandomMoviesQuery,
+  useGetRandomContentQuery,
   useCreateContentMutation,
   useGetContentQuery,
   useGetFeaturedContentQuery,
   useUpdateContentMutation,
   useDeleteContentMutation,
   useGetContentBasedOnSortQuery,
-  useGetTopContentQuery,
   useGetContentBasedOnGenresQuery,
+  useGetAllContentBasedOnTypeQuery,
 } = contentsApiSlice;

@@ -1,5 +1,6 @@
 import { Row } from "../components";
 import {
+  useFetchAllContentBasedType,
   useFetchBasedOnGenreQuery,
   useFetchBasedOnSortQuery,
 } from "../services/hooks/contentHooks";
@@ -17,7 +18,7 @@ const Series = () => {
     listData: newSeries,
     isLoading: newLoading,
     error: newError,
-  } = useFetchBasedOnSortQuery({ type: "series", sort: "createdAt" });
+  } = useFetchAllContentBasedType({ type: "series", sort: "createdAt" });
 
   const {
     listData: comedySeries,

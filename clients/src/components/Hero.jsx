@@ -1,49 +1,29 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useCallback, useEffect, useState } from "react";
-import { useGetRandomMoviesQuery } from "../services/contentsService";
 import { useFeaturedContent } from "../services/hooks/contentHooks";
 
 const Hero = () => {
   const { contents: movies, isLoading, error } = useFeaturedContent();
   console.log(movies);
 
-  const slides = [
-    {
-      url: "https://m.media-amazon.com/images/M/MV5BY2U5YmQ3YjgtM2I2OC00YmM5LTkyM2MtN2I5Zjg2MDE0ODkwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80",
-    },
-
-    {
-      url: "https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = useCallback(() => {
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    const newIndex = isFirstSlide ? movies.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
-  }, [slides, currentIndex]);
+  }, [movies, currentIndex]);
 
   const nextSlide = useCallback(() => {
-    const isLastSlide = currentIndex === slides.length - 1;
+    const isLastSlide = currentIndex === movies.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-  }, [slides, currentIndex]);
+  }, [movies, currentIndex]);
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
 
-  // Auto-rotate slides every 5 seconds
+  // Auto-rotate movies every 5 seconds
   // useEffect(() => {
   //   // const interval = setInterval(() => {
   //   //   nextSlide();
@@ -56,7 +36,7 @@ const Hero = () => {
     <section className="z-0 relative group w-full h-height-dvh">
       <div
         style={{
-          backgroundImage: `url(${movies?.[currentIndex]?.coverImage})`,
+          backgroundImage: `url(${movies?.[currentIndex].coverImage})`,
         }}
         className="w-full h-full bg-center bg-cover duration-500"
       ></div>
@@ -69,7 +49,7 @@ const Hero = () => {
         <ChevronRightIcon className="w-9 h-9 text-white " onClick={nextSlide} />
       </div>
       <div className="absolute bottom-2 right-1/2 left-1/2 flex justify-center gap-2 ">
-        {slides.map((slide, slideIndex) => (
+        {movies?.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}

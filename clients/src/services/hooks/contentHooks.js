@@ -1,4 +1,6 @@
 import {
+  useGetAllContentBasedOnTypeQuery,
+  useGetAllContentsQuery,
   useGetContentBasedOnGenresQuery,
   useGetContentBasedOnSortQuery,
   useGetFeaturedContentQuery,
@@ -38,5 +40,23 @@ export const useFeaturedContent = () => {
 
   const contents = data?.data.docs;
 
+  return { contents, isLoading, error };
+};
+
+export const useFetchAllContents = ({ sort }) => {
+  const { data, isLoading, error } = useGetAllContentsQuery({
+    sort,
+  });
+
+  const contents = data?.data.docs;
+  return { contents, isLoading, error };
+};
+
+export const useFetchAllContentBasedType = ({ sort }) => {
+  const { data, isLoading, error } = useGetAllContentBasedOnTypeQuery({
+    sort,
+  });
+
+  const contents = data?.data.docs;
   return { contents, isLoading, error };
 };

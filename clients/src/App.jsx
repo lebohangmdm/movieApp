@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./components";
-import { Home, Login, Register, Series } from "./pages";
+import { Home, Login, Movies, Register, Series } from "./pages";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route index element={<Home />} />
-            <Route path="/series" element={<Series />} />
+            <Route path="series" element={<Series />} />
+            <Route path="movies" element={<Movies />} />
           </Route>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
