@@ -23,7 +23,7 @@ const Row = ({ title, data }) => {
 
   return (
     <div className="">
-      <h2 className="cursor-pointer text-sm font-semibold text-[#e5e5e5] mb-4 transition duration-200 hover:text-white md:mb-4 md:text-2xl">
+      <h2 className="capitalize text-sm font-semibold text-[#e5e5e5] mb-4 transition duration-200 hover:text-white md:mb-4 md:text-2xl">
         {title}
       </h2>
       <div className="group relative md:ml-4">

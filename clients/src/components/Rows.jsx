@@ -47,7 +47,7 @@ const Rows = () => {
   } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Sci-Fi" });
 
   return (
-    <section className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-12 lg:py-16">
+    <section className="max-w-7xl mx-auto  py-12 px-4 md:px-8 lg:px-12 lg:py-16">
       <div className="h-40 space-y-0.5 md:space-y-8 ">
         <Row title={"Top Movie"} data={movies} />
         <Row title={"Top Series"} data={series} />
