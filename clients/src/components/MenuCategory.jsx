@@ -2,6 +2,7 @@ import { useState } from "react";
 import { categories } from "../constants/NavLinks";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
+import { useFetchAllContents } from "../services/hooks/contentHooks";
 
 const MenuCategory = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -13,6 +14,16 @@ const MenuCategory = () => {
   const handleMouseLeave = () => {
     setShowMenu(false);
   };
+
+  const { contents, isLoading, error } = useFetchAllContents({
+    sort: "createdAt",
+  });
+
+  const genres = [
+    ...new Set(
+      contents?.map((content) => [...content.genres]).flatMap((arr) => arr)
+    ),
+  ].sort((a, b) => a.localeCompare(b));
 
   return (
     <li
@@ -31,12 +42,12 @@ const MenuCategory = () => {
         </span>
       </button>
       {showMenu && (
-        <ul className="z-30 absolute  grid grid-cols-3 gap-x-6 gap-y-2 w-[400px] bg-[#2c2e4c] py-4 px-6">
-          {categories.map((link) => {
+        <ul className="z-30 absolute  grid grid-cols-4 gap-x-6 gap-y-2 w-[450px] bg-[#2c2e4c] py-4 px-6">
+          {genres.map((genre) => {
             return (
-              <li key={link.key}>
-                <Link to={link.href} className="nav-link font-medium">
-                  {link.label}
+              <li key={genre}>
+                <Link to={`/genres/${genre}`} className="sub-link font-medium">
+                  {genre}
                 </Link>
               </li>
             );

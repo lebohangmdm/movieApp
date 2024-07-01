@@ -4,6 +4,7 @@ import MenuCategory from "./MenuCategory";
 
 const NavLinks = () => {
   const auth = true;
+
   return (
     <ul className="hidden  lg:flex items-center md:gap-8 lg:gap-12 ">
       <>

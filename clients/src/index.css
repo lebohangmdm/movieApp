@@ -20,6 +20,10 @@ body {
   .nav-link {
     @apply capitalize text-lg text-light-2 hover:text-purple-2 active:text-purple-2  transition-all duration-200;
   }
+
+  .sub-link {
+    @apply capitalize text-sm text-light-2 hover:text-purple-2 active:text-purple-2  transition-all duration-200;
+  }
 }
 
 .bg-banner {

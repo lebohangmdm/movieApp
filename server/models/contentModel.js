@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 
 const contentSchema = new mongoose.Schema(
   {
@@ -39,7 +40,7 @@ const contentSchema = new mongoose.Schema(
       default: Date.now(),
     },
     genres: {
-      type: Array,
+      type: [String],
       required: [true, "Please provide the genre of them content"],
     },
     type: {
@@ -93,6 +94,11 @@ contentSchema.virtual("reviews", {
   ref: "Review",
   foreignField: "Content",
   localField: "_id",
+});
+
+contentSchema.pre("save", function (next) {
+  this.genres = this.genres.map((genre) => slugify(genre.toLowerCase()));
+  next();
 });
 
 // contentSchema.virtual("numOfReviews").get(function () {

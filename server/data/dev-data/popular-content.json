@@ -9,28 +9,7 @@
       "backdrop_path": "/7U2m2dMSIfHx2gWXKq78Xj1weuH.jpg"
     },
     "budget": 200000000,
-    "genres": [
-      {
-        "id": 16,
-        "name": "Animation"
-      },
-      {
-        "id": 10751,
-        "name": "Family"
-      },
-      {
-        "id": 18,
-        "name": "Drama"
-      },
-      {
-        "id": 12,
-        "name": "Adventure"
-      },
-      {
-        "id": 35,
-        "name": "Comedy"
-      }
-    ],
+    "genres": ["Animation", "Family", "Drama", "Adventure", "Comedy"],
     "homepage": "https://movies.disney.com/inside-out-2",
     "id": 1022789,
     "imdb_id": "tt22022452",
@@ -95,20 +74,7 @@
     "budget": 160000000,
 
     "directors": "Wes Ball",
-    "genres": [
-      {
-        "id": 878,
-        "name": "Science Fiction"
-      },
-      {
-        "id": 12,
-        "name": "Adventure"
-      },
-      {
-        "id": 28,
-        "name": "Action"
-      }
-    ],
+    "genres": ["sci-fi", "adventure", "action"],
     "homepage": "https://www.20thcenturystudios.com/movies/kingdom-of-the-planet-of-the-apes",
     "id": 653346,
     "imdb_id": "tt11389872",
@@ -172,16 +138,7 @@
     "duration": "42 min",
     "episode_run_time": [],
     "releaseDate": "20 Jan 2008",
-    "genres": [
-      {
-        "id": 18,
-        "name": "Drama"
-      },
-      {
-        "id": 80,
-        "name": "Crime"
-      }
-    ],
+    "genres": ["Drama", "Crime"],
     "homepage": "https://www.sonypictures.com/tv/breakingbad",
     "id": 1396,
     "in_production": false,
@@ -349,24 +306,7 @@
       "backdrop_path": "/k9hhSHg5GS4UgWQC6MHBOZrarji.jpg"
     },
     "budget": 100000000,
-    "genres": [
-      {
-        "id": 28,
-        "name": "Action"
-      },
-      {
-        "id": 80,
-        "name": "Crime"
-      },
-      {
-        "id": 53,
-        "name": "Thriller"
-      },
-      {
-        "id": 35,
-        "name": "Comedy"
-      }
-    ],
+    "genres": ["Action", "Crime", "Thriller", "Comedy"],
     "homepage": "https://www.badboys.movie",
     "imdb_id": "tt4919268",
     "origin_country": ["US"],
@@ -427,20 +367,7 @@
     "backdrop_path": "/fY3lD0jM5AoHJMunjGWqJ0hRteI.jpg",
     "belongs_to_collection": null,
     "budget": 15000000,
-    "genres": [
-      {
-        "id": 878,
-        "name": "Science Fiction"
-      },
-      {
-        "id": 27,
-        "name": "Horror"
-      },
-      {
-        "id": 28,
-        "name": "Action"
-      }
-    ],
+    "genres": ["sci-fi", "Horror", "Action"],
     "homepage": "https://godzillafilm.co.uk",
     "id": 940721,
     "imdb_id": "tt23289160",
@@ -526,20 +453,7 @@
     ],
     "episode_run_time": [],
     "releaseDate": "21 Aug 2022",
-    "genres": [
-      {
-        "id": 10765,
-        "name": "Sci-Fi & Fantasy"
-      },
-      {
-        "id": 18,
-        "name": "Drama"
-      },
-      {
-        "id": 10759,
-        "name": "Action & Adventure"
-      }
-    ],
+    "genres": ["Sci-Fi", "Drama", "Action", "Fantasy", "Adventure"],
     "homepage": "https://www.hbo.com/house-of-the-dragon",
     "id": 94997,
 
@@ -683,20 +597,7 @@
     "backdrop_path": "/nxxCPRGTzxUH8SFMrIsvMmdxHti.jpg",
     "belongs_to_collection": null,
     "budget": 110000000,
-    "genres": [
-      {
-        "id": 35,
-        "name": "Comedy"
-      },
-      {
-        "id": 14,
-        "name": "Fantasy"
-      },
-      {
-        "id": 10751,
-        "name": "Family"
-      }
-    ],
+    "genres": ["Comedy", "Fantasy", "Family"],
     "homepage": "https://www.if.movie",
     "id": 639720,
     "imdb_id": "tt11152168",
@@ -764,20 +665,7 @@
       "backdrop_path": "/7ECkRbU1OvDCDLxUv5YBBDxfGF3.jpg"
     },
     "budget": 168000000,
-    "genres": [
-      {
-        "id": 28,
-        "name": "Action"
-      },
-      {
-        "id": 12,
-        "name": "Adventure"
-      },
-      {
-        "id": 878,
-        "name": "Science Fiction"
-      }
-    ],
+    "genres": ["Action", "Adventure", "sci-fi"],
     "homepage": "https://www.furiosaamadmaxsaga.com",
     "id": 786892,
     "imdb_id": "tt12037194",
