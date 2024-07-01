@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./components";
-import { Genre, Home, Login, Movies, Register, Series } from "./pages";
+import { Genre, Home, Login, Movies, Register, Search, Series } from "./pages";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
             <Route path="series" element={<Series />} />
             <Route path="movies" element={<Movies />} />
             <Route path="genres/:genre" element={<Genre />} />
+            <Route path="search/:title" element={<Search />} />
           </Route>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />

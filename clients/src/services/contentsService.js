@@ -24,6 +24,13 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
     getContent: builder.query({
       query: (id) => `contents/${id}`,
     }),
+
+    getContentByName: builder.query({
+      query: ({ title }) => ({
+        url: "/contents",
+        params: { title },
+      }),
+    }),
     getContentBasedOnSort: builder.query({
       query: ({ type, sort, limit }) => ({
         url: "/contents",
@@ -75,4 +82,5 @@ export const {
   useGetContentBasedOnSortQuery,
   useGetContentBasedOnGenresQuery,
   useGetAllContentBasedOnTypeQuery,
+  useGetContentByNameQuery,
 } = contentsApiSlice;

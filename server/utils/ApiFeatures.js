@@ -49,5 +49,13 @@ class APIFeatures {
 
     return this;
   }
+
+  searchByTitle() {
+    const title = this.queryString.title;
+    if (title) {
+      this.query = this.query.find({ title: { $regex: title, $options: "i" } });
+    }
+    return this;
+  }
 }
 module.exports = APIFeatures;

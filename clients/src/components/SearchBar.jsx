@@ -1,12 +1,22 @@
 import { TextField, IconButton, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
   const [searchVisible, setSearchVisible] = useState(false);
+  const [name, setName] = useState("");
 
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
+  };
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const title = e.target.value;
+    setName(title);
+    navigate(title ? `/search/${encodeURIComponent(title)}` : "/");
   };
 
   return (
@@ -34,6 +44,8 @@ const SearchBar = () => {
             }}
             variant="outlined"
             size="small"
+            value={name}
+            onChange={handleChange}
             placeholder="Search"
             InputProps={{
               endAdornment: (

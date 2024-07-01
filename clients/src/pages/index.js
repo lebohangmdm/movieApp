@@ -4,3 +4,4 @@ export { default as Login } from "./Login";
 export { default as Series } from "./Series";
 export { default as Movies } from "./Movies";
 export { default as Genre } from "./Genre";
+export { default as Search } from "./Search";

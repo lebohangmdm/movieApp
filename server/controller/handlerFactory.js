@@ -25,7 +25,8 @@ exports.getAll = (Model) => async (req, res, next) => {
     .filter()
     .sort()
     .limitFields()
-    .paginate();
+    .paginate()
+    .searchByTitle();
 
   const docs = await features.query;
 
