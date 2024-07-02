@@ -4,6 +4,7 @@ import {
   useGetContentBasedOnGenresQuery,
   useGetContentBasedOnSortQuery,
   useGetContentByNameQuery,
+  useGetContentQuery,
   useGetFeaturedContentQuery,
 } from "../contentsService";
 
@@ -69,4 +70,11 @@ export const useFetchContentByName = ({ title }) => {
 
   const contents = data?.data.docs;
   return { contents, isLoading, error };
+};
+
+export const useFetchGetById = (id) => {
+  const { data, isLoading, error } = useGetContentQuery(id);
+
+  const content = data?.data.doc;
+  return { content, isLoading, error };
 };

@@ -5,3 +5,4 @@ export { default as Series } from "./Series";
 export { default as Movies } from "./Movies";
 export { default as Genre } from "./Genre";
 export { default as Search } from "./Search";
+export { default as Details } from "./Details";
