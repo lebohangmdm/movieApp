@@ -1,6 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useCallback, useEffect, useState } from "react";
 import { useFeaturedContent } from "../services/hooks/contentHooks";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { contents: movies, isLoading, error } = useFeaturedContent();
@@ -34,12 +35,14 @@ const Hero = () => {
 
   return (
     <section className="z-0 relative group w-full h-height-dvh">
-      <div
-        style={{
-          backgroundImage: `url(${movies?.[currentIndex].coverImage})`,
-        }}
-        className="w-full h-full bg-center bg-cover duration-500"
-      ></div>
+      <Link to={`/watch/${movies?.[currentIndex].id}`}>
+        <div
+          style={{
+            backgroundImage: `url(${movies?.[currentIndex].coverImage})`,
+          }}
+          className="w-full h-full bg-center bg-cover duration-500"
+        ></div>
+      </Link>
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-gray-500/20 text-white cursor-pointer">
         <ChevronLeftIcon className="w-9 h-9 text-white" onClick={prevSlide} />

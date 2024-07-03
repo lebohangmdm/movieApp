@@ -38,8 +38,8 @@ const Row = ({ title, data }) => {
           ref={rowRef}
           className="flex items-center space-x-1 overflow-x-scroll scrollbar-hide md:gap-x-8"
         >
-          {data?.map((show) => {
-            return <RowContent key={show.id} show={show} />;
+          {data?.map((content) => {
+            return <RowContent key={content.id} content={content} />;
           })}
         </div>
 
