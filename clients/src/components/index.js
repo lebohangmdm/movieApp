@@ -10,3 +10,4 @@ export { default as Hero } from "./Hero";
 export { default as Row } from "./Row";
 export { default as RowContent } from "./RowContent";
 export { default as InputError } from "./InputError";
+export { default as UploadImage } from "./UploadImage";
