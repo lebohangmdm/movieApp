@@ -5,25 +5,24 @@ const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
 
 const protect = asyncHandler(async (req, res, next) => {
-  // check if there's token
+  // 1) Getting token and check of it's there
   let token;
-  if (
-    req.headers.authorization &&
-    req.headers.authorization.startsWith("Bearer")
-  ) {
-    token = req.headers.authorization.split(" ")[1];
+  if (req.signedCookies.jwt) {
+    token = req.signedCookies.jwt;
   }
+  console.log(token);
 
   if (!token) {
-    return next(new AppError("You are not logged in. Please log in", 401));
+    return next(
+      new AppError("You are not logged in! Please log in to get access.", 401)
+    );
   }
 
-  //   verify your token
+  // 2) Verification token
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
-  //   check for the user
+  // 3) Check if user still exists
   const user = await User.findById(decoded.id);
-
   if (!user) {
     return next(
       new AppError(
@@ -33,13 +32,14 @@ const protect = asyncHandler(async (req, res, next) => {
     );
   }
 
-  // Check if user changed password after the token was issued
+  // 4) Check if user changed password after the token was issued
   if (user.changedPasswordAfter(decoded.iat)) {
     return next(
       new AppError("User recently changed password! Please log in again.", 401)
     );
   }
 
+  // GRANT ACCESS TO PROTECTED ROUTE
   req.user = user;
   next();
 });

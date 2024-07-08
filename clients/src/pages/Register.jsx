@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { RegisterValidation } from "../utils/validation";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -7,6 +7,8 @@ import { useRegisterMutation } from "../services/authService";
 import { toast } from "react-hot-toast";
 import { useEffect } from "react";
 import { handleFirstWord } from "../utils/helpers";
+import { setCredentials } from "../redux/features/auth/auth";
+import { useDispatch } from "react-redux";
 
 const Register = () => {
   const [registerUser, { isLoading, isError, error }] = useRegisterMutation();
@@ -16,11 +18,17 @@ const Register = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(RegisterValidation) });
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const onSubmit = async (data) => {
     const { data: dataInfo } = await registerUser(data);
-    if (dataInfo?.success) {
+    dispatch(setCredentials(dataInfo));
+
+    if (dataInfo?.status === "success") {
       const firstName = handleFirstWord(dataInfo?.data.user.fullName);
       toast.success(`Welcome, ${firstName}! Glad to have you join us! 🎉 `);
+      navigate("/login");
     }
   };
 

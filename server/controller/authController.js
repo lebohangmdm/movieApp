@@ -1,6 +1,11 @@
 const User = require("../models/userModel");
 const jwt = require("jsonwebtoken");
 const AppError = require("../utils/AppError");
+const cookieParser = require("cookie-parser");
+const express = require("express");
+
+const app = express();
+app.use(cookieParser());
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -8,23 +13,21 @@ const signToken = (id) => {
   });
 };
 
-const createSendToken = (res, statusCode, user) => {
-  token = signToken(user._id);
+const createSendToken = (user, statusCode, res) => {
+  const token = signToken(user._id);
 
-  res.cookie("jwt", process.env.JWT_SECRET, {
-    expires: new Date(
-      Date.now() + process.env.COOKIE_EXPIRES * 24 * 60 * 60 * 1000
-    ),
+  res.cookie("jwt", token, {
     httpOnly: true,
+    expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+    secure: process.env.NODE_ENV === "production",
+    signed: true,
   });
 
-  if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
-
-  // Remove password
+  // Remove password from output
   user.password = undefined;
 
   res.status(statusCode).json({
-    success: "success",
+    status: "success",
     token,
     data: {
       user,
@@ -35,7 +38,7 @@ const createSendToken = (res, statusCode, user) => {
 exports.register = async (req, res, next) => {
   const user = await User.create(req.body);
 
-  createSendToken(res, 201, user);
+  createSendToken(user, 201, res);
 };
 
 exports.login = async (req, res, next) => {
@@ -53,7 +56,7 @@ exports.login = async (req, res, next) => {
     return next(new AppError("Invalid credentials", 401));
   }
 
-  createSendToken(res, 200, user);
+  createSendToken(user, 200, res);
 };
 
 exports.updatePassword = async (req, res, next) => {
@@ -71,7 +74,7 @@ exports.updatePassword = async (req, res, next) => {
   await user.save();
 
   //   send the token
-  createSendToken(res, 200, user);
+  createSendToken(user, 200, res);
 };
 
 exports.logout = (req, res) => {

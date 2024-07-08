@@ -8,13 +8,14 @@ import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { handleFirstWord } from "../utils/helpers";
 import { useDispatch } from "react-redux";
-import { login } from "../redux/features/auth/auth";
+import { setCredentials } from "../redux/features/auth/auth";
 
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [loginUser, { isLoading, isError, error }] = useLoginMutation();
+  console.log(error);
   const {
     register,
     handleSubmit,
@@ -25,8 +26,11 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     const { data: dataInfo } = await loginUser(data);
-    dispatch(login(dataInfo));
-    if (dataInfo?.success) {
+    console.log(dataInfo);
+
+    dispatch(setCredentials(dataInfo));
+
+    if (dataInfo?.status === "success") {
       const firstName = handleFirstWord(dataInfo?.data.user.fullName);
       toast.success(`Welcome back, ${firstName}`);
       navigate("/");
@@ -35,7 +39,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isError) {
-      toast.error(error.data.message);
+      // toast.error(error.data.message);
     }
   }, [isError, error]);
 

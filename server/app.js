@@ -30,18 +30,24 @@ const limiter = rateLimit({
 
 app.use("/api", limiter);
 
-const corsOptions = {
-  origin: "http://localhost:5173",
-  // other options
-};
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+    credentials: true,
+  })
+);
 
 app.use(express.json({ limit: "100kb" }));
 
 app.use(mongoSanitize());
-app.use(cookieParser());
 app.use(hpp());
+app.use(cookieParser(process.env.JWT_SECRET));
+// app.get("/api/v1", (req, res) => {
+//   console.log(req.signedCookies);
+//   res.send("cookie");
+// });
 
 // routes
 app.use("/api/v1/auth", authRouter);

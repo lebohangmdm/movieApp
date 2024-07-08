@@ -11,6 +11,7 @@ router.get(
 );
 router.patch(
   "/profile/update",
+  protect,
   userController.uploadUserPhoto,
   userController.resizeUserPhoto,
   userController.updateMyProfile
