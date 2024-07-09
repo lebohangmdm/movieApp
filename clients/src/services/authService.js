@@ -6,6 +6,9 @@ export const userApiSlice = apiSlice.injectEndpoints({
       query: (data) => ({
         url: `auth/login`,
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: data,
       }),
     }),

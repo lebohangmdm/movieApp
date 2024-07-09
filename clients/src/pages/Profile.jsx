@@ -1,16 +1,71 @@
 import { useForm } from "react-hook-form";
 import { InputError, UploadImage } from "../components";
 import { Button } from "@mui/material";
-import { Delete } from "@mui/icons-material";
+
+import {
+  useDeleteProfileMutation,
+  useGetProfileQuery,
+  useUpdateProfileMutation,
+} from "../services/usersService";
+import { useNavigate } from "react-router-dom";
+import { useFetchGetUser, useLogout } from "../services/hooks/usersHooks";
+import toast from "react-hot-toast";
+import { useEffect } from "react";
 
 const Profile = () => {
+  // const {
+  //   userData,
+  //   isLoading: getUserLoading,
+  //   error: getUserError,
+  // } = useFetchGetUser();
+
+  const {
+    data: userData,
+    isLoading: profileLoading,
+    error: profileError,
+  } = useGetProfileQuery();
+
+  const fullName = userData?.data.user.fullName;
+  const email = userData?.data.user.email;
+  console.log(email);
+
+  useEffect(() => {
+    toast.error(profileError.message);
+  }, [profileError]);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    values: {
+      fullName,
+      email,
+    },
+  });
 
-  const onSubmit = () => {};
+  const [updateProfile, { isLoading: isUpdating, error: updateError }] =
+    useUpdateProfileMutation();
+  const [deleteProfile, { isLoading: isDeleting, error: errorDelete }] =
+    useDeleteProfileMutation();
+
+  const { handleLogout, errorLogout } = useLogout();
+  const navigate = useNavigate();
+
+  const handleDelete = () => {
+    deleteProfile();
+    if (errorDelete) toast.error(errorDelete.message);
+    handleLogout();
+    if (errorLogout) toast.error(errorLogout.message);
+    toast.success("Your account has been deactivated");
+    navigate("/");
+  };
+
+  const onSubmit = (data) => {
+    updateProfile(data);
+    if (updateError) toast.error(updateError.message);
+    navigate(window.location.pathname, { replace: true });
+  };
 
   return (
     <section className="bg-black h-height-dvh">
@@ -24,11 +79,8 @@ const Profile = () => {
             <UploadImage />
           </div>
           <div className="flex-1">
-            <form
-              className="space-y-4 md:space-y-8"
-              onSubmit={handleSubmit(onSubmit)}
-            >
-              <div className="flex flex-col">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="flex flex-col mb-5 md:mb-6">
                 <label className="text-sm text-white mb-2">Full Name</label>
                 <input
                   type="text"
@@ -36,13 +88,12 @@ const Profile = () => {
                   {...register("fullName", {
                     required: "Full Name is required",
                   })}
-                  value={fullName}
                 />
                 {errors.fullName && (
                   <InputError error={errors.fullName.message} />
                 )}
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col mb-5 md:mb-6">
                 <label className="text-sm text-white mb-2">Email</label>
                 <input
                   type="email"
@@ -54,24 +105,34 @@ const Profile = () => {
                       message: "Invalid email address",
                     },
                   })}
-                  value={email}
                 />
                 {errors.email && <InputError error={errors.email.message} />}
               </div>
+              <div className="mt-8 flex justify-between ">
+                <Button
+                  variant="contained"
+                  size="small"
+                  color="success"
+                  type="submit"
+                  sx={{ fontSize: "14px", textTransform: "capitalize" }}
+                >
+                  {isUpdating ? "Updating..." : "Update Profile"}
+                </Button>
+                <Button
+                  variant="contained"
+                  size="small"
+                  color="error"
+                  type="button"
+                  onClick={handleDelete}
+                  sx={{
+                    fontSize: "14px",
+                    textTransform: "capitalize",
+                  }}
+                >
+                  {isDeleting ? "Deleting..." : "Delete Profile"}
+                </Button>
+              </div>
             </form>
-            <div className="mt-8 flex justify-between md:mt-10 lg:mt-12">
-              <Button variant="contained" size="small" color="success">
-                Update Profile
-              </Button>
-              <Button
-                variant="outlined"
-                size="small"
-                color="error"
-                startIcon={<Delete />}
-              >
-                Delete Profile
-              </Button>
-            </div>
           </div>
         </div>
       </div>
