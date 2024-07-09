@@ -10,7 +10,6 @@ const protect = asyncHandler(async (req, res, next) => {
   if (req.signedCookies.jwt) {
     token = req.signedCookies.jwt;
   }
-  console.log(token);
 
   if (!token) {
     return next(
@@ -30,6 +29,11 @@ const protect = asyncHandler(async (req, res, next) => {
         401
       )
     );
+  }
+
+  // check if is user is deactivated
+  if (!user.isActive) {
+    return next(new AppError("Account deactivated", 403));
   }
 
   // 4) Check if user changed password after the token was issued

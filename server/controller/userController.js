@@ -71,8 +71,7 @@ exports.resizeUserPhoto = async (req, res, next) => {
 };
 
 exports.getAllUsers = getAll(User);
-exports.getUser = getOne(User);
-exports.updat = updateOne(User);
+exports.update = updateOne(User);
 exports.deleteUser = deleteOne(User);
 
 exports.getMyProfile = (req, res, next) => {
@@ -81,10 +80,10 @@ exports.getMyProfile = (req, res, next) => {
   next();
 };
 
-exports.getUserById = async (req, res, next) => {
+exports.getUser = async (req, res, next) => {
   const { id } = req.params;
   console.log(id);
-  const user = await User.findById(id);
+  const user = await User.findById({ _id: id }, { active: true });
 
   if (!user) {
     return next(new AppError(`No user found with this id: ${id}`));

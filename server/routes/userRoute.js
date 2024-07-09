@@ -6,8 +6,9 @@ router.use(protect);
 
 router.get(
   "/profile/me",
+  protect,
   userController.getMyProfile,
-  userController.getUserById
+  userController.getUser
 );
 router.patch(
   "/profile/update",

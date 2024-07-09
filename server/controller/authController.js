@@ -51,6 +51,10 @@ exports.login = async (req, res, next) => {
 
   const user = await User.findOne({ email }).select("+password");
 
+  if (!user.active) {
+    return next(new AppError("Account Deactivated"));
+  }
+
   //   check the user and password is correct
   if (!user || !(await user.comparePassword(password))) {
     return next(new AppError("Invalid credentials", 401));
