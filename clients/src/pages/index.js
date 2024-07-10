@@ -6,3 +6,6 @@ export { default as Movies } from "./Movies";
 export { default as Genre } from "./Genre";
 export { default as Search } from "./Search";
 export { default as Details } from "./Details";
+export { default as Profile } from "./Profile";
+export { default as Settings } from "./Settings";
+export { default as Dashboard } from "./Dashboard";

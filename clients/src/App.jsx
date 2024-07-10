@@ -1,6 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AppLayout } from "./components";
 import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import {
+  AppLayout,
+  Contents,
+  CreateContent,
+  UpdateContent,
+  Users,
+} from "./components";
+import {
+  Dashboard,
   Details,
   Genre,
   Home,
@@ -10,6 +22,7 @@ import {
   Register,
   Search,
   Series,
+  Settings,
 } from "./pages";
 import { Toaster } from "react-hot-toast";
 
@@ -29,6 +42,14 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="dashboard" element={<Dashboard />}>
+            <Route index element={<Navigate replace to={"contents"} />} />
+            <Route path="contents" element={<Contents />} />
+            <Route path="create-content" element={<CreateContent />} />
+            <Route path="update-content" element={<UpdateContent />} />
+            <Route path="users" element={<Users />} />
+          </Route>
         </Routes>
       </Router>
       <Toaster
