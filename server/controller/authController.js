@@ -49,10 +49,12 @@ exports.login = async (req, res, next) => {
     return next(new AppError("Please provide both password and email", 400));
   }
 
-  const user = await User.findOne({ email }).select("+password");
+  const user = await User.findOne({ email })
+    .select("+password")
+    .select("+active");
 
   if (!user.active) {
-    return next(new AppError("Account Deactivated"));
+    return next(new AppError("Account Deactivated", 403));
   }
 
   //   check the user and password is correct
@@ -69,7 +71,7 @@ exports.updatePassword = async (req, res, next) => {
 
   // 2) Check if POSTed current password is correct
   if (!(await user.comparePassword(req.body.currentPassword))) {
-    return next(new AppError("Your current password is wrong.", 401));
+    return next(new AppError("Your password is incorrect", 401));
   }
 
   // 3) If so, update password
