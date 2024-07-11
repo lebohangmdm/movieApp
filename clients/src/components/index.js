@@ -11,3 +11,8 @@ export { default as Row } from "./Row";
 export { default as RowContent } from "./RowContent";
 export { default as InputError } from "./InputError";
 export { default as UploadImage } from "./UploadImage";
+export { default as Contents } from "./Contents";
+export { default as CreateContent } from "./CreateContent";
+export { default as UpdateContent } from "./UpdateContent";
+export { default as Users } from "./Users";
+export { default as Table } from "./Table";
