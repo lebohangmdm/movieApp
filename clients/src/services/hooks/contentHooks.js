@@ -1,4 +1,5 @@
 import {
+  useDeleteContentMutation,
   useGetAllContentBasedOnTypeQuery,
   useGetAllContentsQuery,
   useGetContentBasedOnGenresQuery,
@@ -77,4 +78,20 @@ export const useFetchGetById = (id) => {
 
   const content = data?.data.doc;
   return { content, isLoading, error };
+};
+
+export const useDeleteContent = () => {
+  const [deleteContent, { isLoading, error }] = useDeleteContentMutation();
+
+  const handleDelete = async (id) => {
+    console.log(id);
+    try {
+      await deleteContent(id).unwrap();
+      // Optionally handle redirection or state updates here
+    } catch (err) {
+      console.error("delete failed:", err);
+    }
+  };
+
+  return { handleDelete, isLoading, error };
 };

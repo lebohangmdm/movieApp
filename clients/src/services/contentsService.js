@@ -7,6 +7,7 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
         url: "contents",
         params: { sort },
       }),
+      providesTags: ["Contents"],
     }),
     getRandomContent: builder.query({
       query: ({ type }) => ({
@@ -20,6 +21,7 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
         method: "POST",
         body: newContent,
       }),
+      invalidatesTags: ["Contents"],
     }),
     getContent: builder.query({
       query: (id) => `contents/${id}`,
@@ -61,12 +63,14 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
         method: "PATCH",
         body: content,
       }),
+      invalidatesTags: ["Contents"],
     }),
     deleteContent: builder.mutation({
       query: ({ id }) => ({
         url: `contents/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: ["Contents"],
     }),
   }),
 });
