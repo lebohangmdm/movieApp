@@ -1,11 +1,18 @@
 import { useLogoutMutation } from "../authService";
-import { useGetProfileQuery } from "../usersService";
+import { useGetAllUsersQuery, useGetProfileQuery } from "../usersService";
 
 export const useFetchGetUser = () => {
   const { data, isLoading, error } = useGetProfileQuery();
 
   const userData = data?.data;
   return { userData, isLoading, error };
+};
+
+export const useFetchAllUsers = () => {
+  const { data, isLoading, error } = useGetAllUsersQuery({ sort: "createdAt" });
+
+  const usersData = data?.data?.docs;
+  return { usersData, isLoading, error };
 };
 
 export const useLogout = () => {

@@ -7,6 +7,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
         url: "users",
         params: { sort },
       }),
+      providesTags: ["Users"],
     }),
     getProfile: builder.query({
       query: () => ({
@@ -19,6 +20,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
         method: "PATCH",
         body: data,
       }),
+      invalidatesTags: ["Users"],
     }),
 
     deleteProfile: builder.mutation({
@@ -26,13 +28,14 @@ export const userApiSlice = apiSlice.injectEndpoints({
         url: `users/profile/delete`,
         method: "DELETE",
       }),
+      invalidatesTags: ["Users"],
     }),
-
-    logout: builder.mutation({
-      query: () => ({
-        url: `auth/logout`,
-        method: "POST",
+    deleteUser: builder.mutation({
+      query: ({ id }) => ({
+        url: `users/${id}`,
+        method: "DELETE",
       }),
+      invalidatesTags: ["Users"],
     }),
   }),
 });
@@ -42,4 +45,5 @@ export const {
   useGetProfileQuery,
   useUpdateProfileMutation,
   useDeleteProfileMutation,
+  useDeleteUserMutation,
 } = userApiSlice;
