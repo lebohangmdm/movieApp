@@ -15,4 +15,5 @@ export { default as Contents } from "./Contents";
 export { default as CreateContent } from "./CreateContent";
 export { default as UpdateContent } from "./UpdateContent";
 export { default as Users } from "./Users";
-export { default as Table } from "./Table";
+export { default as ContentsTable } from "./ContentsTable";
+export { default as Loader } from "./Loader";

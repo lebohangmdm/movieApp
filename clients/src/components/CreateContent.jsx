@@ -1,18 +1,70 @@
 import { CloudArrowUpIcon } from "@heroicons/react/20/solid";
+import { useForm } from "react-hook-form";
+import InputError from "./InputError";
+import { Button } from "@mui/material";
+import { useCreateContentMutation } from "../services/contentsService";
+import { useState } from "react";
 
 const CreateContent = () => {
-  const type = "series";
-  const selectedImage = "photo";
+  // const type = "series";
+  // const selectedImage = "photo";
+  const [createContent, { isLoading: creating, error, data }] =
+    useCreateContentMutation();
+  const {
+    handleSubmit,
+    register,
+    watch,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      type: "movie",
+      totalSeasons: "",
+    },
+  });
+
+  const selectedType = watch("type");
+  const selectedImage = watch("coverImage");
+
+  console.log(data);
+  const onSubmit = (data) => {
+    const formData = new FormData();
+
+    formData.append("title", data.title);
+    formData.append("duration", data.duration);
+    formData.append("releaseYear", data.releaseYear);
+    formData.append("releaseDate", data.releaseDate);
+    formData.append("cast", data.cast);
+    formData.append("directors", data.directors);
+    formData.append("description", data.description);
+    formData.append("genres", data.genres);
+    formData.append("type", data.type);
+
+    // console.log(data);
+    if (data.coverImage && data.coverImage[0]) {
+      formData.append("coverImage", data.coverImage[0]);
+    }
+
+    createContent(formData);
+  };
+  console.log(error);
+
   return (
     <div>
-      <form action="" className="flex flex-col gap-y-4 md:gap-y-7">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col gap-y-4 md:gap-y-7"
+      >
         <div className="flex flex-col gap-y-4  lg:flex-row lg:gap-y-0 lg:gap-x-8">
           <div className="text-white flex flex-col gap-y-2 w-full lg:w-1/2 ">
             <label className="text-sm">Title</label>
             <input
               type="text"
               className="text-sm  py-2 px-4 bg-transparent md:text-base"
+              {...register("title", {
+                required: "Please provide the title",
+              })}
             />
+            {errors.title && <InputError error={errors.title.message} />}
           </div>
           <div className="text-white flex flex-col gap-y-2 w-full lg:w-1/2 ">
             <label htmlFor="" className="text-sm">
@@ -22,7 +74,11 @@ const CreateContent = () => {
               type="text"
               className="text-sm w-full py-2 px-4 bg-transparent md:text-base"
               placeholder="126 min"
+              {...register("duration", {
+                required: "Please provide the duration",
+              })}
             />
+            {errors.duration && <InputError error={errors.duration.message} />}
           </div>
         </div>
         <div className="flex flex-col gap-y-4  lg:flex-row lg:gap-y-0 lg:gap-x-8">
@@ -34,7 +90,13 @@ const CreateContent = () => {
               type="text"
               className="text-sm  py-2 px-4 bg-transparent md:text-base "
               placeholder="2024"
+              {...register("releaseYear", {
+                required: "Please provide the release year",
+              })}
             />
+            {errors.releaseYear && (
+              <InputError error={errors.releaseYear.message} />
+            )}
           </div>
           <div className="text-white flex flex-col gap-y-2 w-full lg:w-1/2 ">
             <label htmlFor="" className="text-sm">
@@ -44,7 +106,13 @@ const CreateContent = () => {
               type="text"
               className="text-sm w-full py-2 px-4 bg-transparent md:text-base"
               placeholder="26 May 2024"
+              {...register("releaseDate", {
+                required: "Please provide the release date",
+              })}
             />
+            {errors.releaseDate && (
+              <InputError error={errors.releaseDate.message} />
+            )}
           </div>
         </div>
         <div className="text-white flex flex-col gap-y-2 w-full  ">
@@ -56,7 +124,13 @@ const CreateContent = () => {
             cols="30"
             rows="3"
             className="text-sm w-full py-2 px-4 bg-transparent md:text-base"
+            {...register("description", {
+              required: "Please provide the description",
+            })}
           ></textarea>
+          {errors.description && (
+            <InputError error={errors.description.message} />
+          )}
         </div>
         <div className="flex items-center justify-between lg:gap-16">
           <div className="text-white flex flex-col gap-y-2">
@@ -64,10 +138,11 @@ const CreateContent = () => {
               Select Content Type:
             </label>
             <select
-              id="media-select"
-              // value={selectedOption}
-              // onChange={handleChange}
+              id="type"
               className="text-sm py-2 px-4 bg-black md:text-base"
+              {...register("type", {
+                required: "Please provide the type",
+              })}
             >
               <option
                 value="movie"
@@ -82,8 +157,9 @@ const CreateContent = () => {
                 Series
               </option>
             </select>
+            {errors.type && <InputError error={errors.type.message} />}
           </div>
-          {type && (
+          {selectedType === "series" && (
             <div className="text-white flex flex-col gap-y-2 w-52 lg:flex-1">
               <label htmlFor="" className="text-sm">
                 Total Seasons
@@ -91,7 +167,16 @@ const CreateContent = () => {
               <input
                 type="text"
                 className="text-sm w-full py-2 px-4 bg-transparent md:text-base"
+                {...register("totalSeasons", {
+                  required:
+                    selectedType === "series"
+                      ? "Please provide the total season"
+                      : false,
+                })}
               />
+              {errors.totalSeasons && (
+                <InputError error={errors.totalSeasons.message} />
+              )}
             </div>
           )}
         </div>
@@ -104,7 +189,13 @@ const CreateContent = () => {
               type="text"
               className="text-sm  py-2 px-4 bg-transparent md:text-base "
               placeholder="2024"
+              {...register("directors", {
+                required: "Please provide the directors",
+              })}
             />
+            {errors.directors && (
+              <InputError error={errors.directors.message} />
+            )}
           </div>
           <div className="text-white flex flex-col gap-y-2 w-full lg:w-1/2 ">
             <label htmlFor="" className="text-sm">
@@ -114,7 +205,11 @@ const CreateContent = () => {
               type="text"
               className="text-sm w-full py-2 px-4 bg-transparent md:text-base"
               placeholder="Pedro Pascal, Denzel Washington"
+              {...register("cast", {
+                required: "Please provide the cast",
+              })}
             />
+            {errors.cast && <InputError error={errors.cast.message} />}
           </div>
         </div>
         <div className="flex flex-col gap-y-4  lg:flex-row lg:gap-y-0 lg:gap-x-8">
@@ -126,7 +221,11 @@ const CreateContent = () => {
               type="text"
               className="text-sm  py-2 px-4 bg-transparent md:text-base "
               placeholder="Action, Thriller, Comedy"
+              {...register("genres", {
+                required: "Please provide the genres",
+              })}
             />
+            {errors.genres && <InputError error={errors.genres.message} />}
           </div>
           <div className="text-white flex flex-col gap-y-2 w-full lg:w-1/2 ">
             <label htmlFor="" className="text-sm">
@@ -136,7 +235,11 @@ const CreateContent = () => {
               type="text"
               className="text-sm w-full py-2 px-4 bg-transparent md:text-base"
               placeholder="https:youtube/ytkwnjse"
+              {...register("video", {
+                required: "Please provide the trailer url",
+              })}
             />
+            {errors.video && <InputError error={errors.video.message} />}
           </div>
         </div>
         <div className="mx-auto lg:mx-0">
@@ -148,19 +251,36 @@ const CreateContent = () => {
             <input
               type="file"
               className="hidden"
-              // onChange={handleImageChange}
+              id="coverImage"
+              {...register("coverImage", {
+                required: "Please provide the cover image",
+              })}
             />
+            {errors.coverImage && (
+              <InputError error={errors.coverImage.message} />
+            )}
           </label>
 
           {selectedImage && (
             <div className="mt-4">
               <img
-                // src={selectedImage}
+                src={selectedImage}
                 alt="Preview"
                 className="max-w-xs mx-auto lg:mx-0"
               />
             </div>
           )}
+        </div>
+        <div className="mt-8 flex justify-between ">
+          <Button
+            variant="contained"
+            size="small"
+            color="success"
+            type="submit"
+            sx={{ fontSize: "14px", textTransform: "capitalize" }}
+          >
+            {creating ? "submitting" : "Create Content"}
+          </Button>
         </div>
       </form>
     </div>
