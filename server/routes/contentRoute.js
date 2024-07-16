@@ -4,13 +4,16 @@ const { restrictTo, protect } = require("../middleware/authMiddleware");
 const reviewRouter = require("./reviewRoute");
 
 router.use("/:contentId/reviews", reviewRouter);
-
 router.get("/random", contentController.getRandomContents);
 
 router
   .route("/")
   .get(contentController.getAllContents)
-  .post(contentController.createContent);
+  .post(
+    protect,
+    contentController.uploadSingleImage,
+    contentController.createContent
+  );
 
 router
   .route("/:id")

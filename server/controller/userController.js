@@ -38,8 +38,6 @@ exports.resizeUserPhoto = async (req, res, next) => {
 
   req.file.filename = `user-${req.user.id}-${uuidv4()}.jpeg`;
 
-  // const fileName = `${uuidv4()}${path.extname(req.file.originalName)}`;
-
   await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat("jpeg")
@@ -50,24 +48,6 @@ exports.resizeUserPhoto = async (req, res, next) => {
     );
 
   next();
-
-  // const blob = storage.file(fileName);
-
-  // blobStream = blob.createWriteStream({
-  //   resumable: false,
-  //   contentType: file.mimetype,
-  // });
-
-  // blobStream.on("error", (error) => {
-  //   res.status(400).json({ status: "fail", message: error.message });
-  // });
-
-  // blobStream.on("success", () => {
-  //   const pubicUrl = `https://firebasestorage.googleapis.com/v0/b/${storage.name}/0/${filename}?alt=media`;
-
-  //   res.status(200).json({ status: "success", pubicUrl });
-  // });
-  // blobStream.end(file.buffer);
 };
 
 exports.getAllUsers = getAll(User);

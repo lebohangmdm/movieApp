@@ -32,9 +32,9 @@ const protect = asyncHandler(async (req, res, next) => {
   }
 
   // check if is user is deactivated
-  if (!user.isActive) {
-    return next(new AppError("Account deactivated", 403));
-  }
+  // if (!user.active) {
+  //   return next(new AppError("Account deactivated", 403));
+  // }
 
   // 4) Check if user changed password after the token was issued
   if (user.changedPasswordAfter(decoded.iat)) {

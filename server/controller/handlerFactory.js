@@ -5,6 +5,8 @@ exports.createOne = (Model) => async (req, res, next) => {
   if (!req.body.user) req.body.user = req.user.id;
   if (!req.body.content) req.body.content = req.params.contentId;
 
+  if (req.file) req.body.coverImage = req.file.filename;
+
   const doc = await Model.create(req.body);
 
   console.log(req.body.user);

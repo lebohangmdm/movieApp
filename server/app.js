@@ -40,6 +40,7 @@ app.use(
 );
 
 app.use(express.json({ limit: "100kb" }));
+app.use(express.static("public"));
 
 app.use(mongoSanitize());
 app.use(hpp());

@@ -76,7 +76,7 @@ exports.updatePassword = async (req, res, next) => {
 
   // 3) If so, update password
   user.password = req.body.password;
-  user.passwordConfirm = req.body.passwordConfirm;
+  user.passwordConfirm = req.body.passwordConfirm;a
   await user.save();
 
   //   send the token

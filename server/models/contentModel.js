@@ -67,7 +67,10 @@ const contentSchema = new mongoose.Schema(
         message: `Content is required for series and cannot be 'N/A'`,
       },
     },
-    coverImage: String,
+    coverImage: {
+      type: String,
+      required: [true, "Please provide the cover image"],
+    },
     directors: {
       type: String,
       required: [true, "Please provide the director of them content"],
