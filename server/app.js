@@ -13,6 +13,7 @@ const userRouter = require("./routes/userRoute");
 const contentRouter = require("./routes/contentRoute");
 const reviewRouter = require("./routes/reviewRoute");
 const AppError = require("./utils/AppError");
+require("dotenv").config({ path: "./config.env" });
 
 const app = express();
 
@@ -21,6 +22,8 @@ app.use(helmet());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+console.log(process.env.JWT_SECRET);
 
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 15 minutes

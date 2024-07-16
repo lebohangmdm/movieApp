@@ -1,10 +1,7 @@
 const User = require("../models/userModel");
 const AppError = require("../utils/AppError");
-const { v4: uuidv4 } = require("uuid");
 const multer = require("multer");
 const sharp = require("sharp");
-const path = require("path");
-const storage = require("../config/firebaseStorage");
 const { getAll, getOne, deleteOne, updateOne } = require("./handlerFactory");
 require("express-async-errors");
 
@@ -31,21 +28,18 @@ const upload = multer({
   fileFilter: multerFilter,
 });
 
-exports.uploadUserPhoto = upload.single("photo");
+exports.uploadUserPhoto = upload.single("image");
 
 exports.resizeUserPhoto = async (req, res, next) => {
   if (!req.file) return next();
 
-  req.file.filename = `user-${req.user.id}-${uuidv4()}.jpeg`;
+  req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
 
   await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat("jpeg")
     .jpeg({ quality: 90 })
-    // .toFile(`public${req.body.filename}`);
-    .toFile(
-      `https://firebasestorage.googleapis.com/v0/b/${storage.name}/0/${req.file.filename}?alt=media`
-    );
+    .toFile(`server/public/images/users/${req.file.filename}`);
 
   next();
 };
@@ -53,28 +47,11 @@ exports.resizeUserPhoto = async (req, res, next) => {
 exports.getAllUsers = getAll(User);
 exports.update = updateOne(User);
 exports.deleteUser = deleteOne(User);
+exports.getUser = getOne(User);
 
 exports.getMyProfile = (req, res, next) => {
   req.params.id = req.user.id;
-  console.log("get my profile");
   next();
-};
-
-exports.getUser = async (req, res, next) => {
-  const { id } = req.params;
-  console.log(id);
-  const user = await User.findById({ _id: id }, { active: true });
-
-  if (!user) {
-    return next(new AppError(`No user found with this id: ${id}`));
-  }
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      user,
-    },
-  });
 };
 
 exports.updateMyProfile = async (req, res) => {
