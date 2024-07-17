@@ -59,11 +59,6 @@ const ContentsTable = () => {
     let toastId; // Initialize a variable to store toast ID if needed
 
     // error for contents
-    if (error) {
-      const errorMessage = error?.data?.message || "An error occurred";
-      toastId = toast.error(errorMessage); // Store the toast ID]
-    }
-
     if (isErrorDelete) {
       const errorMessage = deleteError?.data?.message || "An error occurred";
       toastId = toast.error(errorMessage); // Store the toast ID]\
