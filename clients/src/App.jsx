@@ -14,6 +14,7 @@ import {
 import {
   Dashboard,
   Details,
+  Error,
   Genre,
   Home,
   Login,
@@ -47,9 +48,10 @@ function App() {
             <Route index element={<Navigate replace to={"contents"} />} />
             <Route path="contents" element={<Contents />} />
             <Route path="create-content" element={<CreateContent />} />
-            <Route path="update-content" element={<UpdateContent />} />
+            <Route path="update-content/:id" element={<UpdateContent />} />
             <Route path="users" element={<Users />} />
           </Route>
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
       <Toaster
