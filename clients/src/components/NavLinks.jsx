@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { Nav_Links } from "../constants/NavLinks";
 import MenuCategory from "./MenuCategory";
+import { useSelector } from "react-redux";
+import { getAuth } from "../redux/features/auth/auth";
 
 const NavLinks = () => {
-  const auth = true;
+  const isAuth = useSelector(getAuth);
+  const isAdmin = isAuth?.data?.user?.role === "admin";
 
   return (
     <ul className="hidden  lg:flex items-center md:gap-8 lg:gap-12 ">
@@ -16,11 +19,12 @@ const NavLinks = () => {
           );
         })}
         <MenuCategory />
-        {auth && (
+        {isAuth && (
           <Link to={"favorite"} className="nav-link">
             My list
           </Link>
         )}
+        {isAuth && isAdmin && <Link to={"/dashboard"}>Dashboard</Link>}
       </>
     </ul>
   );

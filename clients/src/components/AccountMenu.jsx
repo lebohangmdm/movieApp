@@ -9,13 +9,29 @@ import Tooltip from "@mui/material/Tooltip";
 import PersonAdd from "@mui/icons-material/PersonAdd";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
-import { useSelector } from "react-redux";
-import { getAuth } from "../redux/features/auth/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { getAuth, logout } from "../redux/features/auth/auth";
 import { UserIcon } from "@heroicons/react/20/solid";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useLogout } from "../services/hooks/usersHooks";
+import toast from "react-hot-toast";
 
 export default function AccountMenu() {
   const isAuth = useSelector(getAuth);
+  const letter = isAuth?.data?.user?.fullName.split(" ")[0].slice(0, 1);
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  const { handleLogout, errorLogout } = useLogout();
+
+  const logoutHandler = async () => {
+    await handleLogout();
+    dispatch(logout());
+    navigate("/");
+  };
+
+  // console.log(fullName);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -26,6 +42,8 @@ export default function AccountMenu() {
   const handleMouseLeave = () => {
     setAnchorEl(null);
   };
+
+  if (errorLogout) return toast.error(errorLogout?.data?.message);
 
   return (
     <React.Fragment>
@@ -47,7 +65,7 @@ export default function AccountMenu() {
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
               >
-                <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+                <Avatar sx={{ width: 32, height: 32 }}>{letter}</Avatar>
               </IconButton>
             </Tooltip>
           </Box>
@@ -87,9 +105,14 @@ export default function AccountMenu() {
             transformOrigin={{ horizontal: "right", vertical: "top" }}
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
           >
-            <MenuItem onClick={handleMouseLeave} sx={{ color: "#e6e6e6" }}>
-              <Avatar /> Profile
-            </MenuItem>
+            <Link to={"/profile"}>
+              <MenuItem
+                onClick={handleMouseLeave}
+                sx={{ color: "#e6e6e6", display: "flex" }}
+              >
+                <Avatar /> Profile
+              </MenuItem>
+            </Link>
             <MenuItem onClick={handleMouseLeave} sx={{ color: "#e6e6e6" }}>
               <Avatar /> My account
             </MenuItem>
@@ -99,18 +122,22 @@ export default function AccountMenu() {
               </ListItemIcon>
               Add another account
             </MenuItem>
-            <MenuItem onClick={handleMouseLeave} sx={{ color: "#e6e6e6" }}>
-              <ListItemIcon>
-                <Settings fontSize="small" sx={{ color: "#e6e6e6" }} />
-              </ListItemIcon>
-              Settings
-            </MenuItem>
-            <MenuItem onClick={handleMouseLeave} sx={{ color: "#e6e6e6" }}>
-              <ListItemIcon>
-                <Logout fontSize="small" sx={{ color: "#e6e6e6" }} />
-              </ListItemIcon>
-              Logout
-            </MenuItem>
+            <Link to={"/settings"}>
+              <MenuItem onClick={handleMouseLeave} sx={{ color: "#e6e6e6" }}>
+                <ListItemIcon>
+                  <Settings fontSize="small" sx={{ color: "#e6e6e6" }} />
+                </ListItemIcon>
+                Settings
+              </MenuItem>
+            </Link>
+            <button onClick={logoutHandler}>
+              <MenuItem onClick={handleMouseLeave} sx={{ color: "#e6e6e6" }}>
+                <ListItemIcon>
+                  <Logout fontSize="small" sx={{ color: "#e6e6e6" }} />
+                </ListItemIcon>
+                Logout
+              </MenuItem>
+            </button>
           </Menu>
         </>
       ) : (

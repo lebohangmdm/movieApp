@@ -7,9 +7,14 @@ import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { getAuth } from "../redux/features/auth/auth";
+import { Dashboard } from "@mui/icons-material";
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const isAuth = useSelector(getAuth);
+  const isAdmin = isAuth?.data?.user?.role === "admin";
 
   const handleShowMenu = () => {
     setShowMenu((show) => !show);
@@ -58,7 +63,7 @@ const MobileMenu = () => {
             </li>
             <li className="text-white text-lg">
               <Link
-                to={"/movie"}
+                to={isAuth ? "/favorites" : "/login"}
                 className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
               >
                 <SubscriptionsIcon />
@@ -67,13 +72,24 @@ const MobileMenu = () => {
             </li>
             <li className="text-white text-lg">
               <Link
-                to={"/movie"}
+                to={"/search"}
                 className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
               >
                 <SearchIcon />
                 <span className="font-semibold">Search</span>
               </Link>
             </li>
+            {isAdmin && isAuth && (
+              <li className="text-white text-lg">
+                <Link
+                  to={"/dashboard"}
+                  className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
+                >
+                  <Dashboard />
+                  <span className="font-semibold">Dashboard</span>
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       )}
