@@ -37,6 +37,36 @@ export const userApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ["Users"],
     }),
+    addContent: builder.mutation({
+      query: (newContent) => ({
+        url: `users/my-list`,
+        method: "POST",
+        body: newContent,
+      }),
+      invalidatesTags: ["Users"],
+    }),
+    deleteContent: builder.mutation({
+      query: () => ({
+        url: `users/my-list`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Users"],
+    }),
+    likeContent: builder.mutation({
+      query: (newContent) => ({
+        url: `users/favorites`,
+        method: "POST",
+        body: newContent,
+      }),
+      invalidatesTags: ["Users"],
+    }),
+    dislikeContent: builder.mutation({
+      query: () => ({
+        url: `users/favorites`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Users"],
+    }),
   }),
 });
 
