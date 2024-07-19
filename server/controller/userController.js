@@ -85,6 +85,28 @@ exports.deleteMyProfile = async (req, res) => {
   });
 };
 
+exports.addContent = async (req, res) => {
+  const user = await User.findById(req.user.id);
+
+  await user.addContent(req.body.content);
+
+  res.status(200).json({
+    status: "success",
+    message: "Content successfully added",
+  });
+};
+
+exports.removeContent = async (req, res) => {
+  const user = await User.findById(req.user.id);
+
+  await user.removeContent(req.body.id);
+
+  res.status(204).json({
+    status: "success",
+    message: "Content successfully deleted",
+  });
+};
+
 exports.addLikedContent = async (req, res) => {
   const user = await User.findById(req.user.id);
 

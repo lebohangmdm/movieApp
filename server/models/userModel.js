@@ -50,6 +50,12 @@ const userSchema = new mongoose.Schema({
       ref: "Movie",
     },
   ],
+  watchList: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Movie",
+    },
+  ],
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetTokenExpires: Date,
@@ -92,7 +98,25 @@ userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
   return false;
 };
 
+// add watchList
+userSchema.methods.addContent = function (contentId) {
+  if (!this.watchList.includes(contentId)) {
+    this.watchList.push(contentId);
+  }
+  return this.save();
+};
+
+// remove watchList
+userSchema.methods.removeContent = function (contentId) {
+  this.watchList = this.watchList.filter(
+    (id) => id.toString() !== contentId.toString()
+  );
+
+  this.save();
+};
+
 // favourite methods
+// add favorite
 userSchema.methods.addFavorite = function (contentId) {
   if (!this.favorites.includes(contentId)) {
     this.favorites.push(contentId);
@@ -101,6 +125,7 @@ userSchema.methods.addFavorite = function (contentId) {
   return this.save();
 };
 
+// remove favorite
 userSchema.methods.deleteFavorite = function (contentId) {
   this.favorites = this.favorites.filter(
     (id) => id.toString() !== contentId.toString()

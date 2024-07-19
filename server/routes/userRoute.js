@@ -30,6 +30,11 @@ router.delete(
   userController.clearLikedContents
 );
 
+router
+  .route("/my-list")
+  .post(restrictTo("user"), userController.addContent)
+  .delete(restrictTo("user"), userController.removeContent);
+
 router.use(restrictTo("admin"));
 
 router.get("/", userController.getAllUsers);
