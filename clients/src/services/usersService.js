@@ -60,7 +60,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ["Users"],
     }),
-    dislikeContent: builder.mutation({
+    hateContent: builder.mutation({
       query: () => ({
         url: `users/favorites`,
         method: "DELETE",
@@ -76,4 +76,8 @@ export const {
   useUpdateProfileMutation,
   useDeleteProfileMutation,
   useDeleteUserMutation,
+  useAddContentMutation,
+  useDeleteContentMutation,
+  useLikeContentMutation,
+  useHateContentMutation,
 } = userApiSlice;
