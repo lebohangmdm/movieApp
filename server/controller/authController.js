@@ -53,10 +53,6 @@ exports.login = async (req, res, next) => {
     .select("+password")
     .select("+active");
 
-  if (!user.active) {
-    return next(new AppError("Account Deactivated", 403));
-  }
-
   //   check the user and password is correct
   if (!user || !(await user.comparePassword(password))) {
     return next(new AppError("Invalid credentials", 401));
@@ -76,7 +72,8 @@ exports.updatePassword = async (req, res, next) => {
 
   // 3) If so, update password
   user.password = req.body.password;
-  user.passwordConfirm = req.body.passwordConfirm;a
+  user.passwordConfirm = req.body.passwordConfirm;
+  a;
   await user.save();
 
   //   send the token

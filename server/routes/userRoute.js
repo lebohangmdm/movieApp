@@ -21,19 +21,13 @@ router.delete("/profile/delete", userController.deleteMyProfile);
 
 router
   .route("/favorites")
-  .post(restrictTo("user"), userController.addLikedContent)
-  .delete(restrictTo("user"), userController.deleteLikedContent);
-
-router.delete(
-  "/favorites/clear",
-  restrictTo("user"),
-  userController.clearLikedContents
-);
+  .post(restrictTo("user", "admin"), userController.addLikedContent)
+  .delete(restrictTo("user", "admin"), userController.deleteLikedContent);
 
 router
   .route("/my-list")
-  .post(restrictTo("user"), userController.addContent)
-  .delete(restrictTo("user"), userController.removeContent);
+  .post(restrictTo("user", "admin"), userController.addContent)
+  .delete(restrictTo("user", "admin"), userController.removeContent);
 
 router.use(restrictTo("admin"));
 

@@ -98,8 +98,8 @@ exports.addContent = async (req, res) => {
 
 exports.removeContent = async (req, res) => {
   const user = await User.findById(req.user.id);
-
-  await user.removeContent(req.body.id);
+  console.log(req.body.content);
+  await user.removeContent(req.body.content);
 
   res.status(204).json({
     status: "success",
@@ -109,9 +109,8 @@ exports.removeContent = async (req, res) => {
 
 exports.addLikedContent = async (req, res) => {
   const user = await User.findById(req.user.id);
-
+  console.log("req.body.content: ", req.body.content);
   await user.addFavorite(req.body.content);
-
   res.status(200).json({
     status: "success",
     message: "Content successfully added",
@@ -120,22 +119,11 @@ exports.addLikedContent = async (req, res) => {
 
 exports.deleteLikedContent = async (req, res) => {
   const user = await User.findById(req.user.id);
-
-  await user.deleteFavorite(req.body.id);
+  console.log(req.body.content);
+  await user.deleteFavorite(req.body.content);
 
   res.status(204).json({
     status: "success",
     message: "Content successfully deleted",
-  });
-};
-
-exports.clearLikedContents = async (req, res) => {
-  const user = await User.findById(req.user.id);
-
-  await user.clearFavorite();
-
-  res.status(204).json({
-    status: "success",
-    message: "Contents successfully deleted",
   });
 };

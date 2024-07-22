@@ -2,63 +2,85 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
 
-const userSchema = new mongoose.Schema({
-  fullName: {
-    type: String,
-    required: [true, "Please provide your full Name"],
-    trim: true,
-  },
-  email: {
-    type: String,
-    required: [true, "Please provide your email"],
-    unique: [true, "User already exists"],
-    validate: [validator.isEmail, "Please provide a valid email"],
-  },
-  image: String,
-  role: {
-    type: String,
-    enum: {
-      values: ["user", "admin"],
-      message: "Please provide one of the required roles",
+const userSchema = new mongoose.Schema(
+  {
+    fullName: {
+      type: String,
+      required: [true, "Please provide your full Name"],
+      trim: true,
     },
-    default: "user",
-  },
-  password: {
-    type: String,
-    required: [true, "Please provide your password"],
-    minlength: 6,
-    select: false,
-  },
-  passwordConfirm: {
-    type: String,
-    required: [true, "Please confirm your password"],
-    validate: {
-      validator: function (val) {
-        return this.password === val;
+    email: {
+      type: String,
+      required: [true, "Please provide your email"],
+      unique: [true, "User already exists"],
+      validate: [validator.isEmail, "Please provide a valid email"],
+    },
+    image: String,
+    role: {
+      type: String,
+      enum: {
+        values: ["user", "admin"],
+        message: "Please provide one of the required roles",
       },
-      message: "Confirm password and password do not match",
+      default: "user",
     },
+    password: {
+      type: String,
+      required: [true, "Please provide your password"],
+      minlength: 6,
+      select: false,
+    },
+    passwordConfirm: {
+      type: String,
+      required: [true, "Please confirm your password"],
+      validate: {
+        validator: function (val) {
+          return val === this.password;
+        },
+        message: "Confirm password and password do not match",
+      },
+    },
+    active: {
+      type: Boolean,
+      default: true,
+      select: false,
+    },
+    favorites: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Content",
+      },
+    ],
+    watchList: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Content",
+      },
+    ],
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetTokenExpires: Date,
   },
-  active: {
-    type: Boolean,
-    default: true,
-    select: false,
-  },
-  favorites: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Movie",
-    },
-  ],
-  watchList: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Movie",
-    },
-  ],
-  passwordChangedAt: Date,
-  passwordResetToken: String,
-  passwordResetTokenExpires: Date,
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  }
+);
+
+userSchema.pre(/^findOne/, function (next) {
+  this.populate({
+    path: "favorites",
+    select: "title coverImage",
+  });
+  next();
+});
+
+userSchema.pre(/^findOne/, function (next) {
+  this.populate({
+    path: "watchList",
+    select: "title coverImage",
+  });
+  next();
 });
 
 userSchema.pre("save", async function (next) {
@@ -103,16 +125,16 @@ userSchema.methods.addContent = function (contentId) {
   if (!this.watchList.includes(contentId)) {
     this.watchList.push(contentId);
   }
-  return this.save();
+  return this.save({ validateBeforeSave: false });
 };
 
 // remove watchList
 userSchema.methods.removeContent = function (contentId) {
   this.watchList = this.watchList.filter(
-    (id) => id.toString() !== contentId.toString()
+    (content) => content.id.toString() !== contentId.toString()
   );
 
-  this.save();
+  return this.save({ validateBeforeSave: false });
 };
 
 // favourite methods
@@ -122,22 +144,16 @@ userSchema.methods.addFavorite = function (contentId) {
     this.favorites.push(contentId);
   }
 
-  return this.save();
+  return this.save({ validateBeforeSave: false });
 };
 
 // remove favorite
 userSchema.methods.deleteFavorite = function (contentId) {
   this.favorites = this.favorites.filter(
-    (id) => id.toString() !== contentId.toString()
+    (content) => content.id.toString() !== contentId.toString()
   );
 
-  this.save();
-};
-
-userSchema.methods.clearFavorite = function () {
-  this.favorites = [];
-
-  this.save();
+  return this.save({ validateBeforeSave: false });
 };
 
 const User = mongoose.model("User", userSchema);

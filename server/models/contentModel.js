@@ -73,11 +73,11 @@ const contentSchema = new mongoose.Schema(
     },
     directors: {
       type: String,
-      required: [true, "Please provide the director of them content"],
+      required: [true, "Please provide the director of the content"],
     },
     cast: {
       type: String,
-      required: [true, "Please provide the actors of them content"],
+      required: [true, "Please provide the actors of the content"],
     },
     featured: {
       type: Boolean,
@@ -108,6 +108,6 @@ contentSchema.pre("save", function (next) {
 //   return this.reviews.length || 0;
 // });
 
-const Content = mongoose.model("content", contentSchema);
+const Content = mongoose.model("Content", contentSchema);
 
 module.exports = Content;

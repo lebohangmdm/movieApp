@@ -69,11 +69,15 @@ exports.getOne = (Model, populateOpts) => async (req, res, next) => {
 
 exports.updateOne = (Model) => async (req, res, next) => {
   const { id } = req.params;
+  console.log("_id:", id);
+  console.log("req-body:", req.body);
 
   const doc = await Model.findByIdAndUpdate(id, req.body, {
     new: true,
     runValidators: true,
   });
+
+  console.log(doc);
 
   if (!doc) {
     return next(new AppError("Could not find the document with this id", 404));
