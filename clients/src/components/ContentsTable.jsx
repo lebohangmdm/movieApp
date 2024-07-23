@@ -16,6 +16,7 @@ import Loader from "./Loader";
 import toast from "react-hot-toast";
 import { useDeleteContentMutation } from "../services/contentsService";
 import { Link } from "react-router-dom";
+import ErrorMessage from "./ErrorMessage";
 
 const ContentsTable = () => {
   const columns = [
@@ -40,7 +41,6 @@ const ContentsTable = () => {
   const [page, pagechange] = useState(0);
   const [rowperpage, rowperpagechange] = useState(5);
 
-  console.log(contents);
   const [
     deleteContent,
     {
@@ -73,6 +73,8 @@ const ContentsTable = () => {
       }
     };
   }, [isErrorDelete, isSuccessDelete, deleteError, error]);
+
+  if (error) return <ErrorMessage error={error?.data?.message} />;
 
   return (
     <div className="text-center">
@@ -114,17 +116,15 @@ const ContentsTable = () => {
                               let value = row[column.id];
 
                               return (
-                                <>
-                                  <TableCell
-                                    key={value}
-                                    sx={{
-                                      backgroundColor: "black",
-                                      color: "white",
-                                    }}
-                                  >
-                                    {value}
-                                  </TableCell>
-                                </>
+                                <TableCell
+                                  key={value}
+                                  sx={{
+                                    backgroundColor: "black",
+                                    color: "white",
+                                  }}
+                                >
+                                  {value}
+                                </TableCell>
                               );
                             })}
 
@@ -136,8 +136,8 @@ const ContentsTable = () => {
                               display: "flex",
                             }}
                           >
-                            <Link to={`/update-content/${row._id}`}>
-                              <IconButton aria-label="delete">
+                            <Link to={`/dashboard/update-content/${row._id}`}>
+                              <IconButton aria-label="edit">
                                 <Edit sx={{ color: "green" }} />
                               </IconButton>
                             </Link>
