@@ -4,14 +4,18 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AddIcon from "@mui/icons-material/Add";
+import DeleteIcon from "@mui/icons-material/Delete";
+
 import { Theaters } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { HandThumbDownIcon, HandThumbUpIcon } from "@heroicons/react/20/solid";
 import {
+  useAddContentMutation,
   useGetProfileQuery,
   useHateContentMutation,
   useLikeContentMutation,
-} from "../services/usersService";
+  useRemoveContentMutation,
+} from "../services/usersService.js";
 import toast from "react-hot-toast";
 import ErrorMessage from "./ErrorMessage";
 
@@ -28,37 +32,108 @@ const OptionsMenu = ({ content }) => {
 
   const { data, error: userError } = useGetProfileQuery();
 
-  const [
-    likeContent,
-    { isSuccess: likeSuccess, isError: isLikeError, error: likeError },
-  ] = useLikeContentMutation();
-  const [
-    hateContent,
-    { isSuccess: isHateSuccess, isError: isHateError, error: hateError },
-  ] = useHateContentMutation();
+  const [likeContent, { isError: isLikeError, error: likeError }] =
+    useLikeContentMutation();
+  const [hateContent, { isError: isHateError, error: hateError }] =
+    useHateContentMutation();
 
-  const id = content.id;
-  const contents = data?.data?.doc?.favorites;
+  const [addContent, { isError: isAddError, error: addError }] =
+    useAddContentMutation();
+  const [removeContent, { isError: isDeleteError, error: deleteError }] =
+    useRemoveContentMutation();
 
-  const likedContent = contents.find((content) => content.id === id);
+  // HANDLE FAVOURITE
+  const id = content?.id;
+  const favorites = data?.data?.doc?.favorites;
+
+  const existingLikeContent = favorites?.find((content) => content?.id === id);
+  const contentId = existingLikeContent ? existingLikeContent?.id : id;
 
   const handleLike = async () => {
-    await likeContent(likedContent);
-    if (likeSuccess) return toast.success(`I like this`);
+    try {
+      const data = await likeContent({ content: contentId });
+
+      if (data.data.status === "success")
+        return toast.success(`Add to favourites`);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleHate = async () => {
-    await hateContent();
-    if (isHateSuccess) return toast.success("I hate this");
+    try {
+      const data = await hateContent({ content: contentId });
+      if (data.data === null) return toast.success("Remove from favourites");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // HANDLE CONTENT LIST
+  const watchList = data?.data?.doc?.watchList;
+  const existingListContent = watchList?.find((content) => content?.id === id);
+  const listId = existingListContent ? existingListContent?.id : id;
+
+  const handleAdd = async () => {
+    try {
+      const data = await addContent({ content: listId });
+
+      if (data.data.status === "success") return toast.success("Add to list");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDelete = async () => {
+    try {
+      const data = await removeContent({ content: listId });
+      if (data.data === null) return toast.success("Remove from list");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    if (isLikeError) return toast.error(likeError?.data?.message);
+    if (isLikeError && likeError?.data?.message) {
+      toast.error(likeError.data.message);
+    } else {
+      // Dismiss any existing toast when `isLikeError` is false or `likeError.data.message` is falsy
+      toast.dismiss();
+    }
+
+    // Cleanup function: Dismiss toast when the component unmounts or when `isLikeError` or `likeError` change
+    return () => {
+      toast.dismiss();
+    };
   }, [isLikeError, likeError]);
 
   useEffect(() => {
-    if (isHateError) return toast.error(hateError?.data?.message);
+    if (isHateError) {
+      toast.error(hateError?.data?.message);
+    } else {
+      toast.dismiss();
+    }
+
+    return () => {
+      toast.dismiss();
+    };
   }, [isHateError, hateError]);
+
+  useEffect(() => {
+    if (isAddError) {
+      toast.error(addError?.data?.message);
+    } else {
+      toast.dismiss();
+    }
+  }, [isAddError, addError]);
+
+  useEffect(() => {
+    if (isDeleteError) {
+      toast.error(deleteError?.data?.message);
+    } else {
+      toast.dismiss();
+    }
+  }, [isDeleteError, deleteError]);
 
   if (userError) return <ErrorMessage error={userError?.data?.message} />;
 
@@ -117,8 +192,18 @@ const OptionsMenu = ({ content }) => {
             fontSize: "14px",
           }}
         >
-          <AddIcon sx={{ marginRight: 1 }} />
-          My List
+          {existingListContent ? (
+            <button className="flex items-center" onClick={handleDelete}>
+              {" "}
+              <DeleteIcon sx={{ marginRight: 1 }} /> <span>Remove List</span>{" "}
+            </button>
+          ) : (
+            <button className="flex items-center" onClick={handleAdd}>
+              {" "}
+              <AddIcon sx={{ marginRight: 1 }} />
+              <span>Add List</span>
+            </button>
+          )}
         </MenuItem>
         <MenuItem
           onClick={handleClose}
@@ -129,15 +214,15 @@ const OptionsMenu = ({ content }) => {
             fontSize: "14px",
           }}
         >
-          {likedContent ? (
+          {existingLikeContent ? (
             <button className="flex items-center" onClick={handleHate}>
               <HandThumbDownIcon className="w-6 h-6 mr-2.5" />
-              Hate this
+              <span>Hate this</span>
             </button>
           ) : (
             <button className="flex items-center" onClick={handleLike}>
               <HandThumbUpIcon className="w-6 h-6 mr-2.5" />
-              Like this
+              <span>Like this</span>
             </button>
           )}
         </MenuItem>
