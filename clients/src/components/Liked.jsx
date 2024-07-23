@@ -1,19 +1,16 @@
 import { useGetProfileQuery } from "../services/usersService.js";
-import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage.jsx";
+import Loader from "./Loader";
 import RowContent from "./RowContent.jsx";
 
-const MyList = () => {
+const Liked = () => {
   const {
     data,
     isLoading: userLoading,
     error: userError,
   } = useGetProfileQuery();
 
-  console.log(data);
-
-  const contents = data?.data?.doc?.watchList;
-  console.log(contents);
+  const contents = data?.data?.doc?.favorites;
 
   if (!contents || contents.length === 0)
     return (
@@ -39,4 +36,4 @@ const MyList = () => {
   );
 };
 
-export default MyList;
+export default Liked;
