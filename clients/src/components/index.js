@@ -18,3 +18,5 @@ export { default as Users } from "./Users";
 export { default as ContentsTable } from "./ContentsTable";
 export { default as Loader } from "./Loader";
 export { default as ErrorMessage } from "./ErrorMessage";
+export { default as Liked } from "./Liked";
+export { default as MyList } from "./MyList";

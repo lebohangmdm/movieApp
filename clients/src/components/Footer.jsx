@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <footer className="py-4">Footer</footer>;
+  return <footer className="py-2 text-white">Footer</footer>;
 };
 
 export default Footer;

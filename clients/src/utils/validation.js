@@ -29,4 +29,23 @@ const LoginValidation = yup.object().shape({
     .matches(/(?=.*[0-9])/, "Password must have a number"),
 });
 
-export { RegisterValidation, LoginValidation };
+const updatePasswordValidation = yup.object().shape({
+  currentPassword: yup
+    .string()
+    .required("Please provide your password")
+    .min(6, "Password must at least have 6 characters")
+    .max(30, "Password must less than 30 characters")
+    .matches(/(?=.*[0-9])/, "Password must have a number"),
+  password: yup
+    .string()
+    .required("Please provide your password")
+    .min(6, "Password must at least have 6 characters")
+    .max(30, "Password must less than 30 characters")
+    .matches(/(?=.*[0-9])/, "Password must have a number"),
+  passwordConfirm: yup
+    .string()
+    .required("Please confirm your password")
+    .oneOf([yup.ref("password"), null], "Passwords must match"),
+});
+
+export { RegisterValidation, LoginValidation, updatePasswordValidation };

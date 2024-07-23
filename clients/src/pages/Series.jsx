@@ -55,7 +55,7 @@ const Series = () => {
   //   } = useFetchBasedOnSortQuery({ type: "series", sort: "" });
 
   return (
-    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12  bg-light-3">
+    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12  bg-[#0f0019]">
       <div className="space-y-0.5 md:space-y-8 ">
         <Row title={"Top Series"} data={topSeries} />
         <Row title={"New Series"} data={newSeries} />

@@ -15,7 +15,7 @@ import { Delete, Edit } from "@mui/icons-material";
 import Loader from "./Loader";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { useDeleteUserMutation } from "../services/usersService";
+import { useDeleteUserMutation } from "../services/usersService.js";
 import { useFetchAllUsers } from "../services/hooks/usersHooks";
 
 const UsersTable = () => {

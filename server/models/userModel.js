@@ -67,6 +67,9 @@ const userSchema = new mongoose.Schema(
   }
 );
 
+userSchema.index({ _id: 1, favorites: 1 }, { unique: true, sparse: true });
+userSchema.index({ _id: 1, watchList: 1 }, { unique: true, sparse: true });
+
 userSchema.pre(/^findOne/, function (next) {
   this.populate({
     path: "favorites",

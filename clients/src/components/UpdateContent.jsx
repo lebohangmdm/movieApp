@@ -4,20 +4,22 @@ import InputError from "./InputError";
 import { CloudArrowUpIcon } from "@heroicons/react/20/solid";
 import { Button } from "@mui/material";
 import { useUpdateContentMutation } from "../services/contentsService";
+
+import toast from "react-hot-toast";
+import { useEffect } from "react";
 import { useFetchGetById } from "../services/hooks/contentHooks";
 import { useParams } from "react-router-dom";
 
 const UpdateContent = () => {
-  // const { id } = useParams();
-  // console.log(id);
-  const id = "6682b59cfed119ec7bca93fb";
+  const { id } = useParams();
   const [updateContent, { isError, isLoading, error, isSuccess }] =
     useUpdateContentMutation();
 
+  console.log(id);
   const {
     content,
-    isLoading: loadingData,
-    error: errorData,
+    isLoading: loadingContent,
+    error: errorContent,
   } = useFetchGetById(id);
 
   console.log(content);
@@ -26,25 +28,87 @@ const UpdateContent = () => {
     handleSubmit,
     register,
     watch,
-    reset,
     setValue,
     formState: { errors },
   } = useForm();
 
-  Object.keys(content).forEach((key) => {
-    setValue(key, content[key]);
-  });
+  useEffect(() => {
+    if (content) {
+      Object.keys(content).forEach((key) => {
+        setValue(key, content[key]);
+      });
+    }
+  }, [content, setValue]);
 
   const selectedType = watch("type");
 
   const onSubmit = (data) => {
-    console.log(data);
+    const formData = new FormData();
+
+    // const genres = data.genres.toLowerCase().split(",");
+    // genres.forEach((genre) => formData.append("genres[]", genre));
+
+    // for (const key in data) {
+    //   if (key === "coverImage" && data[key][0]) {
+    //     formData.append(key, data[key][0]);
+    //   } else if (key !== "coverImage") {
+    //     formData.append(key, data[key]);
+    //   }
+    // }
+    // const genres = data.genres.toLowerCase().split(",");
+    // console.log(genres);
+
+    formData.append("title", data.title);
+    formData.append("duration", data.duration);
+    formData.append("releaseYear", data.releaseYear);
+    formData.append("releaseDate", data.releaseDate);
+    formData.append("cast", data.cast);
+    formData.append("directors", data.directors);
+    formData.append("description", data.description);
+    formData.append("type", data.type);
+    formData.append("totalSeasons", data.totalSeasons);
+    // genres.forEach((genre) => {
+    //   formData.append("genres[]", genre); // Using 'genres[]' to indicate an array
+    // });
+
+    // console.log(data);
+    if (data.coverImage && data.coverImage[0]) {
+      formData.append("coverImage", data.coverImage[0]);
+    }
+
+    updateContent({ id, formData });
   };
+
+  useEffect(() => {
+    // failed fetch content error
+    if (errorContent)
+      toast.error(errorContent?.data?.message || "An error occurred");
+  }, [errorContent]);
+
+  useEffect(() => {
+    let toastId; // Initialize a variable to store toast ID if needed
+
+    // error for contents
+
+    if (isError) {
+      const errorMessage = error?.data?.message || "An error occurred";
+      toastId = toast.error(errorMessage); // Store the toast ID]\
+    } else if (isSuccess) {
+      toastId = toast.success("Content created successfully"); // Store the toast ID
+    }
+
+    // Cleanup function to be called on component unmount or before running the effect again
+    return () => {
+      if (toastId) {
+        toast.dismiss(toastId); // Dismiss the toast if it's still visible
+      }
+    };
+  }, [isError, isSuccess, error]);
 
   return (
     <div>
       <h1>Create Content</h1>
-      {isLoading ? (
+      {isLoading || loadingContent ? (
         <Loader />
       ) : (
         <div>

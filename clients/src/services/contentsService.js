@@ -58,11 +58,14 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
       }),
     }),
     updateContent: builder.mutation({
-      query: ({ id, content }) => ({
-        url: `contents/${id}`,
-        method: "PATCH",
-        body: content,
-      }),
+      query: ({ id, formData }) => {
+        console.log(formData);
+        return {
+          url: `contents/${id}`,
+          method: "PATCH",
+          body: formData,
+        };
+      },
       invalidatesTags: ["Contents"],
     }),
     deleteContent: builder.mutation({

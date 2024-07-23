@@ -98,7 +98,7 @@ exports.addContent = async (req, res) => {
 
 exports.removeContent = async (req, res) => {
   const user = await User.findById(req.user.id);
-  console.log(req.body.content);
+  console.log("req.body.content: ", req.body.content);
   await user.removeContent(req.body.content);
 
   res.status(204).json({

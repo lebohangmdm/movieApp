@@ -1,7 +1,4 @@
-import {
-  CloudArrowDownIcon,
-  CloudArrowUpIcon,
-} from "@heroicons/react/20/solid";
+import { CloudArrowUpIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 
 const UploadImage = () => {

@@ -1,5 +1,5 @@
 import { useLogoutMutation } from "../authService";
-import { useGetAllUsersQuery, useGetProfileQuery } from "../usersService";
+import { useGetAllUsersQuery, useGetProfileQuery } from "../usersService.js";
 
 export const useFetchGetUser = () => {
   const { data, isLoading, error } = useGetProfileQuery();
@@ -22,6 +22,7 @@ export const useLogout = () => {
   const handleLogout = async () => {
     try {
       await logout().unwrap();
+
       // Optionally handle redirection or state updates here
     } catch (err) {
       console.error("Logout failed:", err);

@@ -13,6 +13,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
       query: () => ({
         url: "users/profile/me",
       }),
+      providesTags: ["Users"],
     }),
     updateProfile: builder.mutation({
       query: (data) => ({
@@ -38,32 +39,34 @@ export const userApiSlice = apiSlice.injectEndpoints({
       invalidatesTags: ["Users"],
     }),
     addContent: builder.mutation({
-      query: (newContent) => ({
+      query: (data) => ({
         url: `users/my-list`,
         method: "POST",
-        body: newContent,
+        body: data,
       }),
       invalidatesTags: ["Users"],
     }),
-    deleteContent: builder.mutation({
-      query: () => ({
-        url: `users/my-list`,
-        method: "DELETE",
-      }),
+    removeContent: builder.mutation({
+      query: (data) => {
+        return { url: `users/my-list`, method: "DELETE", body: data };
+      },
       invalidatesTags: ["Users"],
     }),
     likeContent: builder.mutation({
-      query: (newContent) => ({
-        url: `users/favorites`,
-        method: "POST",
-        body: newContent,
-      }),
+      query: (data) => {
+        return {
+          url: `users/favorites`,
+          method: "POST",
+          body: data,
+        };
+      },
       invalidatesTags: ["Users"],
     }),
     hateContent: builder.mutation({
-      query: () => ({
+      query: (data) => ({
         url: `users/favorites`,
         method: "DELETE",
+        body: data,
       }),
       invalidatesTags: ["Users"],
     }),
@@ -77,7 +80,7 @@ export const {
   useDeleteProfileMutation,
   useDeleteUserMutation,
   useAddContentMutation,
-  useDeleteContentMutation,
+  useRemoveContentMutation,
   useLikeContentMutation,
   useHateContentMutation,
 } = userApiSlice;

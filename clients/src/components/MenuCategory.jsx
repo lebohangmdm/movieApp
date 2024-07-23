@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { categories } from "../constants/NavLinks";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 import { useFetchAllContents } from "../services/hooks/contentHooks";
+import ErrorMessage from "./ErrorMessage";
 
 const MenuCategory = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,7 +15,7 @@ const MenuCategory = () => {
     setShowMenu(false);
   };
 
-  const { contents, isLoading, error } = useFetchAllContents({
+  const { contents, error } = useFetchAllContents({
     sort: "createdAt",
   });
 
@@ -24,6 +24,8 @@ const MenuCategory = () => {
       contents?.map((content) => [...content.genres]).flatMap((arr) => arr)
     ),
   ].sort((a, b) => a.localeCompare(b));
+
+  if (error) return <ErrorMessage error={error?.data?.message} />;
 
   return (
     <li

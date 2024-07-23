@@ -2,19 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #0f0019;
-}
-
 .no-amazon-scrollbar::-webkit-scrollbar {
   display: "none";
 }
 
-/* @layer base {
+@layer base {
   body {
-    @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-500;
+    @apply bg-[#0f0019];
   }
-} */
+}
 
 @layer utilities {
   .nav-link {
@@ -28,30 +24,38 @@ body {
 
 .bg-banner {
   background-image: url("assets/banner.jpg");
-  height: 100dvh;
   width: 100%;
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  height: calc(100dvh-16px);
 }
 
 .bg-tv-banner {
   background-image: url("assets/banner.jpg");
-  height: 100dvh;
+  height: calc(100dvh-16px);
   width: 100%;
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* .swiper-button-prev,
-.swiper-button-next {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-} */
-
-.swiper-button-prev,
-.swiper-button-next {
-  display: none;
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #6f25b0;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
 }

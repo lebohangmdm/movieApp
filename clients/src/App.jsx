@@ -8,6 +8,8 @@ import {
   AppLayout,
   Contents,
   CreateContent,
+  Liked,
+  MyList,
   UpdateContent,
   Users,
 } from "./components";
@@ -17,6 +19,7 @@ import {
   Error,
   Genre,
   Home,
+  List,
   Login,
   Movies,
   Profile,
@@ -39,6 +42,11 @@ function App() {
             <Route path="genres/:genre" element={<Genre />} />
             <Route path="search/:title" element={<Search />} />
             <Route path="watch/:id" element={<Details />} />
+            <Route path="list" element={<List />}>
+              <Route index element={<Navigate replace to="my-list" />} />
+              <Route path="my-list" element={<MyList />} />
+              <Route path="favourites" element={<Liked />} />
+            </Route>
           </Route>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />

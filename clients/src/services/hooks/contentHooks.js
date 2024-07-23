@@ -76,7 +76,7 @@ export const useFetchContentByName = ({ title }) => {
 export const useFetchGetById = (id) => {
   const { data, isLoading, error } = useGetContentQuery(id);
 
-  const content = data?.data.doc;
+  const content = data?.data?.doc;
   return { content, isLoading, error };
 };
 

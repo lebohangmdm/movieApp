@@ -40,6 +40,7 @@ const SearchBar = () => {
                 "&.Mui-focused fieldset": { borderColor: "#9499ff" },
                 borderRadius: "3px",
                 maxWidth: "230px",
+                color: "white",
               },
             }}
             variant="outlined"

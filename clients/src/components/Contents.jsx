@@ -1,5 +1,11 @@
+import { ContentsTable } from ".";
+
 const Contents = () => {
-  return <div>Contents</div>;
+  return (
+    <div>
+      <ContentsTable />
+    </div>
+  );
 };
 
 export default Contents;

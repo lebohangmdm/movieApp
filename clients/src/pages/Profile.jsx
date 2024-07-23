@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import {
   useDeleteProfileMutation,
   useUpdateProfileMutation,
-} from "../services/usersService";
+} from "../services/usersService.js";
 import { useNavigate } from "react-router-dom";
 import { useFetchGetUser, useLogout } from "../services/hooks/usersHooks";
 import toast from "react-hot-toast";

@@ -7,6 +7,8 @@ import { getAuth } from "../redux/features/auth/auth";
 const NavLinks = () => {
   const isAuth = useSelector(getAuth);
   const isAdmin = isAuth?.data?.user?.role === "admin";
+  const auth = isAuth && isAdmin;
+  console.log(auth);
 
   return (
     <ul className="hidden  lg:flex items-center md:gap-8 lg:gap-12 ">
@@ -20,11 +22,15 @@ const NavLinks = () => {
         })}
         <MenuCategory />
         {isAuth && (
-          <Link to={"favorite"} className="nav-link">
+          <Link to={isAuth ? "/list" : "/login"} className="nav-link">
             My list
           </Link>
         )}
-        {isAuth && isAdmin && <Link to={"/dashboard"}>Dashboard</Link>}
+        {auth && (
+          <Link to={"/dashboard"} className="nav-link">
+            dashboard
+          </Link>
+        )}
       </>
     </ul>
   );

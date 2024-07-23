@@ -1,5 +1,11 @@
+import UsersTable from "./UsersTable";
+
 const Users = () => {
-  return <div>Users</div>;
+  return (
+    <div>
+      <UsersTable />
+    </div>
+  );
 };
 
 export default Users;
