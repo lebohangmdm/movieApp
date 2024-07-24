@@ -2,11 +2,18 @@ import ReactPlayer from "react-player/youtube";
 import { Link, useParams } from "react-router-dom";
 import { useFetchGetById } from "../services/hooks/contentHooks";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { ErrorMessage, Loader } from "../components";
+import { ErrorMessage, Loader, StarRating } from "../components";
+import { useState } from "react";
 
 const Details = () => {
   const { id } = useParams();
   const { content, isLoading, error } = useFetchGetById(id);
+  const [userRating, setUserRating] = useState(0);
+
+  // const alreadyWatched =[]
+  // .map((watched) => watched.id)
+  // .includes(movie.imdbID);
+  const alreadyWatched = [].map((watched) => watched.id).includes("");
 
   if (error) return <ErrorMessage error={error?.data?.message} />;
 
@@ -88,6 +95,45 @@ const Details = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+          <div>
+            <h3>Reviews</h3>
+            <div className="flex flex-col gap-6 mt-8">
+              {!alreadyWatched ? (
+                <>
+                  <p className="text-sm text-black">
+                    Add your rating for this movie
+                  </p>
+                  {userRating ? (
+                    <>
+                      <StarRating
+                        maxRating={10}
+                        size={24}
+                        onSetRating={setUserRating}
+                      />
+                      <div className="flex gap-4">
+                        <button
+                          className="py-3 px-6  font-semibold capitalize rounded-lg bg-blue-700  text-white hover:brightness-150 transition-all duration-100 cursor-pointer"
+                          onClick={addMovie}
+                        >
+                          Add to watched list
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <StarRating
+                      maxRating={10}
+                      size={24}
+                      onSetRating={setUserRating}
+                    />
+                  )}
+                </>
+              ) : (
+                <p className="text-sm text-black">
+                  You have rated the movie already
+                </p>
+              )}
             </div>
           </div>
         </section>
