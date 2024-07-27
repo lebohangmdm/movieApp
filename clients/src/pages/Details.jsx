@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 
 import {
   useCreateReviewMutation,
+  useDeleteReviewMutation,
   useGetAllReviewsQuery,
   useGetReviewQuery,
   useUpdateReviewMutation,
@@ -23,10 +24,10 @@ const Details = () => {
   const { id: contentId } = useParams();
   const { content, isLoading, error } = useFetchGetById(contentId);
   const [selectUpdate, setSelectUpdate] = useState(false);
-  const [updateReviewId, setUpdateReviewId] = useState(null);
+  const [updateReviewId, setUpdateReviewId] = useState("");
 
   const [userRating, setUserRating] = useState(0);
-  const [createReview, { isLoading: isCreating, error: errorCreateReview }] =
+  const [createReview, { isLoading: isCreating, error: errorCreate }] =
     useCreateReviewMutation();
 
   const {
@@ -34,12 +35,15 @@ const Details = () => {
     isLoading: reviewing,
     error: reviewError,
   } = useGetReviewQuery(updateReviewId);
-  console.log(reviewInfo);
+
   const comment = reviewInfo?.data?.doc?.comment;
   console.log(comment);
 
   const [updateReview, { isLoading: isUpdating, error: updateError }] =
-    useUpdateReviewMutation({ id: updateReviewId });
+    useUpdateReviewMutation();
+
+  const [deleteReview, { isLoading: isDeleting, error: deleteError }] =
+    useDeleteReviewMutation();
 
   const {
     data: reviews,
@@ -60,16 +64,12 @@ const Details = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
-
-  // console.log(reviewData);
 
   const {
     register: updateRegister,
     handleSubmit: updateHandleSubmit,
     formState: { errors: updateErrors },
-    reset: updateReset,
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -83,19 +83,19 @@ const Details = () => {
     const dataInfo = await createReview(newData);
     if (dataInfo.data.status === "success") {
       toast.success("Review created successfully");
-      reset();
       setSelectUpdate(false);
       return;
     }
   };
+
   const onSubmitUpdate = async (data) => {
-    console.log(data);
     const newData = {
       rating: userRating,
       comment: data.comment,
       content: contentId,
       user: userId,
     };
+
     const dataInfo = await updateReview({
       id: updateReviewId,
       content: newData,
@@ -103,28 +103,58 @@ const Details = () => {
 
     if (dataInfo.data.status === "success") {
       toast.success("Review updated successfully");
-      updateReset();
       setSelectUpdate(false);
       return;
     }
   };
 
-  // useEffect(() => {
-  //   if (errorReview) {
-  //     return toast.error(errorReview?.data?.message);
-  //   } else {
-  //     toast.dismiss();
-  //   }
-  //   return () => {
-  //     toast.dismiss();
-  //   };
-  // }, [errorReview]);
+  const handleDelete = async (id) => {
+    const reviewDelete = await deleteReview({ id: "kjdjsfdlkjlsdk" });
+
+    if (reviewDelete.data === null)
+      return toast.success("Review deleted successfully");
+  };
+
+  // Error for creating
+  useEffect(() => {
+    if (errorCreate) {
+      return toast.error(errorCreate?.data?.message);
+    } else {
+      toast.dismiss();
+    }
+    return () => {
+      toast.dismiss();
+    };
+  }, [errorCreate]);
+
+  // fetch a review
+  useEffect(() => {
+    if (reviewError) {
+      return toast.error(reviewError?.data?.message);
+    } else {
+      toast.dismiss();
+    }
+    return () => {
+      toast.dismiss();
+    };
+  }, [reviewError]);
+
+  // updating review
+  useEffect(() => {
+    if (updateError) {
+      return toast.error(updateError?.data?.message);
+    } else {
+      toast.dismiss();
+    }
+    return () => {
+      toast.dismiss();
+    };
+  }, [updateError]);
 
   const handleUpdate = (id) => {
     setSelectUpdate(true);
     setUpdateReviewId(id);
   };
-  const alreadyWatched = [].map((watched) => watched.contentId).includes("");
 
   return (
     <>
@@ -241,7 +271,7 @@ const Details = () => {
                             <button onClick={() => handleUpdate(_id)}>
                               <Edit sx={{ color: "green" }} />
                             </button>
-                            <button>
+                            <button onClick={() => handleDelete(_id)}>
                               <Delete sx={{ color: "red" }} />
                             </button>
                           </div>
