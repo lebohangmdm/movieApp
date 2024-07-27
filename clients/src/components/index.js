@@ -20,3 +20,6 @@ export { default as Loader } from "./Loader";
 export { default as ErrorMessage } from "./ErrorMessage";
 export { default as Liked } from "./Liked";
 export { default as MyList } from "./MyList";
+export { default as StarRating } from "./StarRating";
+export { default as Star } from "./Star";
+export { default as MainLoader } from "./MainLoader";

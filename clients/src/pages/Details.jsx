@@ -2,7 +2,12 @@ import ReactPlayer from "react-player/youtube";
 import { Link, useParams } from "react-router-dom";
 import { useFetchGetById } from "../services/hooks/contentHooks";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { ErrorMessage, InputError, Loader, StarRating } from "../components";
+import {
+  ErrorMessage,
+  InputError,
+  MainLoader,
+  StarRating,
+} from "../components";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -151,6 +156,19 @@ const Details = () => {
     };
   }, [updateError]);
 
+  // delete a review
+  useEffect(() => {
+    let toastId;
+    if (deleteError) {
+      toastId = toast.error(deleteError?.data?.message);
+    }
+    return () => {
+      if (toastId) {
+        toast.dismiss(toastId); // Dismiss the toast if it's still visible
+      }
+    };
+  }, [deleteError]);
+
   const handleUpdate = (id) => {
     setSelectUpdate(true);
     setUpdateReviewId(id);
@@ -159,9 +177,9 @@ const Details = () => {
   return (
     <>
       {isLoading ? (
-        <Loader />
+        <MainLoader />
       ) : (
-        <section>
+        <section className="min-h-height-dvh">
           <div className="">
             <ReactPlayer
               url={content?.video}
@@ -235,11 +253,12 @@ const Details = () => {
                 </div>
               </div>
             </div>
+            {/* Reviews */}
             <div className="mt-16  text-white">
               <h3 className="text-white font-semibold text-xl md:text-2xl mb-8">
                 Reviews ({reviews?.count})
               </h3>
-              <div className="space-y-4" key={reviews?.data}>
+              <div className="space-y-4 md:space-y-8" key={reviews?.data}>
                 {reviews?.data?.docs?.map((data) => {
                   const {
                     comment,
@@ -251,7 +270,7 @@ const Details = () => {
                   const permitted = id === userId;
 
                   return (
-                    <div>
+                    <div className=" border border-white p-4" key={_id}>
                       <div className="flex items-center gap-4 mb-0.5">
                         <p className="font-medium">{fullName}</p>
                         <div className="flex items-center gap-1 text-white">
@@ -261,13 +280,13 @@ const Details = () => {
                           <p className="text-white"> {rating}</p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center justify-between">
                         <p className="text-sm max-w-xs md:max-w-sm">
                           {comment}
                         </p>
                         {/* if auth and permitted show btns and perform actions */}
                         {permitted && (
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 md:gap-4">
                             <button onClick={() => handleUpdate(_id)}>
                               <Edit sx={{ color: "green" }} />
                             </button>
