@@ -10,14 +10,20 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { getAuth } from "../redux/features/auth/auth";
 import { Dashboard } from "@mui/icons-material";
+import MobileSearchBar from "./MobileSearchBar";
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const isAuth = useSelector(getAuth);
   const isAdmin = isAuth?.data?.user?.role === "admin";
 
   const handleShowMenu = () => {
     setShowMenu((show) => !show);
+  };
+
+  const handleShowSearch = () => {
+    setShowSearch((show) => !show);
   };
 
   return (
@@ -36,11 +42,11 @@ const MobileMenu = () => {
           <ul className="space-y-4 mt-8 px-6 ">
             <li className="text-white text-lg">
               <Link
-                to={"/movie"}
+                to={"/movies"}
                 className="text-light-2 space-x-2 hover:text-light-1  transition-all duration-200"
               >
                 <MovieIcon />
-                <span className="font-semibold">Movie</span>
+                <span className="font-semibold">Movies</span>
               </Link>
             </li>
             <li className="text-white  text-lg">
@@ -54,11 +60,11 @@ const MobileMenu = () => {
             </li>
             <li className="text-white text-lg">
               <Link
-                to={"/movie"}
+                to={"/genres"}
                 className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
               >
                 <AutoAwesomeMosaicIcon />
-                <span className="font-semibold">Categories</span>
+                <span className="font-semibold">Genres</span>
               </Link>
             </li>
             <li className="text-white text-lg">
@@ -70,15 +76,7 @@ const MobileMenu = () => {
                 <span className="font-semibold">My List</span>
               </Link>
             </li>
-            <li className="text-white text-lg">
-              <Link
-                to={"/search"}
-                className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
-              >
-                <SearchIcon />
-                <span className="font-semibold">Search</span>
-              </Link>
-            </li>
+
             {isAdmin && isAuth && (
               <li className="text-white text-lg">
                 <Link
@@ -90,7 +88,18 @@ const MobileMenu = () => {
                 </Link>
               </li>
             )}
+            <li className="text-white text-lg">
+              <button
+                type="button"
+                onClick={handleShowSearch}
+                className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
+              >
+                <SearchIcon />
+                <span className="font-semibold">Search</span>
+              </button>
+            </li>
           </ul>
+          <div className="mt-4 px-6">{showSearch && <MobileSearchBar />}</div>
         </div>
       )}
     </div>

@@ -23,3 +23,4 @@ export { default as MyList } from "./MyList";
 export { default as StarRating } from "./StarRating";
 export { default as Star } from "./Star";
 export { default as MainLoader } from "./MainLoader";
+export { default as MobileSearchBar } from "./MobileSearchBar";
