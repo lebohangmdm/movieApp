@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { getAuth } from "../redux/features/auth/auth";
 import { Dashboard } from "@mui/icons-material";
 import MobileSearchBar from "./MobileSearchBar";
+import MobileMenuCategory from "./MobileMenuCategory";
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,6 +26,8 @@ const MobileMenu = () => {
   const handleShowSearch = () => {
     setShowSearch((show) => !show);
   };
+
+  const [showGenres, setShowGenres] = useState(false);
 
   return (
     <div className="block lg:hidden">
@@ -59,17 +62,19 @@ const MobileMenu = () => {
               </Link>
             </li>
             <li className="text-white text-lg">
-              <Link
-                to={"/genres"}
+              <button
+                onClick={() => setShowGenres((show) => !show)}
                 className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
               >
                 <AutoAwesomeMosaicIcon />
                 <span className="font-semibold">Genres</span>
-              </Link>
+              </button>
+
+              {showGenres && <MobileMenuCategory />}
             </li>
             <li className="text-white text-lg">
               <Link
-                to={isAuth ? "/favorites" : "/login"}
+                to={isAuth ? "/list" : "/login"}
                 className="text-light-2 space-x-2 hover:text-light-1 transition-all duration-200"
               >
                 <SubscriptionsIcon />
