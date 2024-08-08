@@ -1,22 +1,25 @@
+import { useEffect, useRef, useState } from "react";
 import {
   useFetchAllContents,
   useFetchBasedOnGenreQuery,
   useFetchBasedOnSortQuery,
 } from "../services/hooks/contentHooks";
 import Row from "./Row";
+import Loader from "./Loader";
 
 const Rows = () => {
-  const {
-    listData: series,
-    isLoading: topSeriesLoading,
-    error: topSeriesError,
-  } = useFetchBasedOnSortQuery({ type: "series", sort: "-rating" });
+  const [visibleRows, setVisibleRows] = useState(2);
+  const bottomRef = useRef(null);
 
-  const {
-    listData: movies,
-    isLoading: topMoviesLoading,
-    error: topMoviesError,
-  } = useFetchBasedOnSortQuery({ type: "movie", sort: "-rating" });
+  const topSeriesData = useFetchBasedOnSortQuery({
+    type: "series",
+    sort: "-rating",
+  });
+
+  const topMoviesData = useFetchBasedOnSortQuery({
+    type: "movie",
+    sort: "-rating",
+  });
 
   const {
     contents: newContents,
@@ -26,67 +29,77 @@ const Rows = () => {
 
   console.log(newContents);
 
-  const {
-    listData: animationSeries,
-    isLoading: animationLoading,
-    error: animationError,
-  } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Animation" });
-  console.log(animationSeries);
+  const animatedMoviesData = useFetchBasedOnGenreQuery({
+    type: "movie",
+    genres: "animation",
+  });
 
-  const {
-    listData: comedyMovies,
-    isLoading: comedyLoading,
-    error: comedyError,
-  } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Comedy" });
-  console.log(animationSeries);
+  const comedyMoviesData = useFetchBasedOnGenreQuery({
+    type: "movie",
+    genres: "comedy",
+  });
+  const dramaSeriesData = useFetchBasedOnGenreQuery({
+    type: "series",
+    genres: "drama",
+  });
 
-  const {
-    listData: scifiSeries,
-    isLoading: scifiLoading,
-    error: scifiError,
-  } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Sci-Fi" });
+  const scifiMoviesData = useFetchBasedOnGenreQuery({
+    type: "movie",
+    genres: "sci-fi",
+  });
+
+  console.log(scifiMoviesData);
+  const rows = [
+    { title: "Top Movies", ...topMoviesData },
+    { title: "Top Series", ...topSeriesData },
+    { title: "Animation Movies", ...animatedMoviesData },
+    { title: "Comedy Movies", ...comedyMoviesData },
+    { title: "Drama Series", ...dramaSeriesData },
+    { title: "Science Fiction", ...scifiMoviesData },
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleRows < rows.length) {
+          setVisibleRows((prev) => Math.min(prev + 1, rows.length));
+        }
+      },
+      { threshold: 1.0 }
+    );
+
+    if (bottomRef.current) {
+      observer.observe(bottomRef.current);
+    }
+
+    return () => {
+      if (bottomRef.current) {
+        observer.unobserve(bottomRef.current);
+      }
+    };
+  }, [visibleRows, rows.length]);
 
   return (
-    <section className="max-w-7xl mx-auto  py-12 px-4 md:px-8 lg:px-12 lg:py-16 bg-[#0f0019]">
-      <div className="h-40 space-y-0.5 md:space-y-8 ">
-        <Row
-          title={"Top Movie"}
-          data={movies}
-          isLoading={topMoviesLoading}
-          error={topMoviesError}
-        />
-
-        <Row
-          title={"Top Series"}
-          data={series}
-          isLoading={topSeriesLoading}
-          error={topSeriesError}
-        />
-
-        <Row
-          title={"Animation"}
-          data={animationSeries}
-          isLoading={animationLoading}
-          error={animationError}
-        />
-        <Row
-          title={"New Releases"}
-          data={newContents}
-          isLoading={contentsLoading}
-          error={contentsError}
-        />
-        <Row
-          title={"Comedy Movies"}
-          data={comedyMovies}
-          isLoading={comedyLoading}
-          error={comedyError}
-        />
-        <Row
-          title={"Science Fiction"}
-          data={scifiSeries}
-          isLoading={scifiLoading}
-          error={scifiError}
-        />
+    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12 bg-[#0f0019] min-h-height-dvh">
+      <div className="space-y-0.5 md:space-y-8">
+        {rows.slice(0, visibleRows).map((row) => {
+          return (
+            <Row
+              key={row.title}
+              title={row.title}
+              data={row.listData}
+              error={row.error}
+            />
+          );
+        })}
+        {visibleRows < rows.length && (
+          <div
+            ref={bottomRef}
+            className="h-10 flex items-center justify-center"
+          >
+            <Loader />
+          </div>
+        )}
       </div>
     </section>
   );

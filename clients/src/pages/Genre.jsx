@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useFetchBasedOnGenreQuery } from "../services/hooks/contentHooks";
-import { Row } from "../components";
+import { MainLoader, Row } from "../components";
 
 const Genre = () => {
   const { genre } = useParams();
 
   const {
-    listData: movies,
+    listData: movies = [],
     isLoading: moviesLoading,
     error: moviesError,
   } = useFetchBasedOnGenreQuery({ type: "movie", genres: genre });
@@ -16,22 +16,28 @@ const Genre = () => {
     error: seriesError,
   } = useFetchBasedOnGenreQuery({ type: "series", genres: genre });
 
-  return (
-    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12 bg-[#0f0019]">
-      <div className="space-y-0.5 md:space-y-8 ">
-        <Row
-          title={`${genre} Movies`}
-          data={movies}
-          isLoading={moviesLoading}
-          error={moviesError}
-        />
+  if (moviesLoading && seriesLoading) return <MainLoader />;
 
-        <Row
-          title={`${genre} Series`}
-          data={series}
-          isLoading={seriesLoading}
-          error={seriesError}
-        />
+  if (!series?.length && !movies?.length) {
+    return (
+      <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 md:py-12 lg:py-20 lg:px-24 bg-[#0f0019] min-h-height-dvh">
+        <h3 className="text-lg md:text-xl font-medium">
+          Could not any movies and series
+        </h3>
+      </section>
+    );
+  }
+
+  return (
+    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12  bg-[#0f0019] min-h-height-dvh">
+      <div className="space-y-0.5 md:space-y-8 ">
+        {movies?.length >= 1 && (
+          <Row title={`${genre} Movies`} data={movies} error={moviesError} />
+        )}
+
+        {series?.length >= 1 && (
+          <Row title={`${genre} Series`} data={series} error={seriesError} />
+        )}
       </div>
     </section>
   );

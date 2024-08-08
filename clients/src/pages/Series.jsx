@@ -1,67 +1,87 @@
-import { Row } from "../components";
+import React, { useState, useEffect, useRef } from "react";
+import { Loader, Row } from "../components";
 import {
-  useFetchAllContentBasedType,
   useFetchBasedOnGenreQuery,
   useFetchBasedOnSortQuery,
 } from "../services/hooks/contentHooks";
-// import { useFetchList } from "../services/hooks/useListsHooks";
-// import { useGetAllListQuery, useGetListQuery } from "../services/listsService";
 
 const Series = () => {
-  const {
-    listData: topSeries,
-    isLoading: topLoading,
-    error: topErrror,
-  } = useFetchBasedOnSortQuery({ type: "series", sort: "-rating" });
+  const [visibleRows, setVisibleRows] = useState(2);
+  const bottomRef = useRef(null);
 
-  const {
-    listData: newSeries,
-    isLoading: newLoading,
-    error: newError,
-  } = useFetchAllContentBasedType({ type: "series", sort: "createdAt" });
-
-  const {
-    listData: comedySeries,
-    isLoading: comedyLoading,
-    error: comedyError,
-  } = useFetchBasedOnGenreQuery({
+  // Call all hooks unconditionally
+  const topSeriesData = useFetchBasedOnSortQuery({
     type: "series",
-    genres: "Comedy",
+    sort: "-rating",
   });
 
-  const {
-    listData: dramaSeries,
-    isLoading: dramaLoading,
-    error: dramaError,
-  } = useFetchBasedOnGenreQuery({
+  const newSeriesData = useFetchBasedOnSortQuery({
     type: "series",
-    genres: "Drama",
+    sort: "createdAt",
+  });
+  const comedySeriesData = useFetchBasedOnGenreQuery({
+    type: "series",
+    genres: "comedy",
+  });
+  const dramaSeriesData = useFetchBasedOnGenreQuery({
+    type: "series",
+    genres: "drama",
+  });
+  const kidsSeriesData = useFetchBasedOnGenreQuery({
+    type: "series",
+    genres: "animation",
   });
 
-  const {
-    listData: kidsSeries,
-    isLoading: kidsLoading,
-    error: kidsError,
-  } = useFetchBasedOnGenreQuery({
-    type: "series",
-    genres: "Animation",
-  });
+  const rows = [
+    { title: "Top Series", ...topSeriesData },
+    { title: "New Series", ...newSeriesData },
+    { title: "Comedy Series", ...comedySeriesData },
+    { title: "Drama Series", ...dramaSeriesData },
+    { title: "Kids and Family", ...kidsSeriesData },
+  ];
 
-  console.log(comedySeries);
-  //   const {
-  //     listData: newSeries,
-  //     isLoading: newLoading,
-  //     error: newError,
-  //   } = useFetchBasedOnSortQuery({ type: "series", sort: "" });
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleRows < rows.length) {
+          setVisibleRows((prev) => Math.min(prev + 1, rows.length));
+        }
+      },
+      { threshold: 1.0 }
+    );
+
+    if (bottomRef.current) {
+      observer.observe(bottomRef.current);
+    }
+
+    return () => {
+      if (bottomRef.current) {
+        observer.unobserve(bottomRef.current);
+      }
+    };
+  }, [visibleRows, rows.length]);
 
   return (
-    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12  bg-[#0f0019]">
-      <div className="space-y-0.5 md:space-y-8 ">
-        <Row title={"Top Series"} data={topSeries} />
-        <Row title={"New Series"} data={newSeries} />
-        <Row title={"Comedy Series"} data={comedySeries} />
-        <Row title={"Drama Series"} data={dramaSeries} />
-        <Row title={"Kids and Family"} data={kidsSeries} />
+    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12 bg-[#0f0019] min-h-height-dvh">
+      <div className="space-y-0.5 md:space-y-8">
+        {rows.slice(0, visibleRows).map((row) => {
+          return (
+            <Row
+              key={row.title}
+              title={row.title}
+              data={row.listData}
+              error={row.error}
+            />
+          );
+        })}
+        {visibleRows < rows.length && (
+          <div
+            ref={bottomRef}
+            className="h-10 flex items-center justify-center"
+          >
+            <Loader />
+          </div>
+        )}
       </div>
     </section>
   );

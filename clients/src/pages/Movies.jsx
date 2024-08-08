@@ -1,56 +1,97 @@
-import { Row } from "../components";
+import { useEffect, useRef, useState } from "react";
+import { Loader, Row } from "../components";
 import {
-  useFetchAllContents,
   useFetchBasedOnGenreQuery,
   useFetchBasedOnSortQuery,
 } from "../services/hooks/contentHooks";
 
 const Movies = () => {
-  const {
-    listData: comedyMovies,
-    isLoading: comedyMoviesLoading,
-    error: comedyMoviesError,
-  } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Comedy" });
+  const [visibleRows, setVisibleRows] = useState(2);
+  const bottomRef = useRef(null);
 
-  const {
-    listData: actionMovies,
-    isLoading: actionMoviesLoading,
-    error: actionMoviesError,
-  } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Action" });
+  // Call all hooks unconditionally
+  const comedyMoviesData = useFetchBasedOnGenreQuery({
+    type: "movie",
+    genres: "comedy",
+  });
 
-  const {
-    listData: topMovies,
-    isLoading: topMoviesLoading,
-    error: topMoviesErrror,
-  } = useFetchBasedOnSortQuery({ type: "movie", sort: "-rating" });
+  const actionMoviesData = useFetchBasedOnGenreQuery({
+    type: "movie",
+    genres: "action",
+  });
 
-  const {
-    contents: newMovies,
-    isLoading: newMoviesLoading,
-    error: newMoviesError,
-  } = useFetchAllContents({ type: "movie", sort: "createdAt" });
+  const topMoviesData = useFetchBasedOnSortQuery({
+    type: "movie",
+    sort: "-rating",
+  });
 
-  const {
-    listData: horrorMovies,
-    isLoading: horrorMoviesLoading,
-    error: horrorMoviesError,
-  } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Horror" });
+  const newMoviesData = useFetchBasedOnSortQuery({
+    type: "movie",
+    sort: "createdAt",
+  });
+  console.log(newMoviesData);
 
-  const {
-    listData: familyMovies,
-    isLoading: familyMoviesLoading,
-    error: familyMoviesError,
-  } = useFetchBasedOnGenreQuery({ type: "movie", genres: "Family" });
+  const horrorMoviesData = useFetchBasedOnGenreQuery({
+    type: "movie",
+    genres: "horror",
+  });
+
+  const familyMoviesData = useFetchBasedOnGenreQuery({
+    type: "movie",
+    genres: "family",
+  });
+
+  const rows = [
+    { title: "Top Movies", ...topMoviesData },
+    { title: "New Movies", ...newMoviesData },
+    { title: "Action Movies", ...actionMoviesData },
+    { title: "Comedy Movies", ...comedyMoviesData },
+    { title: "Kids and Family", ...familyMoviesData },
+    { title: "Horror", ...horrorMoviesData },
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleRows < rows.length) {
+          setVisibleRows((prev) => Math.min(prev + 1, rows.length));
+        }
+      },
+      { threshold: 1.0 }
+    );
+
+    if (bottomRef.current) {
+      observer.observe(bottomRef.current);
+    }
+
+    return () => {
+      if (bottomRef.current) {
+        observer.unobserve(bottomRef.current);
+      }
+    };
+  }, [visibleRows, rows.length]);
 
   return (
-    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12 bg-[#0f0019]">
-      <div className="space-y-0.5 md:space-y-8 ">
-        <Row title={"Top Movies"} data={topMovies} />
-        <Row title={"New Movies"} data={newMovies} />
-        <Row title={"Comedy Movies"} data={comedyMovies} />
-        <Row title={"Action Movies"} data={actionMovies} />
-        <Row title={"Horror Movies"} data={horrorMovies} />
-        <Row title={"Family & Kids Movies"} data={familyMovies} />
+    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12 bg-[#0f0019] min-h-height-dvh">
+      <div className="space-y-0.5 md:space-y-8">
+        {rows.slice(0, visibleRows).map((row) => {
+          return (
+            <Row
+              key={row.title}
+              title={row.title}
+              data={row.listData}
+              error={row.error}
+            />
+          );
+        })}
+        {visibleRows < rows.length && (
+          <div
+            ref={bottomRef}
+            className="h-10 flex items-center justify-center"
+          >
+            <Loader />
+          </div>
+        )}
       </div>
     </section>
   );
