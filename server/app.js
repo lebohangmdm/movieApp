@@ -27,7 +27,7 @@ console.log(process.env.JWT_SECRET);
 
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 15 minutes
-  limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+  limit: 500, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
   message: "Too many request from this IP. Please again in an hour",
 });
 
@@ -42,9 +42,9 @@ app.use(
   })
 );
 
-app.use(express.json({ limit: "100kb" }));
+app.use(express.json());
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true, limit: "10kb" }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(mongoSanitize());
 app.use(hpp());

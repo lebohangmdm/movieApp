@@ -5,7 +5,7 @@
     "belongs_to_collection": {
       "id": 1022790,
       "name": "Inside Out Collection",
-      "coverImage": "/Apr19lGxP7gm6y2HQX0kqOXTtqC.jpg",
+      "poster": "/Apr19lGxP7gm6y2HQX0kqOXTtqC.jpg",
       "backdrop_path": "/7U2m2dMSIfHx2gWXKq78Xj1weuH.jpg"
     },
     "budget": 200000000,
@@ -18,6 +18,7 @@
     "original_title": "Inside Out 2",
     "description": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
     "popularity": 8313.022,
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTc1MDQ3NjAtOWEzMi00YzE1LWI2OWUtNjQ0OWJkMzI3MDhmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
     "coverImage": "https://images.savoysystems.co.uk/MPE/17357552.jpg",
     "featured": true,
     "production_companies": [
@@ -68,7 +69,7 @@
     "belongs_to_collection": {
       "id": 173710,
       "name": "Planet of the Apes (Reboot) Collection",
-      "coverImage": "https://ntvb.tmsimg.com/assets/p24739866_v_h10_ad.jpg?w=1280&h=720",
+      "poster": "https://ntvb.tmsimg.com/assets/p24739866_v_h10_ad.jpg?w=1280&h=720",
       "backdrop_path": "/2ZkvqfOJUCINozB00wmYuGJQW81.jpg"
     },
     "budget": 160000000,
@@ -83,6 +84,7 @@
     "original_title": "Kingdom of the Planet of the Apes",
     "description": "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
     "popularity": 3212.069,
+    "poster": "https://m.media-amazon.com/images/M/MV5BZGI4NTEwNTAtZDcwMi00MDkxLTg1OGYtNTZmMzE3ZDljNzVlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_SX300.jpg",
     "coverImage": "https://ntvb.tmsimg.com/assets/p24739866_v_h10_ad.jpg?w=1280&h=720",
     "production_companies": [
       {
@@ -125,6 +127,7 @@
     "tagline": "No one can stop the reign.",
     "title": "Kingdom of the Planet of the Apes",
     "video": "https://youtu.be/Kdr5oedn7q8",
+
     "cast": "Owen Teague, Freya Allan, Kevin Durand, Peter Macon, William H. Macy, Eka Darville",
     "type": "movie",
     "featured": true,
@@ -179,7 +182,7 @@
     "title": "Breaking Bad",
     "description": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
     "popularity": 471.37,
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
     "production_companies": [
       {
         "id": 11073,
@@ -213,7 +216,7 @@
         "id": 3577,
         "name": "Specials",
         "description": "",
-        "coverImage": "/40dT79mDEZwXkQiZNBgSaydQFDP.jpg",
+        "poster": "/40dT79mDEZwXkQiZNBgSaydQFDP.jpg",
         "season_number": 0,
         "vote_average": 0.0
       },
@@ -223,7 +226,7 @@
         "id": 3572,
         "name": "Season 1",
         "description": "High school chemistry teacher Walter White's life is suddenly transformed by a dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\" Walter a new trade.",
-        "coverImage": "/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg",
+        "poster": "/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg",
         "season_number": 1,
         "vote_average": 8.3
       },
@@ -233,7 +236,7 @@
         "id": 3573,
         "name": "Season 2",
         "description": "Walt must deal with the chain reaction of his choice, as he and Jesse face new and severe consequences. When danger and suspicion around Walt escalate, he is pushed to new levels of desperation. Just how much higher will the stakes rise? How far is Walt willing to go to ensure his family's security? Will his grand plan spiral out of control?",
-        "coverImage": "/e3oGYpoTUhOFK0BJfloru5ZmGV.jpg",
+        "poster": "/e3oGYpoTUhOFK0BJfloru5ZmGV.jpg",
         "season_number": 2,
         "vote_average": 8.3
       },
@@ -243,7 +246,7 @@
         "id": 3575,
         "name": "Season 3",
         "description": "Walt continues to battle dueling identities: a desperate husband and father trying to provide for his family, and a newly appointed key player in the Albuquerque drug trade. As the danger around him escalates, Walt is now entrenched in the complex worlds of an angst-ridden family on the verge of dissolution, and the ruthless and unrelenting drug cartel.",
-        "coverImage": "/ffP8Q8ew048YofHRnFVM18B2fPG.jpg",
+        "poster": "/ffP8Q8ew048YofHRnFVM18B2fPG.jpg",
         "season_number": 3,
         "vote_average": 8.3
       },
@@ -253,7 +256,7 @@
         "id": 3576,
         "name": "Season 4",
         "description": "Walt and Jesse must cope with the fallout of their previous actions, both personally and professionally. Tension mounts as Walt faces a true standoff with his employer, Gus, with neither side willing or able to back down. Walt must also adjust to a new relationship with Skyler, whom while still reconciling her relationship with Walt, is committed to properly laundering Walt’s money and ensuring her sister Marie and an ailing Hank are financially stable.",
-        "coverImage": "/5ewrnKp4TboU4hTLT5cWO350mHj.jpg",
+        "poster": "/5ewrnKp4TboU4hTLT5cWO350mHj.jpg",
         "season_number": 4,
         "vote_average": 8.5
       },
@@ -263,7 +266,7 @@
         "id": 3578,
         "name": "Season 5",
         "description": "Walt is faced with the prospect of moving on in a world without his enemy. As the pressure of a criminal life starts to build, Skyler struggles to keep Walt’s terrible secrets. Facing resistance from sometime adversary and former Fring lieutenant Mike, Walt tries to keep his world from falling apart even as his DEA Agent brother in law, Hank, finds numerous leads that could blaze a path straight to Walt. ",
-        "coverImage": "/r3z70vunihrAkjILQKWHX0G2xzO.jpg",
+        "poster": "/r3z70vunihrAkjILQKWHX0G2xzO.jpg",
         "season_number": 5,
         "vote_average": 8.9
       }
@@ -302,7 +305,7 @@
     "belongs_to_collection": {
       "id": 14890,
       "name": "Bad Boys Collection",
-      "coverImage": "/iB59poJBofg1ciKlu6LzZakf11m.jpg",
+      "poster": "/iB59poJBofg1ciKlu6LzZakf11m.jpg",
       "backdrop_path": "/k9hhSHg5GS4UgWQC6MHBOZrarji.jpg"
     },
     "budget": 100000000,
@@ -357,6 +360,7 @@
     "vote_average": 7.143,
     "type": "movie",
     "vote_count": 368,
+    "poster": "https://m.media-amazon.com/images/M/MV5BY2U5YmQ3YjgtM2I2OC00YmM5LTkyM2MtN2I5Zjg2MDE0ODkwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
     "title": "Bad Boys: Ride or Die",
     "cast": "Will Smith, Martin Lawrence",
     "directors": "Bilall Fallah,Adil El Arbi",
@@ -423,6 +427,7 @@
     "tagline": "Postwar Japan. From zero to minus.",
     "title": "Godzilla Minus One",
     "video": "https://youtu.be/nAYKaslCXPc",
+    "poster": "https://m.media-amazon.com/images/M/MV5BOTI5MjNjMTMtN2NiNC00YjBlLTgzMWQtMGRhZDZkYmY1NGU2XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg",
     "cast": "Ryunosuke Kamiki, Minami Hamabe, Yuki Yamada, Munetaka Aoki, Sakura Ando",
     "directors": "Takashi Yamazaki",
     "vote_average": 7.619,
@@ -503,12 +508,13 @@
     "number_of_episodes": 18,
     "number_of_seasons": 2,
     "origin_country": ["US"],
+    "poster": "https://m.media-amazon.com/images/M/MV5BM2QzMGVkNjUtN2Y4Yi00ODMwLTg3YzktYzUxYjJlNjFjNDY1XkEyXkFqcGc@._V1_SX300.jpg",
     "original_language": "en",
     "original_name": "House of the Dragon",
     "duration": "50 min",
     "description": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
     "popularity": 3474.684,
-    "coverImage": "https://static.dw.com/image/62850747_1004.webp",
+    "coverImage": "https://9meters.com/wp-content/uploads/game-of-thrones-house-of-the-dragon-1536x864.webp",
     "featured": true,
     "production_companies": [
       {
@@ -549,7 +555,7 @@
         "id": 309556,
         "name": "Specials",
         "description": "",
-        "coverImage": "/qVU4112Ob2ikHBu4VRC50MdWZcM.jpg",
+        "poster": "/qVU4112Ob2ikHBu4VRC50MdWZcM.jpg",
         "season_number": 0,
         "vote_average": 0.0
       },
@@ -559,7 +565,7 @@
         "id": 134965,
         "name": "Season 1",
         "description": "",
-        "coverImage": "/m7ta0kNg2ONvnBFF76miVvbWK1V.jpg",
+        "poster": "/m7ta0kNg2ONvnBFF76miVvbWK1V.jpg",
         "season_number": 1,
         "vote_average": 7.9
       },
@@ -569,7 +575,7 @@
         "id": 368014,
         "name": "Season 2",
         "description": "",
-        "coverImage": "/xhjADf5sslq7lbRjc50FgvIYIkT.jpg",
+        "poster": "/xhjADf5sslq7lbRjc50FgvIYIkT.jpg",
         "season_number": 2,
         "vote_average": 8.1
       }
@@ -607,6 +613,7 @@
     "description": "A young girl who goes through a difficult experience begins to see everyone's imaginary friends who have been left behind as their real-life friends have grown up.",
     "popularity": 937.037,
     "coverImage": "https://ntvb.tmsimg.com/assets/p26019154_v_h8_ab.jpg?w=1280&h=720",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYWQ4OGI2MmQtZjUxMC00Njg2LWJiZTQtYmFmZjI5ZmI1Y2U1XkEyXkFqcGdeQXVyMTA1NjE5MTAz._V1_SX300.jpg",
     "production_companies": [
       {
         "id": 4,
@@ -661,7 +668,7 @@
     "belongs_to_collection": {
       "id": 8945,
       "name": "Mad Max Collection",
-      "coverImage": "/9U9QmbCDIBhqDShuIxOiS9gjKYz.jpg",
+      "poster": "/9U9QmbCDIBhqDShuIxOiS9gjKYz.jpg",
       "backdrop_path": "/7ECkRbU1OvDCDLxUv5YBBDxfGF3.jpg"
     },
     "budget": 168000000,
@@ -675,6 +682,7 @@
     "description": "As the world fell, young Furiosa is snatched from the Green Place of Many Mothers and falls into the hands of a great Biker Horde led by the Warlord Dementus. Sweeping through the Wasteland they come across the Citadel presided over by The Immortan Joe. While the two Tyrants war for dominance, Furiosa must survive many trials as she puts together the means to find her way home.",
     "popularity": 659.548,
     "coverImage": "https://i0.wp.com/www.newsfromthecouch.com/wp-content/uploads/2024/05/Furiosa-Cover.jpg?fit=1280%2C720&ssl=1",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNDRkNGNjNzMtYzE3MS00OWQyLTkzZGUtNWIyMmYwMjY3YzYxXkEyXkFqcGc@._V1_SX300.jpg",
     "production_companies": [
       {
         "id": 174,
@@ -741,7 +749,7 @@
     "Language": "Japanese, English",
     "Country": "Japan",
     "Awards": "40 wins & 88 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00OGQ4LWE3OGYtNDdiMzNiNDZlMDAwXkEyXkFqcGdeQXVyNzI3NjY3NjQ@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00OGQ4LWE3OGYtNDdiMzNiNDZlMDAwXkEyXkFqcGdeQXVyNzI3NjY3NjQ@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -771,7 +779,7 @@
     "Language": "English, Spanish, Vietnamese",
     "Country": "United States",
     "Awards": "Nominated for 53 Primetime Emmys. 69 wins & 324 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -801,7 +809,7 @@
     "Language": "English, Russian, Ukrainian",
     "Country": "United States, United Kingdom",
     "Awards": "Won 10 Primetime Emmys. 85 wins & 60 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -831,7 +839,7 @@
     "Language": "English, Indonesian",
     "Country": "Canada, United States",
     "Awards": "Won 8 Primetime Emmys. 83 wins & 131 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -861,7 +869,7 @@
     "Language": "English, Spanish, German, French",
     "Country": "United States",
     "Awards": "Won 5 Primetime Emmys. 51 wins & 195 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -891,7 +899,7 @@
     "Language": "Japanese, English",
     "Country": "United States",
     "Awards": "8 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMzhkNzVkNDYtNmE2Zi00ZTk1LTk2OWYtOTU5NWM5OWQ2Zjc0XkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzhkNzVkNDYtNmE2Zi00ZTk1LTk2OWYtOTU5NWM5OWQ2Zjc0XkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -921,7 +929,7 @@
     "Language": "English, Romanian, Irish Gaelic, Italian, Yiddish, French",
     "Country": "United Kingdom",
     "Awards": "Won 1 BAFTA Award23 wins & 55 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -951,7 +959,7 @@
     "Language": "English",
     "Country": "United Kingdom, United States, China, France, Germany",
     "Awards": "Won 1 Primetime Emmy. 11 wins & 13 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNDZiNDllMTAtOTgxZi00NzNiLWFhNzUtOGUwZWZjZGNjZTMyXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNDZiNDllMTAtOTgxZi00NzNiLWFhNzUtOGUwZWZjZGNjZTMyXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -981,7 +989,7 @@
     "Language": "English",
     "Country": "United States, United Kingdom",
     "Awards": "Won 59 Primetime Emmys. 389 wins & 636 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1011,7 +1019,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Won 2 Primetime Emmys. 15 wins & 76 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BY2ZiODA2MGYtMmMxMi00YjlmLWFmYjktMWYyOTMwNWFkNWNkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BY2ZiODA2MGYtMmMxMi00YjlmLWFmYjktMWYyOTMwNWFkNWNkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1041,7 +1049,7 @@
     "Language": "English, Old English, Norse, Old, Latin, French, Arabic, Greek, Ancient (to 1453), Russian",
     "Country": "Ireland, Canada",
     "Awards": "Won 1 Primetime Emmy. 46 wins & 133 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZWNlZmNiNzItYWMwNC00ODYxLThlNjYtMjU3NzlmNDQxMTY2XkEyXkFqcGdeQXVyMTA3MzQ4MTc0._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZWNlZmNiNzItYWMwNC00ODYxLThlNjYtMjU3NzlmNDQxMTY2XkEyXkFqcGdeQXVyMTA3MzQ4MTc0._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1071,7 +1079,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Won 1 Primetime Emmy. 21 wins & 82 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BYTY2ZjYyNGUtZGVkZS00MDNhLWIwMjMtZDk4MmQ5ZWI0NTY4XkEyXkFqcGdeQXVyMTY3MDE5MDY1._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTY2ZjYyNGUtZGVkZS00MDNhLWIwMjMtZDk4MmQ5ZWI0NTY4XkEyXkFqcGdeQXVyMTY3MDE5MDY1._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1101,7 +1109,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "1 win & 9 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNmVmMmM5ZmItZDg0OC00NTFiLWIxNzctZjNmYTY5OTU3ZWU3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNmVmMmM5ZmItZDg0OC00NTFiLWIxNzctZjNmYTY5OTU3ZWU3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1131,7 +1139,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Nominated for 1 Primetime Emmy. 29 wins & 99 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BYmMxNGQ4NzYtYmQzNC00N2I2LWI5NzUtMTU5MDczZGEzNDBlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYmMxNGQ4NzYtYmQzNC00N2I2LWI5NzUtMTU5MDczZGEzNDBlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1161,7 +1169,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "6 wins & 29 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNjMwNDNkMzEtNzRmNy00YmExLTg3ZWYtM2NjMjFjNWY3MmM0XkEyXkFqcGdeQXVyMTY0Njc2MTUx._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNjMwNDNkMzEtNzRmNy00YmExLTg3ZWYtM2NjMjFjNWY3MmM0XkEyXkFqcGdeQXVyMTY0Njc2MTUx._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1191,7 +1199,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "38 wins & 67 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMDk3YzgxNDQtNTEzOS00NDMyLWFlYmYtYTZlMDk1NDkxNmMyXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDk3YzgxNDQtNTEzOS00NDMyLWFlYmYtYTZlMDk1NDkxNmMyXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1221,7 +1229,7 @@
     "Language": "Japanese",
     "Country": "Japan",
     "Awards": "2 wins & 10 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZGFiMWFhNDAtMzUyZS00NmQ2LTljNDYtMmZjNTc5MDUxMzViXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1251,7 +1259,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "4 wins & 11 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNGZjZDc3NjAtYjI1OC00NWUzLWIxOWItNzUyODc5NDIwMWRjXkEyXkFqcGdeQXVyNTQ4ODA2NzQ@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNGZjZDc3NjAtYjI1OC00NWUzLWIxOWItNzUyODc5NDIwMWRjXkEyXkFqcGdeQXVyNTQ4ODA2NzQ@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1281,7 +1289,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Won 2 Primetime Emmys. 18 wins & 44 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1311,7 +1319,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Nominated for 2 Primetime Emmys. 2 wins & 5 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNjU1Y2JjMjYtNDJiNS00NmFhLTk2N2MtMDEwNDI1YzVhNGI1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNjU1Y2JjMjYtNDJiNS00NmFhLTk2N2MtMDEwNDI1YzVhNGI1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1341,7 +1349,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Won 1 Primetime Emmy. 2 wins & 33 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMTU1OTdjYTUtMzA2MS00Njg4LWI1NTctMWUzYzNkNmQ5YWY3XkEyXkFqcGdeQXVyMTUwMzM5ODkz._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTU1OTdjYTUtMzA2MS00Njg4LWI1NTctMWUzYzNkNmQ5YWY3XkEyXkFqcGdeQXVyMTUwMzM5ODkz._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1371,7 +1379,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Won 2 Primetime Emmys. 22 wins & 164 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1401,7 +1409,7 @@
     "Language": "English, Spanish",
     "Country": "United States",
     "Awards": "Nominated for 9 Primetime Emmys. 4 wins & 65 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BYWU4ZmI0NTItZjcyNy00MzQ5LThiNDQtZDZkNjg1NWUwN2RhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYWU4ZmI0NTItZjcyNy00MzQ5LThiNDQtZDZkNjg1NWUwN2RhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1431,7 +1439,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Won 2 Primetime Emmys. 19 wins & 134 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1461,7 +1469,7 @@
     "Language": "English",
     "Country": "United Kingdom",
     "Awards": "Won 6 Primetime Emmys. 37 wins & 123 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZTgyNTBkNzctN2I3NC00NTA1LWJiMDMtYzA2MmYyZjc1NWQzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZTgyNTBkNzctN2I3NC00NTA1LWJiMDMtYzA2MmYyZjc1NWQzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1491,7 +1499,7 @@
     "Language": "Japanese, English",
     "Country": "Japan",
     "Awards": "26 wins & 48 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BYTIxNjk3YjItYmYzMC00ZTdmLTk0NGUtZmNlZTA0NWFkZDMwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTIxNjk3YjItYmYzMC00ZTdmLTk0NGUtZmNlZTA0NWFkZDMwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1521,7 +1529,7 @@
     "Language": "English",
     "Country": "United States, South Korea, Canada, Philippines",
     "Awards": "4 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZWNkNmE1NmYtMDQzMy00NmU3LWFmMGYtYzAxZjllZGE5OGM1XkEyXkFqcGdeQXVyNTgwODM3MjE@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZWNkNmE1NmYtMDQzMy00NmU3LWFmMGYtYzAxZjllZGE5OGM1XkEyXkFqcGdeQXVyNTgwODM3MjE@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1551,7 +1559,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "4 wins & 30 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZTlmYjk0ZTItODNhMC00YmIyLWExZWEtYjk0YWQzMGNhOTZmXkEyXkFqcGdeQXVyMTY0Njc2MTUx._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZTlmYjk0ZTItODNhMC00YmIyLWExZWEtYjk0YWQzMGNhOTZmXkEyXkFqcGdeQXVyMTY0Njc2MTUx._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1581,7 +1589,7 @@
     "Language": "English",
     "Country": "United Kingdom",
     "Awards": "Nominated for 5 BAFTA 4 wins & 8 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMGNhODY0ZjktYjY2ZS00MGNkLTg2ZTUtMGEwNGRlMmY3ZjQ4XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMGNhODY0ZjktYjY2ZS00MGNkLTg2ZTUtMGEwNGRlMmY3ZjQ4XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1611,7 +1619,7 @@
     "Language": "English",
     "Country": "United Kingdom",
     "Awards": "N/A",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMTY2NGRlZTgtZWU1ZC00NzhkLTgyMmYtYTQyZDgzYmE0ZmYzXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTY2NGRlZTgtZWU1ZC00NzhkLTgyMmYtYTQyZDgzYmE0ZmYzXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1641,7 +1649,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "N/A",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BODRjOTVmOGEtZDM1NS00MDVmLWI2MTAtZWUzZjVhMzIzZDI0XkEyXkFqcGdeQXVyNzkyMDA5MTc@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BODRjOTVmOGEtZDM1NS00MDVmLWI2MTAtZWUzZjVhMzIzZDI0XkEyXkFqcGdeQXVyNzkyMDA5MTc@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1671,7 +1679,7 @@
     "Language": "English",
     "Country": "Australia, United Kingdom",
     "Awards": "17 wins & 11 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMDBiNDI3YjQtNDdkNS00ZDliLTlmMmQtMDE4ZWM1ZGIyNjljXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDBiNDI3YjQtNDdkNS00ZDliLTlmMmQtMDE4ZWM1ZGIyNjljXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1701,7 +1709,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Nominated for 3 Primetime Emmys. 7 wins & 51 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNWMxZjQ0MjgtOTVjMC00OGI5LThjYTAtYzg3ZDNjYmNlMzk5XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNWMxZjQ0MjgtOTVjMC00OGI5LThjYTAtYzg3ZDNjYmNlMzk5XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1731,7 +1739,7 @@
     "Language": "English, Spanish",
     "Country": "United States, South Korea, Germany",
     "Awards": "10 wins & 46 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZjE4OGZjMGEtNDYzMC00MGJhLWI2OTktYWM1MDc2Y2Q4NDVkXkEyXkFqcGdeQXVyNjc1MjM1MzI@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjE4OGZjMGEtNDYzMC00MGJhLWI2OTktYWM1MDc2Y2Q4NDVkXkEyXkFqcGdeQXVyNjc1MjM1MzI@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1761,7 +1769,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "N/A",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMzJlMDI0YWEtN2I1YS00MDViLWJlYWQtYTkyMGM5NzBmYjI0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzJlMDI0YWEtN2I1YS00MDViLWJlYWQtYTkyMGM5NzBmYjI0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
     "Ratings": [],
     "Metascore": "N/A",
     "imdbRating": "N/A",
@@ -1789,7 +1797,7 @@
     "Language": "Mandarin, Chinese, English",
     "Country": "United States, China",
     "Awards": "3 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDY0YzI0OTctYjVhYy00MTVhLWE0NTgtYTRmYTBmOTE3YTViXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1826,7 +1834,7 @@
     "Language": "English",
     "Country": "United States, Australia, Canada",
     "Awards": "1 nomination",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMjA5ZjA3ZjMtMzg2ZC00ZDc4LTk3MTctYTE1ZTUzZDIzMjQyXkEyXkFqcGdeQXVyMTM1NjM2ODg1._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjA5ZjA3ZjMtMzg2ZC00ZDc4LTk3MTctYTE1ZTUzZDIzMjQyXkEyXkFqcGdeQXVyMTM1NjM2ODg1._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1863,7 +1871,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "1 win",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BOWM5OGE3NGMtODc4Yi00NThjLWE2NTMtMDE5YjBhYmY5ZTE3XkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BOWM5OGE3NGMtODc4Yi00NThjLWE2NTMtMDE5YjBhYmY5ZTE3XkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1900,7 +1908,7 @@
     "Language": "English",
     "Country": "United States, Canada, United Arab Emirates, Hungary, Italy, New Zealand, Jordan, Gambia",
     "Awards": "4 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1937,7 +1945,7 @@
     "Language": "English",
     "Country": "United States, United Kingdom, Hong Kong",
     "Awards": "N/A",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZDdlNTIwNjYtNzVhNS00MGVmLTk1ZGYtZmZiMjhiMmQ1ZjkwXkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDdlNTIwNjYtNzVhNS00MGVmLTk1ZGYtZmZiMjhiMmQ1ZjkwXkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -1974,7 +1982,7 @@
     "Language": "English, Russian, Ukrainian, Estonian, Norwegian, Hindi",
     "Country": "United States, United Kingdom",
     "Awards": "Won 1 Oscar. 49 wins & 136 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMzU3YWYwNTQtZTdiMC00NjY5LTlmMTMtZDFlYTEyODBjMTk5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzU3YWYwNTQtZTdiMC00NjY5LTlmMTMtZDFlYTEyODBjMTk5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2015,7 +2023,7 @@
     "Language": "Norwegian, Swedish, English",
     "Country": "Norway, France, Denmark, Sweden",
     "Awards": "15 wins & 47 nominations",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BYzllNGU5NWUtM2Q0ZC00ZWUwLTk1YzItNDcxYWRmMWM4YzIzXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYzllNGU5NWUtM2Q0ZC00ZWUwLTk1YzItNDcxYWRmMWM4YzIzXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2056,7 +2064,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Nominated for 1 Oscar. 102 wins & 163 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2098,7 +2106,7 @@
     "Language": "English",
     "Country": "United States",
     "Awards": "Nominated for 7 Oscars. 21 wins & 42 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2139,7 +2147,7 @@
     "Language": "Korean, English",
     "Country": "South Korea",
     "Awards": "Won 4 Oscars. 309 wins & 265 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2180,7 +2188,7 @@
     "Language": "English, Mandarin",
     "Country": "United States, United Kingdom",
     "Awards": "Won 2 Oscars. 163 wins & 164 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2221,7 +2229,7 @@
     "Language": "English",
     "Country": "United States, United Kingdom, Canada",
     "Awards": "Won 1 Oscar. 44 wins & 148 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2262,7 +2270,7 @@
     "Language": "English, Spanish",
     "Country": "Canada, United States",
     "Awards": "Won 1 Oscar. 85 wins & 61 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",
@@ -2303,7 +2311,7 @@
     "Language": "English, Sindarin",
     "Country": "New Zealand, United States",
     "Awards": "Won 4 Oscars. 125 wins & 127 nominations total",
-    "coverImage": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
     "Ratings": [
       {
         "Source": "Internet Movie Database",

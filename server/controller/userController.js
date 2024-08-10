@@ -1,7 +1,7 @@
 const User = require("../models/userModel");
 const AppError = require("../utils/AppError");
 const multer = require("multer");
-const sharp = require("sharp");
+// const sharp = require("sharp");
 const { getAll, getOne, deleteOne, updateOne } = require("./handlerFactory");
 require("express-async-errors");
 
@@ -35,11 +35,11 @@ exports.resizeUserPhoto = async (req, res, next) => {
 
   req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
 
-  await sharp(req.file.buffer)
-    .resize(500, 500)
-    .toFormat("jpeg")
-    .jpeg({ quality: 90 })
-    .toFile(`server/public/images/users/${req.file.filename}`);
+  // await sharp(req.file.buffer)
+  //   .resize(500, 500)
+  //   .toFormat("jpeg")
+  //   .jpeg({ quality: 90 })
+  //   .toFile(`server/public/images/users/${req.file.filename}`);
 
   next();
 };

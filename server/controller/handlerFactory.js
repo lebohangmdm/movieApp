@@ -21,7 +21,8 @@ exports.createOne = (Model) => async (req, res, next) => {
 
 exports.getAll = (Model) => async (req, res, next) => {
   let filter = {};
-  if (req.body.movieId) filter = { movie: req.params.movieId };
+  if (req.body.content) filter = { movie: req.params.contentId };
+  if (req.params.content) filter = { movie: req.params.contentId };
 
   const features = new APIFeatures(Model.find(filter), req.query)
     .filter()
@@ -70,14 +71,11 @@ exports.getOne = (Model, populateOpts) => async (req, res, next) => {
 exports.updateOne = (Model) => async (req, res, next) => {
   const { id } = req.params;
   console.log("_id:", id);
-  console.log("req-body:", req.body);
 
   const doc = await Model.findByIdAndUpdate(id, req.body, {
     new: true,
     runValidators: true,
   });
-
-  console.log(doc);
 
   if (!doc) {
     return next(new AppError("Could not find the document with this id", 404));

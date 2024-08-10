@@ -20,12 +20,15 @@ const contentSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide the duration of them content"],
     },
-    rating: {
+    ratingsAverage: {
       type: Number,
-      default: 1,
+      min: [1, "Rating must be above 1.0"],
+      max: [5, "Rating must be below 5.0"],
+      set: (val) => Math.round(val * 10) / 10, // 4.666666, 46.6666, 47, 4.7
     },
     totalRatings: {
       type: Number,
+      default: 0,
     },
     releaseYear: {
       type: String,
@@ -69,7 +72,11 @@ const contentSchema = new mongoose.Schema(
     },
     coverImage: {
       type: String,
-      required: [true, "Please provide the cover image"],
+      default: false,
+    },
+    poster: {
+      type: String,
+      required: [true, "Please provide the poster"],
     },
     directors: {
       type: String,
