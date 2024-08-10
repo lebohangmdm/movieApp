@@ -69,12 +69,14 @@ const Details = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const {
     register: updateRegister,
     handleSubmit: updateHandleSubmit,
     formState: { errors: updateErrors },
+    reset: updateReset,
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -100,59 +102,72 @@ const Details = () => {
       content: contentId,
       user: userId,
     };
+    console.log(data.comment);
+    console.log(newData);
 
     const dataInfo = await updateReview({
       id: updateReviewId,
       content: newData,
     });
 
-    if (dataInfo.data.status === "success") {
+    if (dataInfo.data?.status === "success") {
       toast.success("Review updated successfully");
       setSelectUpdate(false);
+      setUpdateReviewId("");
+      reset();
       return;
     }
   };
 
   const handleDelete = async (id) => {
-    const reviewDelete = await deleteReview({ id: "kjdjsfdlkjlsdk" });
+    const reviewDelete = await deleteReview({ id });
 
     if (reviewDelete.data === null)
-      return toast.success("Review deleted successfully");
+      toast.success("Review deleted successfully");
+    setSelectUpdate(false);
+    setUpdateReviewId("");
+    updateReset();
+    reset();
+    return;
   };
 
   // Error for creating
   useEffect(() => {
+    let toastId;
     if (errorCreate) {
-      return toast.error(errorCreate?.data?.message);
-    } else {
-      toast.dismiss();
+      toastId = toast.error(errorCreate?.data?.message);
     }
     return () => {
-      toast.dismiss();
+      if (toastId) {
+        toast.dismiss(toastId);
+      }
     };
   }, [errorCreate]);
 
   // fetch a review
   useEffect(() => {
+    let toastId;
     if (reviewError) {
-      return toast.error(reviewError?.data?.message);
-    } else {
-      toast.dismiss();
+      toastId = toast.error(reviewError?.data?.message);
     }
     return () => {
-      toast.dismiss();
+      if (toastId) {
+        toast.dismiss(toastId);
+      }
     };
   }, [reviewError]);
 
   // updating review
   useEffect(() => {
+    let toastId;
     if (updateError) {
-      return toast.error(updateError?.data?.message);
-    } else {
-      toast.dismiss();
+      toastId = toast.error(updateError?.data?.message);
+      console.log(updateError);
     }
     return () => {
-      toast.dismiss();
+      if (toastId) {
+        toast.dismiss(toastId);
+      }
     };
   }, [updateError]);
 
@@ -195,13 +210,15 @@ const Details = () => {
             </h1>
             <div>
               <div className="flex items-center gap-4 md:mt-2">
-                <p>{content?.duration}</p>
-                <p>{content?.releaseDate}</p>
-                <p className="flex items-center gap-1">
+                <p className="tracking-tight">{content?.duration}</p>
+                <p className="tracking-tight">{content?.releaseDate}</p>
+                <p className="flex sm:items-center  gap-[2px] sm:gap-1 text-sm sm:text-base capitalize tracking-tight">
                   <span>
-                    <StarIcon className="text-yellow-500 text-[18px] w-[18px] h-[18px]" />
+                    <StarIcon className="text-yellow-500  w-[18px] sm:w-[20px] " />
                   </span>{" "}
-                  {content?.rating}{" "}
+                  {content?.ratingsAverage
+                    ? content.ratingsAverage
+                    : "Not rated yet"}
                 </p>
               </div>
               <div>
