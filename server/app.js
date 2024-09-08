@@ -13,6 +13,7 @@ const userRouter = require("./routes/userRoute");
 const contentRouter = require("./routes/contentRoute");
 const reviewRouter = require("./routes/reviewRoute");
 const AppError = require("./utils/AppError");
+const path = require("path");
 require("dotenv").config({ path: "./config.env" });
 
 const app = express();
@@ -27,7 +28,7 @@ console.log(process.env.JWT_SECRET);
 
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 15 minutes
-  limit: 500, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+  limit: 300, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
   message: "Too many request from this IP. Please again in an hour",
 });
 
@@ -43,7 +44,10 @@ app.use(
 );
 
 app.use(express.json());
-app.use(express.static("public"));
+// app.use("/images", express.static("server/public/images"));
+// app.use(express.static("./public"));
+// app.use("/images", express.static(path.join(__dirname, "public/images")));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(mongoSanitize());

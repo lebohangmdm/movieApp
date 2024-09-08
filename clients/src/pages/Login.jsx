@@ -7,12 +7,15 @@ import { useLoginMutation } from "../services/authService";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { handleFirstWord } from "../utils/helpers";
-import { useDispatch } from "react-redux";
-import { setCredentials } from "../redux/features/auth/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { getAuth, setCredentials } from "../redux/features/auth/auth";
 
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const auth = useSelector(getAuth);
+  console.log(auth);
 
   const [loginUser, { isLoading, isError, error }] = useLoginMutation();
   console.log(error);

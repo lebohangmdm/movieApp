@@ -1,5 +1,10 @@
 const Footer = () => {
-  return <footer className="py-2 text-white">Footer</footer>;
+  const year = new Date().getFullYear();
+  return (
+    <footer className="py-1.5 text-white flex items-center justify-center bg-[#111]">
+      <p className="text-xs sm:text-sm">{year} @copyright</p>
+    </footer>
+  );
 };
 
 export default Footer;

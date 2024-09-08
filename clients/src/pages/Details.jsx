@@ -1,5 +1,5 @@
 import ReactPlayer from "react-player/youtube";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useFetchGetById } from "../services/hooks/contentHooks";
 import { StarIcon } from "@heroicons/react/20/solid";
 import {
@@ -30,6 +30,7 @@ const Details = () => {
   const { content, isLoading, error } = useFetchGetById(contentId);
   const [selectUpdate, setSelectUpdate] = useState(false);
   const [updateReviewId, setUpdateReviewId] = useState("");
+  const navigate = useNavigate(0);
 
   const [userRating, setUserRating] = useState(0);
   const [createReview, { isLoading: isCreating, error: errorCreate }] =
@@ -102,8 +103,9 @@ const Details = () => {
       content: contentId,
       user: userId,
     };
+
+    console.log(userRating);
     console.log(data.comment);
-    console.log(newData);
 
     const dataInfo = await updateReview({
       id: updateReviewId,
@@ -188,6 +190,8 @@ const Details = () => {
     setSelectUpdate(true);
     setUpdateReviewId(id);
   };
+  console.log(content?.ratingsAverage);
+  console.log(content?.totalRatings);
 
   return (
     <>

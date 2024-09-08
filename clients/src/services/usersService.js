@@ -16,11 +16,13 @@ export const userApiSlice = apiSlice.injectEndpoints({
       providesTags: ["Users"],
     }),
     updateProfile: builder.mutation({
-      query: (data) => ({
-        url: `users/profile/update`,
-        method: "PATCH",
-        body: data,
-      }),
+      query: (formData) => {
+        return {
+          url: `users/profile/update`,
+          method: "PATCH",
+          body: formData,
+        };
+      },
       invalidatesTags: ["Users"],
     }),
 

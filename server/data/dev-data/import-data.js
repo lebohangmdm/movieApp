@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const Content = require("../../models/contentModel");
 
-dotenv.config({ path: "./config.env" });
+dotenv.config({ path: "../config.env" });
 
 mongoose
   .connect(process.env.MONGO_URI)

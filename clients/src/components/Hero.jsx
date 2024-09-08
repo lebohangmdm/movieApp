@@ -2,6 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useCallback, useEffect, useState } from "react";
 import { useFeaturedContent } from "../services/hooks/contentHooks";
 import { Link } from "react-router-dom";
+import MainLoader from "./MainLoader";
 
 const Hero = () => {
   const { contents: movies, isLoading, error } = useFeaturedContent();
@@ -23,6 +24,8 @@ const Hero = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
+  if (isLoading) return <MainLoader />;
 
   // Auto-rotate movies every 5 seconds
   // useEffect(() => {

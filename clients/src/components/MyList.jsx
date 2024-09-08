@@ -1,7 +1,7 @@
 import { useGetProfileQuery } from "../services/usersService.js";
-import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage.jsx";
 import RowContent from "./RowContent.jsx";
+import MainLoader from "./MainLoader.jsx";
 
 const MyList = () => {
   const {
@@ -27,7 +27,7 @@ const MyList = () => {
   return (
     <>
       {userLoading ? (
-        <Loader />
+        <MainLoader />
       ) : (
         <div className="grid items-center justify-center gap-6 sm:grid-cols-2 md:gap-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-y-12">
           {contents?.map((content) => {

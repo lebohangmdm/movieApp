@@ -1,10 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  userInfo: localStorage.getItem("userInfo")
-    ? JSON.parse(localStorage.getItem("userInfo"))
-    : null,
+  userInfo: null,
 };
+
+try {
+  const storedUserInfo = localStorage.getItem("userInfo");
+  if (storedUserInfo) {
+    initialState.userInfo = JSON.parse(storedUserInfo);
+  }
+} catch (error) {
+  console.error("Error parsing userInfo from localStorage:", error);
+}
 
 const authSlice = createSlice({
   name: "auth",
@@ -16,12 +23,12 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       state.userInfo = null;
-      localStorage.clear();
+      localStorage.removeItem("userInfo");
     },
   },
 });
 
-export const { register, setCredentials, logout } = authSlice.actions;
+export const { setCredentials, logout } = authSlice.actions;
 
 export const getAuth = (state) => state.auth.userInfo;
 export default authSlice.reducer;

@@ -25,6 +25,7 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
     }),
     getContent: builder.query({
       query: (id) => `contents/${id}`,
+      invalidatesTags: ["Contents"],
     }),
 
     getContentByName: builder.query({
@@ -66,14 +67,14 @@ export const contentsApiSlice = apiSlice.injectEndpoints({
           body: formData,
         };
       },
-      invalidatesTags: ["Contents"],
+      invalidatesTags: ["Contents", "Reviews"],
     }),
     deleteContent: builder.mutation({
       query: ({ id }) => ({
         url: `contents/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: ["Contents"],
+      invalidatesTags: ["Contents", "Reviews"],
     }),
   }),
 });

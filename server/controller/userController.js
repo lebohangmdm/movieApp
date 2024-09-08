@@ -1,7 +1,7 @@
 const User = require("../models/userModel");
 const AppError = require("../utils/AppError");
 const multer = require("multer");
-// const sharp = require("sharp");
+const Jimp = require("jimp");
 const { getAll, getOne, deleteOne, updateOne } = require("./handlerFactory");
 require("express-async-errors");
 
@@ -33,15 +33,19 @@ exports.uploadUserPhoto = upload.single("image");
 exports.resizeUserPhoto = async (req, res, next) => {
   if (!req.file) return next();
 
-  req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
+  try {
+    req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
 
-  // await sharp(req.file.buffer)
-  //   .resize(500, 500)
-  //   .toFormat("jpeg")
-  //   .jpeg({ quality: 90 })
-  //   .toFile(`server/public/images/users/${req.file.filename}`);
+    const image = await Jimp.read(req.file.buffer);
+    await image
+      .resize(500, 500)
+      .quality(90)
+      .writeAsync(`server/public/images/users/${req.file.filename}`);
 
-  next();
+    next();
+  } catch (error) {
+    return next(new AppError("Error processing image", 500));
+  }
 };
 
 exports.getAllUsers = getAll(User);
@@ -57,7 +61,10 @@ exports.getMyProfile = (req, res, next) => {
 exports.updateMyProfile = async (req, res) => {
   const filteredBody = filterObj(req.body, "fullName", "email", "image");
 
-  if (req.file) filteredBody.photo = req.file.filename;
+  console.log(req.file);
+  console.log(req.body);
+
+  if (req.file) filteredBody.image = req.file.filename;
 
   const updateUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,

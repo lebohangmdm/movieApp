@@ -7,7 +7,7 @@ process.on("uncaughtException", (err) => {
   process.exit(1);
 });
 
-require("dotenv").config({ path: "./config.env" });
+require("dotenv").config({ path: "../config.env" });
 
 mongoose
   .connect(process.env.MONGO_URI)

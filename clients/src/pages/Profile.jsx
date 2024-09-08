@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { ErrorMessage, InputError, Loader, UploadImage } from "../components";
 import { Button } from "@mui/material";
+import imageCompression from "browser-image-compression";
 
 import {
   useDeleteProfileMutation,
@@ -9,11 +10,42 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useFetchGetUser, useLogout } from "../services/hooks/usersHooks";
 import toast from "react-hot-toast";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { logout, setCredentials } from "../redux/features/auth/auth";
 
+const MAX_FILE_SIZE = 1 * 1024 * 1024; // 1MB
 const Profile = () => {
+  const [file, setFile] = useState(null);
+  const [preview, setPreview] = useState(null);
+
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.size > MAX_FILE_SIZE) {
+        toast.error("File is too large. Maximum size is 1MB.");
+        return;
+      }
+
+      try {
+        const compressedFile = await imageCompression(file, {
+          maxSizeMB: 1,
+          maxWidthOrHeight: 1920,
+        });
+
+        setFile(compressedFile);
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          setPreview(e.target.result);
+        };
+        reader.readAsDataURL(compressedFile);
+      } catch (err) {
+        setError("Error compressing image: " + err.message);
+      }
+    }
+  };
+
   const {
     userData,
     isLoading: loadingUserData,
@@ -58,10 +90,25 @@ const Profile = () => {
 
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-  const onSubmit = (data) => {
-    updateProfile(data);
+  const onSubmit = async (data) => {
+    console.log(data);
+    console.log(file);
+    const formData = new FormData();
+    formData.append("fullName", data.fullName);
+    formData.append("email", data.email);
+    if (file) {
+      formData.append("image", file);
+    }
+
+    console.log(file);
+
+    const response = await updateProfile(formData).unwrap();
+    const updatedImage = response.data.updateUser.image;
     const fullName = (userInfo.data.user.fullName = data.fullName);
     const email = (userInfo.data.user.fullName = data.email);
+    const image = (userInfo.data.user.image = updatedImage);
+    // const imageUrl = URL.createObjectURL(image);
+    // console.log(imageUrl);
     dispatch(
       setCredentials({
         ...userInfo,
@@ -69,8 +116,9 @@ const Profile = () => {
           ...userInfo.data,
           user: {
             ...userInfo.data.user,
-            fullName: fullName,
-            email: email,
+            fullName,
+            email,
+            image,
           },
         },
       })
@@ -83,7 +131,7 @@ const Profile = () => {
     return <ErrorMessage error={errorUserData?.data?.message} />;
 
   return (
-    <section className="bg-black h-height-dvh">
+    <section className="bg-black min-h-dvh">
       <div className="max-w-4xl mx-auto py-8 px-4 md:px-8 lg:p-12">
         <h1 className="text-2xl font-semibold md:text-4xl lg:text-5xl text-white mb-4 md:mb-6 lg:mb-8">
           Edit Profile
@@ -93,7 +141,7 @@ const Profile = () => {
         ) : (
           <div className="flex flex-col gap-8 md:flex-row">
             <div className="w-full md:w-2/5 lg:w-1/4">
-              <UploadImage />
+              <UploadImage handleChange={handleImageChange} image={preview} />
             </div>
             <div className="flex-1">
               <form onSubmit={handleSubmit(onSubmit)}>

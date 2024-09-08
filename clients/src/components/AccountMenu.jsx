@@ -15,9 +15,16 @@ import { UserIcon } from "@heroicons/react/20/solid";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogout } from "../services/hooks/usersHooks";
 import toast from "react-hot-toast";
+import { useGetProfileQuery } from "../services/usersService";
 
 export default function AccountMenu() {
   const isAuth = useSelector(getAuth);
+
+  const avatarFilename = true;
+  const avatar = avatarFilename
+    ? `http://localhost:3000/images/users/user-66bc971e15fb6a3b4129e767-1723661535312.jpeg`
+    : null;
+  // console.log(avatar);
   const letter = isAuth?.data?.user?.fullName.split(" ")[0].slice(0, 1);
   const navigate = useNavigate();
 
@@ -30,6 +37,10 @@ export default function AccountMenu() {
     dispatch(logout());
     navigate("/");
   };
+
+  const { data } = useGetProfileQuery();
+  const image = data?.data?.doc.image;
+  console.log(image);
 
   // console.log(fullName);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -139,6 +150,10 @@ export default function AccountMenu() {
               </MenuItem>
             </button>
           </Menu>
+
+          <div>
+            <img src={avatar} alt="avatar" className="h-20 w-20 object-cover" />
+          </div>
         </>
       ) : (
         <>

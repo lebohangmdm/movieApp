@@ -4,15 +4,10 @@ const { protect, restrictTo } = require("../middleware/authMiddleware");
 
 router.use(protect);
 
-router.get(
-  "/profile/me",
-  protect,
-  userController.getMyProfile,
-  userController.getUser
-);
+router.get("/profile/me", userController.getMyProfile, userController.getUser);
+
 router.patch(
   "/profile/update",
-  protect,
   userController.uploadUserPhoto,
   userController.resizeUserPhoto,
   userController.updateMyProfile

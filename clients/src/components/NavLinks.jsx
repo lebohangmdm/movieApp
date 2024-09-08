@@ -8,7 +8,6 @@ const NavLinks = () => {
   const isAuth = useSelector(getAuth);
   const isAdmin = isAuth?.data?.user?.role === "admin";
   const auth = isAuth && isAdmin;
-  console.log(auth);
 
   return (
     <ul className="hidden  lg:flex items-center md:gap-8 lg:gap-12 ">

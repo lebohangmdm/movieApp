@@ -15,7 +15,7 @@ export const reviewsApiSlice = apiSlice.injectEndpoints({
         method: "POST",
         body: newContent,
       }),
-      invalidatesTags: ["Reviews"],
+      invalidatesTags: ["Reviews", "Contents"],
     }),
     getReview: builder.query({
       query: (id) => `reviews/${id}`,
@@ -30,14 +30,14 @@ export const reviewsApiSlice = apiSlice.injectEndpoints({
           body: content,
         };
       },
-      invalidatesTags: ["Reviews"],
+      invalidatesTags: ["Reviews", "Contents"],
     }),
     deleteReview: builder.mutation({
       query: ({ id }) => ({
         url: `reviews/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: ["Reviews"],
+      invalidatesTags: ["Reviews", "Contents"],
     }),
   }),
 });

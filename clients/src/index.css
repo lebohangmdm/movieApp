@@ -18,8 +18,12 @@
   }
 
   .sub-link {
-    @apply capitalize text-sm text-light-2 hover:text-purple-2 active:text-purple-2  transition-all duration-200;
+    @apply capitalize text-xs sm:text-sm text-light-2 hover:text-purple-2 active:text-purple-2  transition-all duration-200;
   }
+}
+
+.img-bottom {
+  object-position: 50% 100%;
 }
 
 .bg-banner {

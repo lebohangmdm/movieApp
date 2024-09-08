@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useFetchContentByName } from "../services/hooks/contentHooks";
-import { ErrorMessage, Loader } from "../components";
+import { ErrorMessage, MainLoader } from "../components";
 
 const Search = () => {
   const { title } = useParams();
@@ -36,9 +36,9 @@ const Search = () => {
   }
 
   return (
-    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12">
+    <section className="max-w-7xl mx-auto py-8 px-4 md:px-8 lg:px-12 h-height-dvh">
       {isLoading ? (
-        <Loader />
+        <MainLoader />
       ) : (
         <div className="grid gap-8  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
           {contents?.map((content) => {
@@ -50,7 +50,7 @@ const Search = () => {
               >
                 <Link key={content.id} to={`/watch/${content.id}`}>
                   <img
-                    src={content.coverImage}
+                    src={content.poster}
                     alt={content.title}
                     className="object-cover mx-auto "
                   />
